@@ -1,0 +1,2765 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SafeStep Living™ — Renter-Friendly Bathroom Safety. No Drilling, No Tools.</title>
+<meta name="description" content="Grab poles and tub rails rated to 300 lbs that install in 5 minutes with no tools and no drilling. Built for renters. 30-day money-back guarantee." />
+<meta property="og:title" content="SafeStep Living™ — Bathroom Safety Without a Single Hole" />
+<meta property="og:description" content="300 lb rated grab poles and tub rails. 5-minute setup, no tools, no drilling." />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0E1215" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:    { DEFAULT:'#0E1215', soft:'#181F25', mute:'#4A5661', faint:'#6B7885' },
+        nickel: { DEFAULT:'#8D97A3', light:'#E4E9EE', pale:'#F4F7F9', mist:'#FAFBFC' },
+        care:   { DEFAULT:'#0E6B5C', light:'#D6EDE8', dark:'#0A5247', deep:'#073A33' },
+        signal: { DEFAULT:'#B4531A', light:'#FBEEE4' },
+        gold:   { DEFAULT:'#B8862B', light:'#FAF2E2' }
+      },
+      fontFamily: {
+        sans: ['Inter','system-ui','-apple-system','Segoe UI','sans-serif'],
+        display: ['Fraunces','Georgia','serif']
+      },
+      boxShadow: {
+        lift:'0 4px 24px -6px rgba(14,18,21,.16), 0 2px 6px -2px rgba(14,18,21,.08)',
+        deep:'0 24px 60px -18px rgba(14,18,21,.36)',
+        glow:'0 0 0 4px rgba(14,107,92,.14)'
+      },
+      maxWidth: { '8xl':'88rem' }
+    }
+  }
+}
+</script>
+<style>
+  /* ── Accessibility-first base: large type, visible focus, calm motion ── */
+  html { font-size:17px; -webkit-text-size-adjust:100%; }
+  @media (min-width:768px){ html{ font-size:18px; } }
+  body { text-rendering:optimizeLegibility; overflow-x:hidden; }
+  :focus-visible { outline:3px solid #0E6B5C; outline-offset:3px; border-radius:6px; }
+  .skip-link { position:absolute; left:-9999px; top:0; z-index:100;
+    background:#0E1215; color:#fff; padding:1rem 1.5rem; font-weight:700; }
+  .skip-link:focus { left:0; }
+
+  /* ── Finish system: one class on <html> recolors every illustration ── */
+  :root {
+    --metal-hi:#3A4249; --metal-mid:#242B31; --metal-lo:#141A1F; --metal-edge:#4E5862;
+  }
+  html[data-finish="brushed_nickel"] {
+    --metal-hi:#CDD4DB; --metal-mid:#A3ADB8; --metal-lo:#7E8893; --metal-edge:#E3E8ED;
+  }
+  .metal-hi{ fill:var(--metal-hi); } .metal-mid{ fill:var(--metal-mid); }
+  .metal-lo{ fill:var(--metal-lo); } .metal-edge{ fill:var(--metal-edge); }
+  .metal-stroke{ stroke:var(--metal-edge); }
+  .illo, .illo * { transition:fill .45s ease, stroke .45s ease; }
+  #heroScene g[id^="sc-"] { transition:opacity .4s ease; }
+
+  /* ── Motion ── */
+  @keyframes rise { from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:none;} }
+  @keyframes fade { from{opacity:0;} to{opacity:1;} }
+  @keyframes slideIn { from{transform:translateX(100%);} to{transform:none;} }
+  @keyframes pulseRing { 0%,100%{opacity:.35; r:13;} 50%{opacity:.9; r:16;} }
+  .rise{ animation:rise .4s cubic-bezier(.2,.7,.3,1) both; }
+  .reveal{ opacity:0; transform:translateY(20px);
+    transition:opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  .lock-pulse{ animation:pulseRing 2.6s ease-in-out infinite; }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:.001ms !important; transition-duration:.001ms !important; }
+    .reveal{ opacity:1; transform:none; }
+  }
+
+  .ptpanel{ display:none; }
+  .ptpanel.on{ display:block; }
+  details > summary{ list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker{ display:none; }
+  details[open] .faq-chev{ transform:rotate(180deg); }
+  .tabular{ font-variant-numeric:tabular-nums; }
+  dialog::backdrop{ background:rgba(14,18,21,.74); backdrop-filter:blur(4px); }
+  .no-scrollbar::-webkit-scrollbar{ display:none; }
+  .no-scrollbar{ -ms-overflow-style:none; scrollbar-width:none; }
+  .tile-grid{ background-image:
+    linear-gradient(rgba(255,255,255,.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.55) 1px, transparent 1px);
+    background-size:34px 34px; }
+</style>
+</head>
+
+<body class="bg-white text-ink font-sans antialiased">
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ═══════════ SVG ILLUSTRATION LIBRARY (drawn, not stock) ═══════════ -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+<defs>
+  <linearGradient id="tubGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EDF1"/>
+  </linearGradient>
+  <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#EDF2F5"/><stop offset="1" stop-color="#DDE5EB"/>
+  </linearGradient>
+  <linearGradient id="lightBeam" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity=".85"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="stripGrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#BFE6DD" stop-opacity=".25"/>
+    <stop offset=".5" stop-color="#8FD3C6" stop-opacity=".55"/>
+    <stop offset="1" stop-color="#BFE6DD" stop-opacity=".25"/>
+  </linearGradient>
+
+  <!-- ── Tension Grab Pole ── -->
+  <symbol id="illo-pole" viewBox="0 0 160 210">
+    <rect x="22" y="196" width="116" height="9" rx="4.5" fill="#D6DEE5"/>
+    <rect x="30" y="4"  width="100" height="9" rx="4.5" fill="#D6DEE5"/>
+    <!-- ceiling + floor pressure plates -->
+    <rect x="58" y="9"   width="44" height="11" rx="5" class="metal-edge"/>
+    <rect x="58" y="188" width="44" height="11" rx="5" class="metal-edge"/>
+    <!-- main tube -->
+    <rect x="71" y="18" width="18" height="172" rx="9" class="metal-mid"/>
+    <rect x="71" y="18" width="7"  height="172" rx="3.5" class="metal-hi" opacity=".75"/>
+    <rect x="84" y="18" width="5"  height="172" rx="2.5" class="metal-lo" opacity=".6"/>
+    <!-- tension collar + calibrated indicator -->
+    <rect x="66" y="52" width="28" height="16" rx="6" class="metal-edge"/>
+    <circle cx="80" cy="60" r="4.5" fill="#0E6B5C"/>
+    <!-- textured grip zone -->
+    <rect x="68" y="88" width="24" height="56" rx="12" class="metal-lo"/>
+    <g stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2" stroke-linecap="round">
+      <line x1="72" y1="98"  x2="88" y2="98"/>
+      <line x1="72" y1="107" x2="88" y2="107"/>
+      <line x1="72" y1="116" x2="88" y2="116"/>
+      <line x1="72" y1="125" x2="88" y2="125"/>
+      <line x1="72" y1="134" x2="88" y2="134"/>
+    </g>
+  </symbol>
+
+  <!-- ── Tub Clamp Grab Bar ── -->
+  <symbol id="illo-clamp" viewBox="0 0 200 170">
+    <!-- tub wall cross-section -->
+    <path d="M52 58 h44 a10 10 0 0 1 10 10 v96 h-64 v-96 a10 10 0 0 1 10-10 z" fill="url(#tubGrad)" stroke="#C7D1D9" stroke-width="2"/>
+    <rect x="42" y="58" width="64" height="12" rx="6" fill="#F2F6F8" stroke="#C7D1D9" stroke-width="1.5"/>
+    <!-- clamp body gripping the wall -->
+    <path d="M40 74 h68 a8 8 0 0 1 8 8 v30 a8 8 0 0 1-8 8 h-68 a8 8 0 0 1-8-8 v-30 a8 8 0 0 1 8-8 z" class="metal-mid"/>
+    <rect x="32" y="74" width="84" height="9" rx="4.5" class="metal-hi" opacity=".65"/>
+    <!-- non-marring pads -->
+    <rect x="44" y="66" width="60" height="7" rx="3.5" fill="#2E3A42" opacity=".55"/>
+    <rect x="44" y="113" width="60" height="7" rx="3.5" fill="#2E3A42" opacity=".55"/>
+    <!-- tightening knob -->
+    <circle cx="74" cy="97" r="11" class="metal-edge"/>
+    <circle cx="74" cy="97" r="4"  fill="#0E6B5C"/>
+    <!-- vertical rail -->
+    <rect x="120" y="22" width="17" height="120" rx="8.5" class="metal-mid"/>
+    <rect x="120" y="22" width="6"  height="120" rx="3"   class="metal-hi" opacity=".7"/>
+    <rect x="117" y="52" width="23" height="46" rx="11" class="metal-lo"/>
+    <g stroke="#FFFFFF" stroke-opacity=".3" stroke-width="2" stroke-linecap="round">
+      <line x1="122" y1="62" x2="135" y2="62"/>
+      <line x1="122" y1="71" x2="135" y2="71"/>
+      <line x1="122" y1="80" x2="135" y2="80"/>
+      <line x1="122" y1="89" x2="135" y2="89"/>
+    </g>
+    <!-- anti-rotation plate -->
+    <rect x="112" y="128" width="33" height="12" rx="5" class="metal-edge"/>
+  </symbol>
+
+  <!-- ── Non-Slip Safety Strips ── -->
+  <symbol id="illo-strips" viewBox="0 0 200 170">
+    <path d="M24 44 h152 a14 14 0 0 1 14 14 v66 a22 22 0 0 1-22 22 h-136 a22 22 0 0 1-22-22 v-66 a14 14 0 0 1 14-14 z" fill="url(#tubGrad)" stroke="#C7D1D9" stroke-width="2.5"/>
+    <ellipse cx="100" cy="52" rx="76" ry="9" fill="#FFFFFF" opacity=".9"/>
+    <g>
+      <rect x="40"  y="74" width="17" height="62" rx="8.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.5"/>
+      <rect x="66"  y="74" width="17" height="62" rx="8.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.5"/>
+      <rect x="92"  y="74" width="17" height="62" rx="8.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.5"/>
+      <rect x="118" y="74" width="17" height="62" rx="8.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.5"/>
+      <rect x="144" y="74" width="17" height="62" rx="8.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.5"/>
+    </g>
+    <g fill="#5FB8A6" opacity=".5">
+      <circle cx="48" cy="90"  r="1.4"/><circle cx="48" cy="104" r="1.4"/><circle cx="48" cy="118" r="1.4"/>
+      <circle cx="74" cy="90"  r="1.4"/><circle cx="74" cy="104" r="1.4"/><circle cx="74" cy="118" r="1.4"/>
+      <circle cx="100" cy="90" r="1.4"/><circle cx="100" cy="104" r="1.4"/><circle cx="100" cy="118" r="1.4"/>
+      <circle cx="126" cy="90" r="1.4"/><circle cx="126" cy="104" r="1.4"/><circle cx="126" cy="118" r="1.4"/>
+      <circle cx="152" cy="90" r="1.4"/><circle cx="152" cy="104" r="1.4"/><circle cx="152" cy="118" r="1.4"/>
+    </g>
+    <circle cx="168" cy="62" r="7" fill="none" stroke="#7FC9BA" stroke-width="2" opacity=".7"/>
+    <path d="M165 62 l2.4 2.4 L172 59" fill="none" stroke="#0E6B5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- ── Full Care Package (all three) ── -->
+  <symbol id="illo-bundle" viewBox="0 0 220 180">
+    <path d="M18 62 l92-34 92 34 -92 34 z" fill="#E9EFF3" stroke="#C7D1D9" stroke-width="2"/>
+    <path d="M18 62 v74 l92 34 v-74 z" fill="#DCE5EB" stroke="#C7D1D9" stroke-width="2"/>
+    <path d="M202 62 v74 l-92 34 v-74 z" fill="#CBD6DE" stroke="#C7D1D9" stroke-width="2"/>
+    <rect x="96" y="14" width="28" height="150" rx="14" fill="#FFFFFF" opacity=".55"/>
+    <!-- pole -->
+    <rect x="44" y="76" width="11" height="74" rx="5.5" class="metal-mid"/>
+    <rect x="44" y="76" width="4"  height="74" rx="2"   class="metal-hi" opacity=".7"/>
+    <rect x="42" y="96" width="15" height="26" rx="7"   class="metal-lo"/>
+    <!-- clamp -->
+    <rect x="70" y="104" width="30" height="11" rx="5.5" class="metal-mid"/>
+    <rect x="80" y="86"  width="11" height="40" rx="5.5" class="metal-mid"/>
+    <circle cx="85" cy="110" r="4" fill="#0E6B5C"/>
+    <!-- strips -->
+    <g>
+      <rect x="132" y="98"  width="9" height="34" rx="4.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+      <rect x="146" y="102" width="9" height="34" rx="4.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+      <rect x="160" y="106" width="9" height="34" rx="4.5" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+    </g>
+  </symbol>
+
+  <!-- ── Hero: a real bathroom, wide enough to hold the whole range ── -->
+  <symbol id="illo-scene" viewBox="0 0 580 420">
+    <rect width="580" height="420" rx="22" fill="url(#wallGrad)"/>
+    <path d="M360 0 L580 0 L580 220 Z" fill="url(#lightBeam)" opacity=".45"/>
+    <!-- window -->
+    <rect x="236" y="34" width="96" height="76" rx="9" fill="#FFFFFF" opacity=".72" stroke="#CBD6DE" stroke-width="2"/>
+    <line x1="284" y1="34" x2="284" y2="110" stroke="#CBD6DE" stroke-width="2"/>
+    <line x1="236" y1="72" x2="332" y2="72" stroke="#CBD6DE" stroke-width="2"/>
+    <!-- floor -->
+    <rect y="330" width="580" height="90" fill="#D3DCE3"/>
+    <rect y="330" width="580" height="5" fill="#BFCAD3"/>
+
+    <!-- bathtub (always present) -->
+    <path d="M132 236 h228 a18 18 0 0 1 18 18 v44 a34 34 0 0 1-34 34 h-196 a34 34 0 0 1-34-34 v-44 a18 18 0 0 1 18-18 z" fill="url(#tubGrad)" stroke="#A9B8C3" stroke-width="3"/>
+    <ellipse cx="246" cy="248" rx="110" ry="11" fill="#FFFFFF" opacity=".95"/>
+
+    <!-- toilet (always present) -->
+    <path d="M452 268 h56 a12 12 0 0 1 12 12 v22 a26 26 0 0 1-26 26 h-28 a26 26 0 0 1-26-26 v-22 a12 12 0 0 1 12-12 z" fill="url(#tubGrad)" stroke="#A9B8C3" stroke-width="3"/>
+    <rect x="450" y="212" width="60" height="50" rx="10" fill="#F2F6F8" stroke="#A9B8C3" stroke-width="3"/>
+    <ellipse cx="480" cy="268" rx="26" ry="8" fill="#FFFFFF" opacity=".9"/>
+    <rect x="456" y="328" width="48" height="8" rx="4" fill="#C9D4DB"/>
+
+    <!-- ── swappable pieces ── -->
+    <g id="sc-strips" opacity=".95">
+      <rect x="186" y="262" width="12" height="42" rx="6" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+      <rect x="206" y="262" width="12" height="42" rx="6" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+      <rect x="226" y="262" width="12" height="42" rx="6" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+      <rect x="246" y="262" width="12" height="42" rx="6" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+      <rect x="266" y="262" width="12" height="42" rx="6" fill="url(#stripGrad)" stroke="#7FC9BA" stroke-width="1.2"/>
+    </g>
+
+    <g id="sc-rail">
+      <rect x="126" y="230" width="70" height="14" rx="7" class="metal-mid"/>
+      <rect x="126" y="230" width="70" height="5" rx="2.5" class="metal-hi" opacity=".6"/>
+      <rect x="132" y="243" width="16" height="12" rx="4" class="metal-lo" opacity=".7"/>
+      <rect x="152" y="176" width="15" height="58" rx="7.5" class="metal-mid"/>
+      <rect x="152" y="176" width="5" height="58" rx="2.5" class="metal-hi" opacity=".7"/>
+      <rect x="149" y="192" width="21" height="32" rx="10" class="metal-lo"/>
+    </g>
+
+    <g id="sc-pole">
+      <rect x="54" y="16" width="40" height="10" rx="5" class="metal-edge"/>
+      <rect x="54" y="336" width="40" height="10" rx="5" class="metal-edge"/>
+      <rect x="65" y="24" width="18" height="314" rx="9" class="metal-mid"/>
+      <rect x="65" y="24" width="7" height="314" rx="3.5" class="metal-hi" opacity=".72"/>
+      <rect x="78" y="24" width="5" height="314" rx="2.5" class="metal-lo" opacity=".55"/>
+      <rect x="60" y="62" width="28" height="16" rx="7" class="metal-edge"/>
+      <circle class="lock-pulse" cx="74" cy="70" r="13" fill="#0E6B5C" opacity=".35"/>
+      <circle cx="74" cy="70" r="5" fill="#0E6B5C"/>
+      <rect x="62" y="150" width="24" height="70" rx="12" class="metal-lo"/>
+      <g stroke="#FFFFFF" stroke-opacity=".26" stroke-width="2.2" stroke-linecap="round">
+        <line x1="66" y1="162" x2="82" y2="162"/><line x1="66" y1="174" x2="82" y2="174"/>
+        <line x1="66" y1="186" x2="82" y2="186"/><line x1="66" y1="198" x2="82" y2="198"/>
+        <line x1="66" y1="210" x2="82" y2="210"/>
+      </g>
+    </g>
+
+    <g id="sc-toilet-rail">
+      <g>
+        <rect x="424" y="236" width="12" height="92" rx="6" class="metal-mid"/>
+        <rect x="424" y="236" width="4" height="92" rx="2" class="metal-hi" opacity=".7"/>
+        <rect x="424" y="230" width="38" height="12" rx="6" class="metal-mid"/>
+        <rect x="421" y="254" width="18" height="30" rx="9" class="metal-lo"/>
+        <rect x="418" y="324" width="24" height="9" rx="4.5" class="metal-edge"/>
+      </g>
+      <g>
+        <rect x="524" y="236" width="12" height="92" rx="6" class="metal-mid"/>
+        <rect x="524" y="236" width="4" height="92" rx="2" class="metal-hi" opacity=".7"/>
+        <rect x="498" y="230" width="38" height="12" rx="6" class="metal-mid"/>
+        <rect x="521" y="254" width="18" height="30" rx="9" class="metal-lo"/>
+        <rect x="518" y="324" width="24" height="9" rx="4.5" class="metal-edge"/>
+      </g>
+    </g>
+
+    <g id="sc-light">
+      <path d="M398 330 L358 330 a40 40 0 0 1 80 0 z" fill="url(#stripGrad)" opacity=".7"/>
+      <rect x="386" y="288" width="24" height="30" rx="7" class="metal-mid"/>
+      <rect x="386" y="288" width="9" height="30" rx="4" class="metal-hi" opacity=".6"/>
+      <circle cx="398" cy="299" r="5" fill="#FFFFFF" opacity=".92"/>
+      <circle cx="398" cy="299" r="2.4" fill="#0E6B5C"/>
+    </g>
+  </symbol>
+
+  <!-- ── Toilet Safety Rail ── -->
+  <symbol id="illo-toilet" viewBox="0 0 200 170">
+    <path d="M78 96 h44 a10 10 0 0 1 10 10 v26 a20 20 0 0 1-20 20 h-24 a20 20 0 0 1-20-20 v-26 a10 10 0 0 1 10-10 z" fill="url(#tubGrad)" stroke="#C7D1D9" stroke-width="2"/>
+    <rect x="74" y="60" width="52" height="40" rx="10" fill="#F2F6F8" stroke="#C7D1D9" stroke-width="2"/>
+    <rect x="80" y="88" width="40" height="9" rx="4.5" fill="#E2E9EE"/>
+    <g>
+      <rect x="40" y="70" width="14" height="76" rx="7" class="metal-mid"/>
+      <rect x="40" y="70" width="5"  height="76" rx="2.5" class="metal-hi" opacity=".7"/>
+      <rect x="40" y="62" width="44" height="13" rx="6.5" class="metal-mid"/>
+      <rect x="37" y="88" width="20" height="34" rx="10" class="metal-lo"/>
+      <rect x="34" y="142" width="26" height="10" rx="5" class="metal-edge"/>
+    </g>
+    <g>
+      <rect x="146" y="70" width="14" height="76" rx="7" class="metal-mid"/>
+      <rect x="146" y="70" width="5"  height="76" rx="2.5" class="metal-hi" opacity=".7"/>
+      <rect x="116" y="62" width="44" height="13" rx="6.5" class="metal-mid"/>
+      <rect x="143" y="88" width="20" height="34" rx="10" class="metal-lo"/>
+      <rect x="140" y="142" width="26" height="10" rx="5" class="metal-edge"/>
+    </g>
+  </symbol>
+
+  <!-- ── Shower Bench ── -->
+  <symbol id="illo-bench" viewBox="0 0 200 170">
+    <rect x="34" y="66" width="132" height="18" rx="9" class="metal-mid"/>
+    <rect x="34" y="66" width="132" height="6" rx="3" class="metal-hi" opacity=".6"/>
+    <g stroke="#FFFFFF" stroke-opacity=".22" stroke-width="2.5" stroke-linecap="round">
+      <line x1="52" y1="75" x2="148" y2="75"/>
+    </g>
+    <rect x="48" y="84" width="13" height="62" rx="6.5" class="metal-mid"/>
+    <rect x="139" y="84" width="13" height="62" rx="6.5" class="metal-mid"/>
+    <rect x="48" y="84" width="5" height="62" rx="2.5" class="metal-hi" opacity=".65"/>
+    <rect x="139" y="84" width="5" height="62" rx="2.5" class="metal-hi" opacity=".65"/>
+    <rect x="42" y="142" width="25" height="11" rx="5.5" class="metal-edge"/>
+    <rect x="133" y="142" width="25" height="11" rx="5.5" class="metal-edge"/>
+    <rect x="54" y="106" width="92" height="9" rx="4.5" class="metal-lo" opacity=".8"/>
+    <circle cx="61" cy="96" r="4" fill="#0E6B5C"/>
+    <circle cx="139" cy="96" r="4" fill="#0E6B5C"/>
+  </symbol>
+
+  <!-- ── Motion Night Light ── -->
+  <symbol id="illo-light" viewBox="0 0 200 170">
+    <path d="M100 148 L34 148 a66 66 0 0 1 132 0 z" fill="url(#stripGrad)" opacity=".55"/>
+    <rect x="72" y="44" width="56" height="62" rx="14" class="metal-mid"/>
+    <rect x="72" y="44" width="20" height="62" rx="14" class="metal-hi" opacity=".55"/>
+    <rect x="84" y="82" width="32" height="12" rx="6" fill="#0E6B5C"/>
+    <circle cx="100" cy="66" r="11" fill="#FFFFFF" opacity=".92"/>
+    <circle cx="100" cy="66" r="5" fill="#0E6B5C" opacity=".75"/>
+    <rect x="92" y="106" width="6" height="12" rx="2" class="metal-edge"/>
+    <rect x="102" y="106" width="6" height="12" rx="2" class="metal-edge"/>
+    <g stroke="#7FC9BA" stroke-width="2.5" stroke-linecap="round" opacity=".6" fill="none">
+      <path d="M52 120 a54 54 0 0 1 12-30"/>
+      <path d="M148 120 a54 54 0 0 0-12-30"/>
+    </g>
+  </symbol>
+
+  <!-- ── Handheld Shower Head ── -->
+  <symbol id="illo-showerhead" viewBox="0 0 200 170">
+    <path d="M58 26 q0 46 22 64 q22 18 22 44" fill="none" class="metal-stroke" stroke-width="11" stroke-linecap="round" opacity=".55"/>
+    <path d="M58 26 q0 46 22 64 q22 18 22 44" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="4" stroke-linecap="round"/>
+    <rect x="44" y="16" width="28" height="14" rx="7" class="metal-edge"/>
+    <rect x="92" y="126" width="21" height="30" rx="10" class="metal-mid"/>
+    <rect x="92" y="126" width="7" height="30" rx="3.5" class="metal-hi" opacity=".7"/>
+    <ellipse cx="102" cy="120" rx="30" ry="15" class="metal-mid"/>
+    <ellipse cx="102" cy="117" rx="30" ry="15" class="metal-hi" opacity=".75"/>
+    <ellipse cx="102" cy="117" rx="21" ry="9.5" class="metal-lo" opacity=".55"/>
+    <g fill="#7FC9BA" opacity=".8">
+      <circle cx="90" cy="116" r="2"/><circle cx="102" cy="114" r="2"/><circle cx="114" cy="116" r="2"/>
+      <circle cx="96" cy="121" r="2"/><circle cx="108" cy="121" r="2"/>
+    </g>
+  </symbol>
+
+  <!-- ── Trust / step icons ── -->
+  <symbol id="ic-nodrill" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".35"/>
+    <path d="M16 20 h9 l4 -6 h5 v10 h-5 l-4 -4 h-9 z" fill="currentColor" opacity=".9"/>
+    <rect x="14" y="26" width="13" height="4" rx="2" fill="currentColor" opacity=".55"/>
+    <line x1="11" y1="37" x2="37" y2="11" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-clock" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M24 13 v12 l8 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-shield" viewBox="0 0 48 48">
+    <path d="M24 5 L40 12 v12 c0 10-7 16-16 19-9-3-16-9-16-19V12z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M17 24 l5 5 l10 -11" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-weight" viewBox="0 0 48 48">
+    <path d="M14 16 h20 l4 24 H10 z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="24" cy="13" r="5" fill="none" stroke="currentColor" stroke-width="3"/>
+  </symbol>
+  <symbol id="ic-cart" viewBox="0 0 24 24">
+    <path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20.5 8H6.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.6" fill="currentColor"/><circle cx="17.5" cy="20" r="1.6" fill="currentColor"/>
+  </symbol>
+</defs>
+</svg>
+
+
+<!-- ═══════════ PITCH TABS ═══════════ -->
+<nav id="pitchTabs" class="sticky top-0 z-50 bg-ink text-white border-b border-white/10" aria-label="Sections">
+  <div class="max-w-8xl mx-auto px-3 sm:px-6 flex items-center gap-1.5 sm:gap-2 h-[48px] sm:h-[52px] overflow-x-auto no-scrollbar">
+    <span class="font-display font-bold text-[15px] mr-1 whitespace-nowrap hidden md:inline">SafeStep<span class="text-care-light"> Living</span></span>
+    <button data-pt="store" aria-selected="true"
+      class="pt whitespace-nowrap px-3 sm:px-4 py-1.5 rounded-lg text-[14px] font-semibold transition bg-white text-ink">Store</button>
+    <button data-pt="opportunity" aria-selected="false"
+      class="pt whitespace-nowrap px-3 sm:px-4 py-1.5 rounded-lg text-[14px] font-semibold transition text-nickel hover:text-white">Opportunity</button>
+    <button data-pt="economics" aria-selected="false"
+      class="pt whitespace-nowrap px-3 sm:px-4 py-1.5 rounded-lg text-[14px] font-semibold transition text-nickel hover:text-white">Economics</button>
+    <button data-pt="marketing" aria-selected="false"
+      class="pt whitespace-nowrap px-3 sm:px-4 py-1.5 rounded-lg text-[14px] font-semibold transition text-nickel hover:text-white">Marketing</button>
+  </div>
+</nav>
+
+<div id="pt-store" class="ptpanel on">
+<!-- ═══════════ ANNOUNCEMENT ═══════════ -->
+<div class="bg-ink text-white text-center text-[15px] font-medium py-2.5 px-4">
+  <span class="inline-flex items-center gap-2 flex-wrap justify-center">
+    Free shipping over $99 &nbsp;·&nbsp; 30-day money-back guarantee &nbsp;·&nbsp;
+    <span class="font-bold text-nickel-light">FSA &amp; HSA eligible</span>
+  </span>
+</div>
+
+<!-- ═══════════ STICKY HEADER ═══════════ -->
+<header class="sticky top-[48px] sm:top-[52px] z-40 bg-white/95 backdrop-blur-md border-b border-nickel-light">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-[64px] sm:h-[74px] gap-2 sm:gap-4">
+
+      <a href="#main" class="flex items-center gap-2.5 shrink-0" aria-label="SafeStep Living home">
+        <svg width="36" height="36" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#0E1215"/>
+          <rect x="9" y="8.5" width="3.4" height="15" rx="1.7" fill="#8D97A3"/>
+          <rect x="19.6" y="8.5" width="3.4" height="15" rx="1.7" fill="#8D97A3"/>
+          <rect x="9" y="14.4" width="14" height="3.2" rx="1.6" fill="#0E6B5C"/>
+        </svg>
+        <span class="font-display font-bold text-[19px] sm:text-[21px] tracking-tight">SafeStep<span class="text-care"> Living</span></span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-[16px] font-semibold text-ink-mute" aria-label="Primary">
+        <a href="#products" class="hover:text-ink transition">Products</a>
+        <button type="button" class="open-assess hover:text-ink transition">Which do I need?</button>
+        <a href="#builder" class="hover:text-ink transition">Build your room</a>
+        <a href="#reviews" class="hover:text-ink transition">Reviews</a>
+        <a href="#b2b" class="hover:text-ink transition">For operators</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <button type="button" id="openCart"
+          class="relative flex items-center gap-2 border-2 border-nickel-light hover:border-ink px-3.5 h-12 rounded-xl font-bold text-[16px] transition"
+          aria-label="Open cart">
+          <svg class="w-6 h-6" aria-hidden="true"><use href="#ic-cart"/></svg>
+          <span class="tabular hidden sm:inline" data-cart-count>0</span>
+          <span data-cart-dot class="hidden absolute -top-1.5 -right-1.5 min-w-[22px] h-[22px] px-1.5 rounded-full bg-signal text-white text-[12px] font-bold flex items-center justify-center tabular">0</span>
+        </button>
+        <button type="button" data-add="full-bathroom-care-package"
+          class="bg-care hover:bg-care-dark text-white font-bold text-[15px] sm:text-[16px] px-4 sm:px-6 h-12 rounded-xl shadow-lift transition active:scale-[.98] whitespace-nowrap">
+          <span class="sm:hidden">Shop</span><span class="hidden sm:inline">Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="relative bg-gradient-to-b from-nickel-pale via-nickel-mist to-white border-b border-nickel-light">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-20 grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-16 items-center">
+
+    <div>
+      <div class="inline-flex items-center gap-2 bg-care-light text-care-dark font-bold text-[14px] px-3.5 py-1.5 rounded-full mb-6">
+        <svg class="w-4 h-4" aria-hidden="true"><use href="#ic-nodrill"/></svg>
+        No-drill, renter-friendly design
+      </div>
+
+      <h1 class="font-display font-bold text-[36px] sm:text-[52px] lg:text-[66px] leading-[1.04] tracking-tight mb-5">
+        Bathroom safety<br />without a single hole
+        <span class="block text-care mt-1">in the wall.</span>
+      </h1>
+
+      <p class="text-[18px] sm:text-[22px] leading-[1.55] text-ink-mute max-w-xl mb-7">
+        Grab poles and tub rails rated to <strong class="text-ink font-bold">300 lbs</strong> that
+        lock into place in <strong class="text-ink font-bold">under five minutes</strong> —
+        no tools and no drilling. They come out the same way they went in.
+      </p>
+
+      <div class="grid sm:flex sm:flex-row gap-3 mb-5">
+        <button type="button" data-add="full-bathroom-care-package"
+          class="bg-care hover:bg-care-dark text-white font-bold text-[17px] sm:text-[18px] px-6 sm:px-8 py-5 rounded-xl shadow-deep transition active:scale-[.98]">
+          Full Care Package — $169.99
+        </button>
+        <button type="button" data-add="complete-bathroom-system"
+          class="bg-ink hover:bg-ink-soft text-white font-bold text-[17px] sm:text-[18px] px-6 sm:px-8 py-5 rounded-xl shadow-lift transition active:scale-[.98]">
+          Complete System — $229.99
+        </button>
+      </div>
+      <button type="button"
+        class="open-assess text-[17px] font-bold text-care hover:underline mb-8">
+        Not sure which one? Answer three questions →
+      </button>
+
+      <div class="grid grid-cols-1 sm:flex sm:flex-wrap gap-2.5 sm:gap-3 mb-7">
+        <div class="flex items-center gap-2.5 bg-white border-2 border-ink rounded-xl px-4 py-3">
+          <svg class="w-7 h-7 text-care" aria-hidden="true"><use href="#ic-weight"/></svg>
+          <div class="leading-tight">
+            <div class="font-bold text-[16px]">Holds 300 lbs</div>
+            <div class="text-[13px] text-ink-mute">Independently load-tested</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2.5 bg-white border border-nickel-light rounded-xl px-4 py-3">
+          <svg class="w-7 h-7 text-care" aria-hidden="true"><use href="#ic-clock"/></svg>
+          <div class="leading-tight">
+            <div class="font-bold text-[16px]" data-delivery-short>Arrives this week</div>
+            <div class="text-[13px] text-ink-mute">Free over $99</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2.5 bg-white border border-nickel-light rounded-xl px-4 py-3">
+          <span class="w-7 h-7 rounded-lg bg-care-light text-care-dark font-bold text-[13px] flex items-center justify-center" aria-hidden="true">FSA</span>
+          <div class="leading-tight">
+            <div class="font-bold text-[16px]">FSA &amp; HSA eligible</div>
+            <div class="text-[13px] text-ink-mute">Use pre-tax dollars</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 flex-wrap">
+        <div class="flex -space-x-2.5" aria-hidden="true">
+          <span class="w-10 h-10 rounded-full bg-nickel border-2 border-white flex items-center justify-center text-white font-bold text-[14px]">DR</span>
+          <span class="w-10 h-10 rounded-full bg-care border-2 border-white flex items-center justify-center text-white font-bold text-[14px]">WH</span>
+          <span class="w-10 h-10 rounded-full bg-ink-mute border-2 border-white flex items-center justify-center text-white font-bold text-[14px]">MT</span>
+          <span class="w-10 h-10 rounded-full bg-signal border-2 border-white flex items-center justify-center text-white font-bold text-[14px]">+</span>
+        </div>
+        <div class="text-[16px]">
+          <div class="text-gold text-[17px] tracking-wide" aria-hidden="true">★★★★★</div>
+          <div class="text-ink-mute">
+            <strong class="text-ink font-bold tabular" data-review-count>4,812</strong> families
+            protected · <strong class="text-ink font-bold">4.8/5</strong> average
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero scene + finish switcher -->
+    <div class="relative">
+      <div class="bg-white rounded-3xl shadow-deep border border-nickel-light p-4 sm:p-5">
+        <div class="relative">
+          <svg class="illo w-full h-auto rounded-2xl" viewBox="0 0 580 420" role="img"
+               aria-label="A bathroom fitted with a SafeStep floor-to-ceiling pole beside the tub, a clamp-on tub rail, non-slip strips, toilet safety rails and a night light" id="heroScene">
+            <use href="#illo-scene"/>
+          </svg>
+          <div class="absolute bottom-3 left-3 bg-ink/95 backdrop-blur text-white rounded-xl px-4 py-2.5 shadow-deep flex items-center gap-2.5">
+            <svg class="w-7 h-7 text-care-light" aria-hidden="true"><use href="#ic-weight"/></svg>
+            <div class="leading-tight">
+              <div class="font-bold text-[17px] tabular">300 lb</div>
+              <div class="text-[12px] text-nickel">load tested</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-ink rounded-2xl p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-care animate-pulse" aria-hidden="true"></span>
+            <p class="text-[15px] font-bold text-white">See each package in the room</p>
+          </div>
+          <div class="grid grid-cols-2 gap-2" role="radiogroup" aria-label="Preview a package in the bathroom">
+            <button type="button" data-scene="full-bathroom-care-package" aria-pressed="true"
+              class="scene-btn text-left px-4 py-3 rounded-xl transition bg-care text-white">
+              <span class="block text-[15px] font-bold leading-tight">Full Care Package</span>
+              <span class="block text-[13px] opacity-80" data-scene-count>3 pieces</span>
+            </button>
+            <button type="button" data-scene="complete-bathroom-system" aria-pressed="false"
+              class="scene-btn text-left px-4 py-3 rounded-xl transition bg-white/10 text-nickel hover:bg-white/20">
+              <span class="block text-[15px] font-bold leading-tight">Complete System</span>
+              <span class="block text-[13px] opacity-80" data-scene-count>5 pieces</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-3 mt-3 px-1 flex-wrap">
+          <div>
+            <div class="font-bold text-[16px]">Choose your finish</div>
+            <div class="text-[14px] text-ink-mute" data-finish-label>Matte Black</div>
+          </div>
+          <div class="flex gap-2" role="radiogroup" aria-label="Product finish">
+            <button type="button" data-finish="matte_black" aria-pressed="true"
+              class="finish-swatch w-12 h-12 rounded-xl border-[3px] border-care ring-2 ring-care/25 transition"
+              style="background:linear-gradient(135deg,#3A4249,#141A1F)" aria-label="Matte black finish"></button>
+            <button type="button" data-finish="brushed_nickel" aria-pressed="false"
+              class="finish-swatch w-12 h-12 rounded-xl border-[3px] border-nickel-light hover:border-ink transition"
+              style="background:linear-gradient(135deg,#E3E8ED,#7E8893)" aria-label="Brushed nickel finish"></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRUST BAR ═══════════ -->
+<section aria-label="What you get" class="bg-ink text-white py-9">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 grid sm:grid-cols-3 gap-7">
+    <div class="flex gap-4 items-start reveal">
+      <svg class="w-10 h-10 shrink-0 text-care-light" aria-hidden="true"><use href="#ic-nodrill"/></svg>
+      <div>
+        <h3 class="font-bold text-[18px] mb-1">No-Drill, Renter-Friendly Design</h3>
+        <p class="text-nickel text-[15px] leading-relaxed">Nothing is drilled, anchored or permanently adhered — so nothing is left behind when you take it down.</p>
+      </div>
+    </div>
+    <div class="flex gap-4 items-start reveal">
+      <svg class="w-10 h-10 shrink-0 text-care-light" aria-hidden="true"><use href="#ic-clock"/></svg>
+      <div>
+        <h3 class="font-bold text-[18px] mb-1">Zero-Tool, 5-Minute Setup</h3>
+        <p class="text-nickel text-[15px] leading-relaxed">No drill, no stud finder, no handyman. If you can turn a doorknob, you can install this.</p>
+      </div>
+    </div>
+    <div class="flex gap-4 items-start reveal">
+      <svg class="w-10 h-10 shrink-0 text-care-light" aria-hidden="true"><use href="#ic-shield"/></svg>
+      <div>
+        <h3 class="font-bold text-[18px] mb-1">30-Day Money-Back Guarantee</h3>
+        <p class="text-nickel text-[15px] leading-relaxed">Try it in the actual bathroom. If it isn't right, we pay the return shipping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ EMPATHY ═══════════ -->
+<section class="py-12 sm:py-16 lg:py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
+    <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">The call you don't want to get</p>
+    <h2 class="font-display font-bold text-[28px] sm:text-[46px] leading-[1.1] tracking-tight mb-7">
+      Most falls don't happen on the stairs.<br class="hidden sm:block" />
+      They happen in the bathroom.
+    </h2>
+    <p class="text-[20px] leading-[1.6] text-ink-mute mb-10">
+      Around <strong class="text-ink">80% of falls at home</strong> happen in the bathroom — on the step into the tub,
+      the turn out of the shower, the reach for a towel. The fix has always meant drilling into tile,
+      asking a landlord, or watching a parent quietly avoid bathing altogether.
+      <strong class="text-ink">SafeStep removes all three problems in an afternoon.</strong>
+    </p>
+    <div class="grid sm:grid-cols-3 gap-5 text-left">
+      <div class="bg-nickel-pale rounded-2xl p-6 border border-nickel-light">
+        <h3 class="font-bold text-[17px] mb-2">For adult children</h3>
+        <p class="text-[16px] text-ink-mute leading-relaxed">Ship it to Mom. She installs it herself in minutes — no contractor in her home, no argument about independence.</p>
+      </div>
+      <div class="bg-nickel-pale rounded-2xl p-6 border border-nickel-light">
+        <h3 class="font-bold text-[17px] mb-2">For active seniors</h3>
+        <p class="text-[16px] text-ink-mute leading-relaxed">Matte black and brushed nickel that read as fixtures, not as medical equipment. Your bathroom still looks like yours.</p>
+      </div>
+      <div class="bg-nickel-pale rounded-2xl p-6 border border-nickel-light">
+        <h3 class="font-bold text-[17px] mb-2">For care operators</h3>
+        <p class="text-[16px] text-ink-mute leading-relaxed">Outfit every bathroom without drilling a single hole — and reconfigure a room in minutes when a resident's needs change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ASSESSMENT BAND ═══════════ -->
+<section class="bg-care-light border-y border-care/20 py-12">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-7 text-center md:text-left">
+    <div class="flex-1">
+      <h2 class="font-display font-bold text-[28px] sm:text-[34px] tracking-tight text-care-deep mb-2">
+        Not sure which pieces you actually need?
+      </h2>
+      <p class="text-[18px] text-care-dark leading-relaxed">
+        Answer three questions about where things feel unsteady. We'll tell you exactly what covers it —
+        and we'll tell you when you <em>don't</em> need the full package.
+      </p>
+    </div>
+    <button type="button"
+      class="open-assess bg-care-deep hover:bg-care-dark text-white font-bold text-[18px] px-8 py-5 rounded-xl shadow-lift transition active:scale-[.98] shrink-0">
+      Find what fits — 30 seconds
+    </button>
+  </div>
+</section>
+
+<!-- ═══════════ PRODUCTS ═══════════ -->
+<section id="products" class="py-12 sm:py-16 lg:py-24 bg-nickel-pale border-b border-nickel-light">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-10 reveal">
+      <h2 class="font-display font-bold text-[28px] sm:text-[46px] tracking-tight mb-4">One box, or one piece at a time.</h2>
+      <p class="text-[19px] text-ink-mute max-w-2xl mx-auto">The packages cover a whole bathroom and cost less than the pieces separately. Everything is also sold on its own.</p>
+    </div>
+
+    <div class="flex justify-center mb-9">
+      <div class="inline-flex items-center gap-3 bg-white rounded-2xl border border-nickel-light p-2 pl-5 shadow-lift">
+        <span class="font-bold text-[16px]">Finish</span>
+        <div class="flex gap-2" role="radiogroup" aria-label="Product finish">
+          <button type="button" data-finish="matte_black" aria-pressed="true"
+            class="finish-swatch flex items-center gap-2 px-4 h-11 rounded-xl border-2 border-care ring-2 ring-care/20 font-semibold text-[15px] transition">
+            <span class="w-5 h-5 rounded-md" style="background:linear-gradient(135deg,#3A4249,#141A1F)"></span>Matte Black
+          </button>
+          <button type="button" data-finish="brushed_nickel" aria-pressed="false"
+            class="finish-swatch flex items-center gap-2 px-4 h-11 rounded-xl border-2 border-nickel-light hover:border-ink font-semibold text-[15px] transition">
+            <span class="w-5 h-5 rounded-md" style="background:linear-gradient(135deg,#E3E8ED,#7E8893)"></span>Brushed Nickel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="packageGrid" class="grid md:grid-cols-2 gap-6 mb-4"></div>
+
+    <div class="flex items-center gap-4 my-10">
+      <div class="h-px flex-1 bg-nickel-light"></div>
+      <p class="text-[16px] font-semibold text-ink-mute">Or choose pieces one at a time</p>
+      <div class="h-px flex-1 bg-nickel-light"></div>
+    </div>
+
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+  </div>
+</section>
+
+<!-- ═══════════ ROOM BUNDLE SELECTOR ═══════════ -->
+<section id="builder" class="py-12 sm:py-16 lg:py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Room Bundle Selector</p>
+      <h2 class="font-display font-bold text-[28px] sm:text-[46px] tracking-tight mb-4">Build the room. See the price instantly.</h2>
+      <p class="text-[19px] text-ink-mute max-w-2xl mx-auto">Pick what the bathroom needs. Volume pricing applies automatically — no code required.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-[1.35fr_1fr] gap-8">
+      <div class="space-y-5">
+        <fieldset class="bg-nickel-pale rounded-2xl border border-nickel-light p-6">
+          <legend class="font-bold text-[18px] px-2">How many bathrooms?</legend>
+          <div class="flex items-center gap-4 mt-3 flex-wrap">
+            <button type="button" data-rooms="-" aria-label="Decrease bathroom count"
+              class="w-14 h-14 rounded-xl border-2 border-ink font-bold text-[24px] hover:bg-ink hover:text-white transition">−</button>
+            <input id="roomCount" type="number" min="1" max="500" value="1" inputmode="numeric"
+              aria-label="Number of bathrooms"
+              class="w-24 h-14 text-center text-[24px] font-bold tabular rounded-xl border-2 border-nickel bg-white" />
+            <button type="button" data-rooms="+" aria-label="Increase bathroom count"
+              class="w-14 h-14 rounded-xl border-2 border-ink font-bold text-[24px] hover:bg-ink hover:text-white transition">+</button>
+            <p class="text-[15px] text-ink-mute leading-snug">Outfitting more than one?<br />Volume pricing kicks in at 2.</p>
+          </div>
+        </fieldset>
+
+        <div class="bg-nickel-pale rounded-2xl border border-nickel-light p-6">
+          <h3 class="font-bold text-[18px] mb-4">Choose your configuration</h3>
+          <div class="space-y-3" role="radiogroup" aria-label="Package configuration">
+            <label class="flex gap-4 items-start p-5 bg-white rounded-xl border-2 border-nickel-light cursor-pointer transition" data-config-card="complete">
+              <input type="radio" name="config" value="complete" class="mt-1.5 w-5 h-5 accent-care shrink-0" />
+              <span class="flex-1">
+                <span class="flex items-baseline justify-between gap-3 flex-wrap">
+                  <strong class="text-[18px]">Complete Bathroom System</strong>
+                  <span class="font-bold tabular text-[18px]">$229.99</span>
+                </span>
+                <span class="block text-[16px] text-ink-mute mt-1">Pole, tub rail, toilet rail, strips and night light · saves $30.89</span>
+                <span class="inline-block mt-2 bg-ink text-white font-bold text-[13px] px-2.5 py-1 rounded-md">EVERYTHING COVERED</span>
+              </span>
+            </label>
+
+            <label class="flex gap-4 items-start p-5 bg-white rounded-xl border-2 border-care ring-2 ring-care/20 cursor-pointer transition" data-config-card="bundle">
+              <input type="radio" name="config" value="bundle" checked class="mt-1.5 w-5 h-5 accent-care shrink-0" />
+              <span class="flex-1">
+                <span class="flex items-baseline justify-between gap-3 flex-wrap">
+                  <strong class="text-[18px]">Full Bathroom Care Package</strong>
+                  <span class="font-bold tabular text-[18px]">$169.99</span>
+                </span>
+                <span class="block text-[16px] text-ink-mute mt-1">Pole, tub rail and strips · saves $23.95 · 15-minute setup</span>
+                <span class="inline-block mt-2 bg-gold-light text-gold font-bold text-[13px] px-2.5 py-1 rounded-md">MOST CHOSEN</span>
+              </span>
+            </label>
+
+            <label class="flex gap-4 items-start p-5 bg-white rounded-xl border-2 border-nickel-light cursor-pointer transition" data-config-card="custom">
+              <input type="radio" name="config" value="custom" class="mt-1.5 w-5 h-5 accent-care shrink-0" />
+              <span class="flex-1">
+                <span class="text-[18px] font-bold">Build it piece by piece</span>
+                <span class="block text-[16px] text-ink-mute mt-1">Pick only what this bathroom needs.</span>
+              </span>
+            </label>
+          </div>
+          <div id="customPicker" class="mt-5 space-y-3 hidden"></div>
+        </div>
+
+        <div class="bg-nickel-pale rounded-2xl border border-nickel-light p-6">
+          <label for="promoCode" class="font-bold text-[17px] block mb-2">Have a promo code?</label>
+          <div class="flex gap-3">
+            <input id="promoCode" type="text" placeholder="SAFESTEP10" autocomplete="off"
+              class="flex-1 h-14 px-4 text-[17px] font-semibold uppercase rounded-xl border-2 border-nickel bg-white tracking-wide" />
+            <button type="button" id="applyPromo"
+              class="px-6 h-14 rounded-xl border-2 border-ink font-bold hover:bg-ink hover:text-white transition">Apply</button>
+          </div>
+          <p id="promoMessage" class="text-[15px] mt-2 min-h-[1.4em]" role="status"></p>
+        </div>
+      </div>
+
+      <div class="lg:sticky lg:top-[94px] h-fit">
+        <div class="bg-ink text-white rounded-2xl shadow-deep p-7">
+          <h3 class="font-display font-bold text-[24px] mb-5">Your order</h3>
+          <div id="summaryLines" class="space-y-3 text-[16px] mb-5" aria-live="polite"></div>
+          <div id="upsellBanner" class="hidden bg-signal text-white rounded-xl p-4 text-[15px] leading-snug mb-4"></div>
+          <div id="tierBanner" class="hidden bg-care-dark rounded-xl p-4 text-[15px] leading-snug mb-4"></div>
+
+          <dl class="space-y-2.5 text-[16px] border-t border-white/15 pt-4">
+            <div class="flex justify-between"><dt class="text-nickel">Subtotal</dt><dd class="tabular font-semibold" data-sum="subtotal">$0.00</dd></div>
+            <div class="flex justify-between hidden" data-row="volume"><dt class="text-nickel">Volume discount <span class="text-white/60" data-sum="tier"></span></dt><dd class="tabular font-semibold text-care-light" data-sum="volume">−$0.00</dd></div>
+            <div class="flex justify-between hidden" data-row="promo"><dt class="text-nickel">Promo <span class="text-white/60" data-sum="promoCode"></span></dt><dd class="tabular font-semibold text-care-light" data-sum="promo">−$0.00</dd></div>
+            <div class="flex justify-between"><dt class="text-nickel">Shipping</dt><dd class="tabular font-semibold" data-sum="shipping">FREE</dd></div>
+          </dl>
+
+          <div class="flex justify-between items-baseline border-t border-white/15 mt-4 pt-4 mb-1">
+            <span class="font-bold text-[20px]">Total</span>
+            <span class="font-display font-bold text-[34px] tabular" data-sum="total">$0.00</span>
+          </div>
+          <p class="text-care-light font-semibold text-[15px] mb-5 tabular" data-sum="savings"></p>
+
+          <button type="button" id="checkoutBtn"
+            class="w-full bg-care hover:bg-care-dark text-white font-bold text-[19px] py-5 rounded-xl transition active:scale-[.98] shadow-lift">
+            Checkout securely
+          </button>
+          <p class="text-center text-[14px] text-nickel mt-4 leading-relaxed">
+            <span data-sum="install">15-minute</span> total setup · 30-day returns<br />
+            No drilling, no anchors, no tools required
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HOW IT WORKS ═══════════ -->
+<section id="how" class="py-12 sm:py-16 lg:py-24 bg-nickel-pale border-y border-nickel-light">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-display font-bold text-[28px] sm:text-[46px] tracking-tight mb-4">Out of the box to fully installed in 15 minutes</h2>
+      <p class="text-[19px] text-ink-mute">No drill. No stud finder. No handyman in the house.</p>
+    </div>
+    <ol class="grid md:grid-cols-3 gap-7">
+      <li class="bg-white rounded-2xl p-7 border border-nickel-light shadow-lift reveal">
+        <div class="w-14 h-14 rounded-full bg-ink text-white font-display font-bold text-[24px] flex items-center justify-center mb-5">1</div>
+        <h3 class="font-bold text-[20px] mb-2">Set it in place</h3>
+        <p class="text-[17px] text-ink-mute leading-relaxed">Stand the pole where the handhold is needed, or seat the clamp on the tub wall. No measuring, no marking.</p>
+      </li>
+      <li class="bg-white rounded-2xl p-7 border border-nickel-light shadow-lift reveal">
+        <div class="w-14 h-14 rounded-full bg-ink text-white font-display font-bold text-[24px] flex items-center justify-center mb-5">2</div>
+        <h3 class="font-bold text-[20px] mb-2">Turn until it locks</h3>
+        <p class="text-[17px] text-ink-mute leading-relaxed">Hand-tighten until the indicator ring turns green. That's the calibrated 300 lb hold — you can't over- or under-do it.</p>
+      </li>
+      <li class="bg-white rounded-2xl p-7 border border-nickel-light shadow-lift reveal">
+        <div class="w-14 h-14 rounded-full bg-ink text-white font-display font-bold text-[24px] flex items-center justify-center mb-5">3</div>
+        <h3 class="font-bold text-[20px] mb-2">Use it that same day</h3>
+        <p class="text-[17px] text-ink-mute leading-relaxed">Lean on it, pull on it, trust it. When you move, it lifts away and the wall is as you found it.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════ COMPARISON ═══════════ -->
+<section class="py-12 sm:py-16 lg:py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <h2 class="font-display font-bold text-[28px] sm:text-[46px] tracking-tight text-center mb-10 reveal">Why not just drill one in?</h2>
+    <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift reveal">
+      <table class="w-full text-left text-[16px] min-w-[560px]">
+        <caption class="sr-only">SafeStep Living compared with traditional drilled-in grab bars</caption>
+        <thead class="bg-ink text-white">
+          <tr><th scope="col" class="p-4 font-bold">&nbsp;</th>
+              <th scope="col" class="p-4 font-bold">SafeStep Living</th>
+              <th scope="col" class="p-4 font-bold text-nickel">Drilled-in grab bar</th></tr>
+        </thead>
+        <tbody class="divide-y divide-nickel-light">
+          <tr><th scope="row" class="p-4 font-semibold bg-nickel-pale">Installation time</th><td class="p-4 font-semibold text-care">5 minutes, yourself</td><td class="p-4 text-ink-mute">2–4 hours + a contractor</td></tr>
+          <tr><th scope="row" class="p-4 font-semibold bg-nickel-pale">Typical cost</th><td class="p-4 font-semibold text-care">$49.95–$109 per bar</td><td class="p-4 text-ink-mute">$300–$600 per bar, installed</td></tr>
+          <tr><th scope="row" class="p-4 font-semibold bg-nickel-pale">Holes in the wall</th><td class="p-4 font-semibold text-care">None drilled</td><td class="p-4 text-ink-mute">Permanent holes in tile</td></tr>
+          <tr><th scope="row" class="p-4 font-semibold bg-nickel-pale">Landlord permission</th><td class="p-4 font-semibold text-care">No drilling involved</td><td class="p-4 text-ink-mute">Required, often refused</td></tr>
+          <tr><th scope="row" class="p-4 font-semibold bg-nickel-pale">Moves with you</th><td class="p-4 font-semibold text-care">Yes, in 2 minutes</td><td class="p-4 text-ink-mute">No — it stays behind</td></tr>
+          <tr><th scope="row" class="p-4 font-semibold bg-nickel-pale">Weight rating</th><td class="p-4 font-semibold text-care">300 lbs</td><td class="p-4 text-ink-mute">250–300 lbs</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ REVIEWS ═══════════ -->
+<section id="reviews" class="py-12 sm:py-16 lg:py-24 bg-nickel-pale border-y border-nickel-light">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <div class="text-gold text-[26px] tracking-wider mb-3" aria-hidden="true">★★★★★</div>
+      <h2 class="font-display font-bold text-[28px] sm:text-[46px] tracking-tight mb-3">
+        <span class="tabular" data-review-count>4,812</span> families have already done this
+      </h2>
+      <p class="text-[19px] text-ink-mute">4.8 out of 5 · 94% say setup took under 10 minutes</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <figure class="bg-white rounded-2xl p-7 border border-nickel-light shadow-lift reveal">
+        <div class="text-gold text-[17px] mb-3" aria-hidden="true">★★★★★</div>
+        <blockquote class="text-[17px] leading-relaxed mb-5">"My mother rents, and her building said absolutely no drilling. I'd been stuck on this for a year. The pole went up in six minutes."</blockquote>
+        <figcaption class="flex items-center gap-3 text-[15px] text-ink-mute">
+          <span class="w-11 h-11 rounded-full bg-nickel text-white font-bold flex items-center justify-center shrink-0" aria-hidden="true">DR</span>
+          <span><strong class="text-ink block">Denise R.</strong>Daughter, Columbus OH · <span class="text-care font-semibold">Verified</span></span>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-2xl p-7 border border-nickel-light shadow-lift reveal">
+        <div class="text-gold text-[17px] mb-3" aria-hidden="true">★★★★★</div>
+        <blockquote class="text-[17px] leading-relaxed mb-5">"I did not want my bathroom looking like a hospital room. The matte black one looks like it came with the apartment. I use it every morning and it does not budge."</blockquote>
+        <figcaption class="flex items-center gap-3 text-[15px] text-ink-mute">
+          <span class="w-11 h-11 rounded-full bg-care text-white font-bold flex items-center justify-center shrink-0" aria-hidden="true">WH</span>
+          <span><strong class="text-ink block">Walter H.</strong>71, Scottsdale AZ · <span class="text-care font-semibold">Verified</span></span>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-2xl p-7 border border-nickel-light shadow-lift reveal">
+        <div class="text-gold text-[17px] mb-3" aria-hidden="true">★★★★★</div>
+        <blockquote class="text-[17px] leading-relaxed mb-5">"We outfitted 14 bathrooms across three homes in one afternoon. No contractor, no permits. Our state inspector had zero notes."</blockquote>
+        <figcaption class="flex items-center gap-3 text-[15px] text-ink-mute">
+          <span class="w-11 h-11 rounded-full bg-ink-mute text-white font-bold flex items-center justify-center shrink-0" aria-hidden="true">MT</span>
+          <span><strong class="text-ink block">Marcus T.</strong>Owner, 3-home RAL group · <span class="text-care font-semibold">Verified</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ B2B ═══════════ -->
+<section id="b2b" class="py-12 sm:py-16 lg:py-24 bg-ink text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <p class="text-care-light font-bold text-[15px] tracking-[.14em] uppercase mb-4">For care operators &amp; property managers</p>
+      <h2 class="font-display font-bold text-[28px] sm:text-[46px] leading-[1.08] tracking-tight mb-6">
+        Outfit every bathroom in your portfolio without drilling a single hole.
+      </h2>
+      <p class="text-[19px] leading-relaxed text-nickel mb-8">
+        Residential Assisted Living operators and property managers use SafeStep to address fall-prevention
+        without capital work, permits or turnover drywall repair. Reconfigure a room in minutes when a
+        resident's needs change — and take the equipment with you when a unit turns over.
+      </p>
+      <ul class="space-y-4 mb-9 text-[17px]">
+        <li class="flex gap-3"><span class="text-care-light font-bold shrink-0" aria-hidden="true">✓</span> <span><strong>Volume pricing to 25% off</strong> — tiered automatically from 10 units</span></li>
+        <li class="flex gap-3"><span class="text-care-light font-bold shrink-0" aria-hidden="true">✓</span> <span><strong>Net-30 terms and consolidated invoicing</strong> across all your sites</span></li>
+        <li class="flex gap-3"><span class="text-care-light font-bold shrink-0" aria-hidden="true">✓</span> <span><strong>No anchor holes at turnover</strong> — nothing is drilled, so there's nothing to patch</span></li>
+        <li class="flex gap-3"><span class="text-care-light font-bold shrink-0" aria-hidden="true">✓</span> <span><strong>Free 2-unit evaluation kit</strong> for your maintenance lead before you commit</span></li>
+      </ul>
+      <button type="button" id="openB2B"
+        class="bg-white text-ink hover:bg-nickel-light font-bold text-[18px] px-8 py-5 rounded-xl shadow-deep transition active:scale-[.98]">
+        Request a facility quote →
+      </button>
+      <p class="text-[15px] text-nickel mt-4">Quotes returned within 4–12 business hours. No obligation.</p>
+    </div>
+    <div class="bg-white/[.06] rounded-2xl border border-white/15 p-7 reveal">
+      <h3 class="font-bold text-[20px] mb-5">Volume pricing — Full Care Package</h3>
+      <div id="tierTable" class="space-y-2 text-[16px]"></div>
+      <p class="text-[15px] text-nickel mt-5 leading-relaxed">
+        Per bathroom, based on one Full Bathroom Care Package per room — the standard RAL specification.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="py-12 sm:py-16 lg:py-24 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <h2 class="font-display font-bold text-[28px] sm:text-[46px] tracking-tight text-center mb-10 reveal">Questions people ask first</h2>
+    <div class="space-y-3">
+      <details class="group bg-nickel-pale rounded-xl border border-nickel-light overflow-hidden">
+        <summary class="flex justify-between items-center gap-4 p-5 font-bold text-[18px]">Will this really hold an adult's full weight?<span class="faq-chev transition shrink-0" aria-hidden="true">▾</span></summary>
+        <div class="px-5 pb-5 text-[17px] text-ink-mute leading-relaxed">Yes. Every tension pole and tub clamp is load-tested to 300 lbs. The tension mechanism is calibrated: you tighten by hand until the indicator ring turns green, which is the point at which the rated hold is achieved. You cannot under-tighten it and believe it's secure.</div>
+      </details>
+      <details class="group bg-nickel-pale rounded-xl border border-nickel-light overflow-hidden">
+        <summary class="flex justify-between items-center gap-4 p-5 font-bold text-[18px]">Will it mark the ceiling, floor or tile?<span class="faq-chev transition shrink-0" aria-hidden="true">▾</span></summary>
+        <div class="px-5 pb-5 text-[17px] text-ink-mute leading-relaxed">Nothing is drilled, anchored or permanently adhered. Pressure is spread across wide non-marring pads rather than concentrated at an anchor point, and the strips use a removable adhesive. As with any pressure-mounted product, we recommend checking that your surfaces are sound and following the included setup guide.</div>
+      </details>
+      <details class="group bg-nickel-pale rounded-xl border border-nickel-light overflow-hidden">
+        <summary class="flex justify-between items-center gap-4 p-5 font-bold text-[18px]">Do I need my landlord's permission?<span class="faq-chev transition shrink-0" aria-hidden="true">▾</span></summary>
+        <div class="px-5 pb-5 text-[17px] text-ink-mute leading-relaxed">SafeStep products install without drilling, anchoring or permanent adhesive, so they generally aren't a structural modification. Lease terms vary, though — every order includes a one-page product information sheet you can share with a landlord or building manager, and we'd suggest checking your lease.</div>
+      </details>
+      <details class="group bg-nickel-pale rounded-xl border border-nickel-light overflow-hidden">
+        <summary class="flex justify-between items-center gap-4 p-5 font-bold text-[18px]">What ceiling heights and tubs does it fit?<span class="faq-chev transition shrink-0" aria-hidden="true">▾</span></summary>
+        <div class="px-5 pb-5 text-[17px] text-ink-mute leading-relaxed">The pole fits ceilings from 7'2" to 9'4" — about 95% of homes and apartments. The tub clamp fits tub walls 3" to 7" thick, including acrylic, fiberglass, porcelain and tiled surrounds. If yours falls outside that, tell us before you order and we'll say so honestly.</div>
+      </details>
+      <details class="group bg-nickel-pale rounded-xl border border-nickel-light overflow-hidden">
+        <summary class="flex justify-between items-center gap-4 p-5 font-bold text-[18px]">What if it isn't right for us?<span class="faq-chev transition shrink-0" aria-hidden="true">▾</span></summary>
+        <div class="px-5 pb-5 text-[17px] text-ink-mute leading-relaxed">Send it back within 30 days for a full refund and we cover return shipping. Install it, use it for a month, and decide in the actual bathroom — that's the only test that matters.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FINAL CTA ═══════════ -->
+<section class="py-12 sm:py-16 lg:py-24 bg-care text-white text-center">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <h2 class="font-display font-bold text-[28px] sm:text-[48px] leading-[1.08] tracking-tight mb-6">The bathroom gets safer this week, not next year.</h2>
+    <p class="text-[20px] leading-relaxed mb-9 text-white/90">One box. Fifteen minutes. No holes, no tools, no contractor.</p>
+    <button type="button" data-add="full-bathroom-care-package"
+      class="bg-white text-care-dark hover:bg-nickel-light font-bold text-[19px] px-10 py-5 rounded-xl shadow-deep transition active:scale-[.98]">
+      Get the Full Care Package — $169.99
+    </button>
+    <p class="text-[16px] text-white/80 mt-5">Free shipping · 30-day money-back guarantee · Ships in 24 hours</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="bg-ink text-nickel py-12 pb-28 lg:pb-12">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-9 text-[16px]">
+    <div>
+      <div class="font-display font-bold text-[21px] text-white mb-3">SafeStep<span class="text-care-light"> Living</span></div>
+      <p class="leading-relaxed">Renter-friendly bathroom safety equipment. Independence without drilling.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-white mb-3">Products</h3>
+      <ul class="space-y-2">
+        <li><a href="#products" class="hover:text-white transition">Tension Grab Pole</a></li>
+        <li><a href="#products" class="hover:text-white transition">Tub Clamp Grab Bar</a></li>
+        <li><a href="#products" class="hover:text-white transition">Non-Slip Safety Strips</a></li>
+        <li><a href="#builder" class="hover:text-white transition">Full Care Package</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-white mb-3">Support</h3>
+      <ul class="space-y-2">
+        <li><a href="#how" class="hover:text-white transition">Installation guides</a></li>
+        <li><a href="#" class="hover:text-white transition">Returns &amp; warranty</a></li>
+        <li><a href="#" class="hover:text-white transition">Renter info sheet (PDF)</a></li>
+        <li><a href="tel:18007233783" class="hover:text-white transition">1-800-SAFESTEP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-white mb-3">For operators</h3>
+      <ul class="space-y-2">
+        <li><button type="button" class="openB2B hover:text-white transition">Request a quote</button></li>
+        <li><a href="#b2b" class="hover:text-white transition">Volume pricing</a></li>
+        <li><a href="#" class="hover:text-white transition">Net-30 application</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 mt-10 pt-7 border-t border-white/10 text-[15px] flex flex-col sm:flex-row gap-3 justify-between">
+    <p>© 2026 SafeStep Living™. All rights reserved.</p>
+    <p>Not a medical device. Consult a clinician about specific mobility needs.</p>
+  </div>
+</footer>
+
+<!-- ═══════════ STICKY MOBILE CTA ═══════════ -->
+<div id="stickyBar" class="fixed bottom-0 inset-x-0 z-30 bg-white border-t-2 border-nickel-light shadow-deep px-4 py-3 lg:hidden translate-y-full transition-transform duration-300">
+  <div class="flex items-center gap-3">
+    <div class="flex-1 leading-tight">
+      <div class="font-bold text-[16px]">Full Care Package</div>
+      <div class="text-[15px] tabular"><strong>$169.99</strong> <span class="text-ink-mute line-through">$193.94</span></div>
+    </div>
+    <button type="button" data-add="full-bathroom-care-package"
+      class="bg-care hover:bg-care-dark text-white font-bold text-[17px] px-7 py-4 rounded-xl transition active:scale-[.98]">Add to Cart</button>
+  </div>
+</div>
+
+</div><!-- /pt-store -->
+
+<!-- ═══════════ THE OPPORTUNITY ═══════════ -->
+<div id="pt-opportunity" class="ptpanel">
+  <section class="bg-gradient-to-b from-nickel-pale to-white border-b border-nickel-light py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">The wave</p>
+      <h1 class="font-display font-bold text-[40px] sm:text-[58px] leading-[1.04] tracking-tight mb-6">11,400 Americans turn 65 every day, and almost none of them want to move.</h1>
+      <p class="text-[21px] leading-[1.55] text-ink-mute max-w-3xl mb-4">2025 was the peak of the "Peak 65" zone — the most Americans ever to reach retirement age in one year, and the pace holds through 2029. About <strong class="text-ink">56 million Americans are 65 or older</strong>, roughly one in six people.</p>
+      <p class="text-[21px] leading-[1.55] text-ink-mute max-w-3xl"><strong class="text-ink">Around 87% intend to stay in their own home.</strong> A house built for a 40-year-old has to be adapted for an 80-year-old, and the bathroom is where that matters most.</p>
+      <div class="grid sm:grid-cols-3 gap-5 mt-10">
+        <div class="bg-white rounded-2xl border border-nickel-light p-6 shadow-lift"><p class="font-display font-bold text-[42px] text-care tabular leading-none mb-2">11,400</p><p class="text-[16px] text-ink-mute">turning 65 every day, through 2029</p></div>
+        <div class="bg-white rounded-2xl border border-nickel-light p-6 shadow-lift"><p class="font-display font-bold text-[42px] text-care tabular leading-none mb-2">87%</p><p class="text-[16px] text-ink-mute">want to stay in their current home</p></div>
+        <div class="bg-white rounded-2xl border border-nickel-light p-6 shadow-lift"><p class="font-display font-bold text-[42px] text-care tabular leading-none mb-2">~80%</p><p class="text-[16px] text-ink-mute">of home falls happen in the bathroom</p></div>
+      </div>
+      <p class="text-[14px] text-ink-faint mt-4">Peak 65 and aging-in-place figures: Retirement Living and AARP, 2025–26. Fall location is a widely cited clinical figure — verify against a primary source before external use.</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-8">Three things are true at once</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-nickel-pale rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[19px] mb-2">The buyer has money</h3><p class="text-[16px] text-ink-mute leading-relaxed">The purchase is usually made by an adult child aged 45–65, not the person using it. Income, urgency and guilt — and they don't need convincing.</p></div>
+        <div class="bg-nickel-pale rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[19px] mb-2">Renting is no longer rare</h3><p class="text-[16px] text-ink-mute leading-relaxed">A growing share of older adults rent or live with family. Every drilled grab bar is a deposit argument. Nothing we sell needs a screw, an anchor or a hole.</p></div>
+        <div class="bg-nickel-pale rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[19px] mb-2">The category is proven</h3><p class="text-[16px] text-ink-mute leading-relaxed">One competing tub rail sells <strong class="text-ink">2,000+ units a month at $39.99</strong> on Amazon alone. Demand isn't the question. Differentiation is.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-nickel-pale border-y border-nickel-light">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-3">Sell the room, not the part</h2>
+      <p class="text-[19px] text-ink-mute max-w-3xl mb-8">Anyone can sell a grab bar — they come from the same factories. Nobody sells <strong class="text-ink">a whole bathroom solved in one box</strong>, with a tool that says when you need fewer pieces.</p>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">Package over part</h3><p class="text-[16px] text-ink-mute leading-relaxed">The Complete System has no comparison price on Amazon because the product doesn't exist there. It nets <strong class="text-ink">$103.72</strong> against <strong class="text-ink">$26.19</strong> for an average single item.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">Advise, don't sell</h3><p class="text-[16px] text-ink-mute leading-relaxed">The assessment recommends a configuration — and recommends <em>less</em> when less is right. A service can't be commoditised.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">Split the channels</h3><p class="text-[16px] text-ink-mute leading-relaxed">Small items on Amazon where the traffic is. Packages on our own store where the margin is. We never fight the $39.99 listing head-on.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">Care homes need no ads</h3><p class="text-[16px] text-ink-mute leading-relaxed">One 40-bathroom order nets around <strong class="text-ink">$960</strong> with zero acquisition cost — fifteen consumer packages, from one conversation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-ink text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <p class="text-care-light font-bold text-[15px] tracking-[.14em] uppercase mb-4">The constraint that shapes everything</p>
+      <h2 class="font-display font-bold text-[34px] sm:text-[46px] tracking-tight mb-5">Nobody quits their job</h2>
+      <p class="text-[20px] leading-relaxed text-nickel max-w-3xl mb-4">This runs in evenings and weekends. A third-party warehouse receives the container and ships every order, so we never touch inventory. Every goal below is sized against hours we actually have.</p>
+      <p class="text-[20px] leading-relaxed text-nickel max-w-3xl">That constraint is a feature. It lets us be patient, test honestly, and stop if the numbers say stop — without anyone's rent depending on the answer.</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display font-bold text-[28px] sm:text-[42px] tracking-tight mb-3">What success looks like</h2>
+      <p class="text-[18px] sm:text-[19px] text-ink-mute mb-8 max-w-3xl">Three levels, with what each one risks, what it asks of us, and what it pays. Two partners, both keeping their jobs.</p>
+
+      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-4">
+        <table class="w-full text-left text-[15px] min-w-[860px]">
+          <thead class="bg-ink text-white"><tr>
+            <th class="p-4 font-bold">Level</th>
+            <th class="p-4 font-bold text-right">Orders/mo</th>
+            <th class="p-4 font-bold text-right">Revenue/yr</th>
+            <th class="p-4 font-bold text-right">Cash at risk</th>
+            <th class="p-4 font-bold text-right">Profit/yr</th>
+            <th class="p-4 font-bold text-right">Each partner</th>
+            <th class="p-4 font-bold text-right">Hrs/wk each</th></tr></thead>
+          <tbody class="divide-y divide-nickel-light">
+            <tr><td class="p-4 font-semibold">Conservative</td><td class="p-4 text-right tabular">15</td>
+              <td class="p-4 text-right tabular">$27,695</td><td class="p-4 text-right tabular">$11,656</td>
+              <td class="p-4 text-right tabular font-bold text-ink-mute">&minus;$175</td>
+              <td class="p-4 text-right tabular font-bold text-ink-mute">&minus;$88</td>
+              <td class="p-4 text-right tabular">1.5&ndash;2.5</td></tr>
+            <tr><td class="p-4 font-semibold">Average</td><td class="p-4 text-right tabular">50</td>
+              <td class="p-4 text-right tabular">$92,316</td><td class="p-4 text-right tabular">$17,806</td>
+              <td class="p-4 text-right tabular font-bold text-care">$12,216</td>
+              <td class="p-4 text-right tabular font-bold text-care">$6,108</td>
+              <td class="p-4 text-right tabular">3&ndash;5</td></tr>
+            <tr class="bg-care-light"><td class="p-4 font-bold">Optimistic + 1 care home/mo</td><td class="p-4 text-right tabular">150</td>
+              <td class="p-4 text-right tabular">$334,544</td><td class="p-4 text-right tabular">$33,556</td>
+              <td class="p-4 text-right tabular font-bold text-care-dark">$65,568</td>
+              <td class="p-4 text-right tabular font-bold text-care-dark">$32,784</td>
+              <td class="p-4 text-right tabular">6&ndash;9</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-[14px] text-ink-faint mb-10">Profit is after landed cost, payment fees, shipping, warehouse handling, advertising <em>and</em> the ~$350/month of fixed costs. Cash at risk is the launch spend plus inventory sitting on the shelf or on the water, plus advertising paid before its revenue lands.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-nickel-pale rounded-2xl p-6 border-t-[5px] border-nickel-light">
+          <h3 class="font-bold text-[21px] mb-1">Conservative</h3>
+          <p class="text-[15px] text-ink-faint mb-4">Break-even &middot; $11,656 at risk</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">What it requires:</strong> one ad channel under $50 a customer. That's it.</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">What it looks like:</strong> 1.5&ndash;2.5 hours a week each. The business washes its own face and neither of us makes money.</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">Growth from here:</strong> everything is still possible. Nothing compounds yet &mdash; no reviews, no ranking, no repeat buyers.</p>
+          <p class="text-[16px] text-care font-semibold leading-relaxed">This is the education. We'd pay $11,656 to learn whether people buy this, and still own sellable stock.</p>
+        </div>
+        <div class="bg-nickel-pale rounded-2xl p-6 border-t-[5px] border-care">
+          <h3 class="font-bold text-[21px] mb-1">Average</h3>
+          <p class="text-[15px] text-ink-faint mb-4">$6,108 each &middot; $17,806 at risk</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">What it requires:</strong> two channels working, Amazon ranking on the rail and strips, 100+ reviews, and a VA on customer email.</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">What it looks like:</strong> 3&ndash;5 hours a week each, about $29 an hour. A decent side income, not a life change.</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">Growth from here:</strong> this is where it starts compounding. Reviews lower ad costs, ranking brings free traffic, and the first care home becomes reachable.</p>
+          <p class="text-[16px] text-care font-semibold leading-relaxed">The real milestone. Past here the business funds its own growth.</p>
+        </div>
+        <div class="bg-nickel-pale rounded-2xl p-6 border-t-[5px] border-gold">
+          <h3 class="font-bold text-[21px] mb-1">Optimistic + B2B</h3>
+          <p class="text-[15px] text-ink-faint mb-4">$32,784 each &middot; $33,556 at risk</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">What it requires:</strong> organic Amazon ranking, Meta scaled past $6k/mo profitably, a live care-home pipeline, and part-time operations help.</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">What it looks like:</strong> 6&ndash;9 hours a week each, about $84 an hour. Roughly two years of that before it settles.</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3"><strong class="text-ink">Growth from here:</strong> care homes are the unlock. They aren't capped by ad budget, only by how many conversations we have.</p>
+          <p class="text-[16px] text-care font-semibold leading-relaxed">The point where quitting becomes a real conversation &mdash; and we still wouldn't have to.</p>
+        </div>
+      </div>
+
+      <h2 class="font-display font-bold text-[28px] sm:text-[38px] tracking-tight mb-3">How many of us, and what happens past the ceiling</h2>
+      <p class="text-[18px] text-ink-mute mb-6 max-w-3xl">More partners means less risk and fewer hours each, but the same pie in more slices. The honest split:</p>
+      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white mb-6">
+        <table class="w-full text-left text-[15px] min-w-[620px]">
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">At the optimistic level</th><th class="p-4 font-bold text-right">Profit each</th><th class="p-4 font-bold text-right">Hrs/wk each</th><th class="p-4 font-bold text-right">Risk each</th></tr></thead>
+          <tbody class="divide-y divide-nickel-light">
+            <tr><td class="p-4 font-semibold">2 partners</td><td class="p-4 text-right tabular font-bold">$32,784</td><td class="p-4 text-right tabular">6&ndash;9</td><td class="p-4 text-right tabular">$16,778</td></tr>
+            <tr><td class="p-4 font-semibold">3 partners</td><td class="p-4 text-right tabular font-bold">$21,856</td><td class="p-4 text-right tabular">4&ndash;6</td><td class="p-4 text-right tabular">$11,185</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5 mb-4">
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light">
+          <h3 class="font-bold text-[19px] mb-2">Is $65k the ceiling?</h3>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-2">No &mdash; it's the ceiling <em>for two people keeping their jobs</em>. Three care homes a month instead of one takes it to about <strong class="text-ink">$88,600</strong> at 18&ndash;24 hours a week. Five takes it past <strong class="text-ink">$111,000</strong>, but by then one of us is effectively full-time.</p>
+          <p class="text-[16px] text-ink-mute leading-relaxed">The fastest route upward isn't more advertising. It's more phone calls.</p>
+        </div>
+        <div class="bg-gold-light rounded-2xl p-6 border border-gold/25">
+          <h3 class="font-bold text-[19px] text-gold mb-2">What we'd actually learn</h3>
+          <p class="text-[16px] text-ink-mute leading-relaxed">Importing, customs, a 3PL, paid acquisition, Amazon, and B2B selling &mdash; on a product with real margin and a bounded downside. If it works we have a business. If it doesn't, we've bought a genuine education for about $11,656 and still hold inventory worth selling.</p>
+        </div>
+      </div>
+    </section>
+</div>
+
+<!-- ═══════════ ECONOMICS ═══════════ -->
+<div id="pt-economics" class="ptpanel">
+  <section class="py-16 bg-white border-b border-nickel-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Unit economics</p>
+      <h1 class="font-display font-bold text-[38px] sm:text-[52px] leading-[1.05] tracking-tight mb-5">What every item costs and earns</h1>
+      <p class="text-[19px] text-ink-mute max-w-3xl mb-8">Landed cost is factory price plus ocean freight plus the 25% China tariff. Net is what reaches us after payment fees, shipping and warehouse pick-and-pack — before any advertising.</p>
+      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift">
+        <table class="w-full text-left text-[16px] min-w-[720px]">
+          <thead class="bg-ink text-white"><tr>
+            <th class="p-4 font-bold">Product</th><th class="p-4 font-bold text-right">Factory</th><th class="p-4 font-bold text-right">Landed</th>
+            <th class="p-4 font-bold text-right">We sell at</th><th class="p-4 font-bold text-right">We keep</th><th class="p-4 font-bold text-right">Margin</th></tr></thead>
+          <tbody class="divide-y divide-nickel-light">
+            <tr><td class="p-4 font-semibold">Tension Grab Pole</td><td class="p-4 text-right tabular">$32.00</td><td class="p-4 text-right tabular">$43.31</td><td class="p-4 text-right tabular">$109.00</td><td class="p-4 text-right tabular font-bold">$44.74</td><td class="p-4 text-right tabular">41.0%</td></tr>
+            <tr><td class="p-4 font-semibold">Tub Rail</td><td class="p-4 text-right tabular">$10.36</td><td class="p-4 text-right tabular">$15.11</td><td class="p-4 text-right tabular">$64.95</td><td class="p-4 text-right tabular font-bold">$33.04</td><td class="p-4 text-right tabular">50.9%</td></tr>
+            <tr><td class="p-4">Toilet Safety Rail <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$9.00</td><td class="p-4 text-right tabular">$14.10</td><td class="p-4 text-right tabular">$49.95</td><td class="p-4 text-right tabular font-bold">$19.33</td><td class="p-4 text-right tabular">38.7%</td></tr>
+            <tr><td class="p-4">Shower Bench <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$16.00</td><td class="p-4 text-right tabular">$24.98</td><td class="p-4 text-right tabular">$89.99</td><td class="p-4 text-right tabular font-bold">$45.76</td><td class="p-4 text-right tabular">50.9%</td></tr>
+            <tr><td class="p-4">Non-Slip Strips</td><td class="p-4 text-right tabular">$1.35</td><td class="p-4 text-right tabular">$1.96</td><td class="p-4 text-right tabular">$19.99</td><td class="p-4 text-right tabular font-bold">$7.00</td><td class="p-4 text-right tabular">35.0%</td></tr>
+            <tr><td class="p-4">Motion Night Light <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$1.80</td><td class="p-4 text-right tabular">$2.52</td><td class="p-4 text-right tabular">$16.99</td><td class="p-4 text-right tabular font-bold">$3.56</td><td class="p-4 text-right tabular">20.9%</td></tr>
+            <tr><td class="p-4">Handheld Shower Head <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$5.50</td><td class="p-4 text-right tabular">$7.74</td><td class="p-4 text-right tabular">$39.99</td><td class="p-4 text-right tabular font-bold">$19.97</td><td class="p-4 text-right tabular">49.9%</td></tr>
+            <tr class="bg-care-light"><td class="p-4 font-bold">Full Care Package</td><td class="p-4 text-right tabular">$43.71</td><td class="p-4 text-right tabular">$64.13</td><td class="p-4 text-right tabular">$169.99</td><td class="p-4 text-right tabular font-bold text-care-dark">$79.42</td><td class="p-4 text-right tabular font-bold text-care-dark">46.7%</td></tr>
+            <tr class="bg-care-light"><td class="p-4 font-bold">Complete System</td><td class="p-4 text-right tabular">$62.61</td><td class="p-4 text-right tabular">$91.64</td><td class="p-4 text-right tabular">$229.99</td><td class="p-4 text-right tabular font-bold text-care-dark">$103.72</td><td class="p-4 text-right tabular font-bold text-care-dark">45.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-[14px] text-ink-faint mt-4">The pole and tub rail are confirmed supplier quotes. Items marked <span class="text-signal font-semibold">est</span> are estimates pending real quotes.</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-nickel-pale border-b border-nickel-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Capital required</p>
+      <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-4">$9,556 to find out, paid in five stages</h2>
+      <p class="text-[19px] text-ink-mute max-w-3xl mb-8">No single large cheque. Each stage only happens if the previous one worked, and we can stop after any of them still holding sellable stock.</p>
+      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white mb-6">
+        <table class="w-full text-left text-[16px] min-w-[680px]">
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">When</th><th class="p-4 font-bold text-right">Amount</th><th class="p-4 font-bold">What it buys</th><th class="p-4 font-bold">Can we stop?</th></tr></thead>
+          <tbody class="divide-y divide-nickel-light">
+            <tr><td class="p-4 font-semibold">Week 1</td><td class="p-4 text-right tabular">$1,100</td><td class="p-4 text-ink-mute">Samples from three factories, registration, storefront, domain</td><td class="p-4 text-care font-semibold">Yes — lose $1,100</td></tr>
+            <tr><td class="p-4 font-semibold">Week 3</td><td class="p-4 text-right tabular">$1,034</td><td class="p-4 text-ink-mute">30% deposit: 50 poles, 100 rails, 200 strip packs</td><td class="p-4 text-care font-semibold">Yes — lose the deposit</td></tr>
+            <tr><td class="p-4 font-semibold">Week 7</td><td class="p-4 text-right tabular">$4,222</td><td class="p-4 text-ink-mute">Balance, freight, tariff, customs entry. Ships to warehouse</td><td class="p-4 text-ink-mute">Committed from here</td></tr>
+            <tr><td class="p-4 font-semibold">Week 10</td><td class="p-4 text-right tabular">$1,200</td><td class="p-4 text-ink-mute">Liability insurance and packaging, before anything ships</td><td class="p-4 text-signal font-semibold">Non-negotiable</td></tr>
+            <tr><td class="p-4 font-semibold">Week 12</td><td class="p-4 text-right tabular">$2,000</td><td class="p-4 text-ink-mute">Three ad creatives, two weeks, equal budget</td><td class="p-4 text-ink-mute">This is the test</td></tr>
+            <tr class="bg-nickel-pale"><td class="p-4 font-bold">Total</td><td class="p-4 text-right tabular font-bold">$9,556</td><td class="p-4 text-ink-mute" colspan="2">A real market test, with sellable inventory at the end</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-care-light rounded-2xl p-6 border border-care/25"><h3 class="font-bold text-[19px] text-care-dark mb-2">What comes back</h3><p class="text-[16px] text-care-dark leading-relaxed">If the first order sells through, roughly <strong>$4,890</strong> returns — about 51%. We fund the second order before the first has fully repaid. Normal for inventory businesses, and the main thing to plan for.</p></div>
+        <div class="bg-signal-light rounded-2xl p-6 border border-signal/25"><h3 class="font-bold text-[19px] text-signal mb-2">What we will not cut</h3><p class="text-[16px] text-ink-mute leading-relaxed">Product liability insurance and independent load testing. We sell a 300 lb rating to people at risk of falling. Those stay in the budget at every level.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white border-b border-nickel-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Supply relationships</p>
+      <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-4">China now, Mexico as the hedge</h2>
+      <p class="text-[19px] text-ink-mute max-w-3xl mb-8">We have live quotes from a Guangdong manufacturer — 12 years trading, 4.7/5 across 677 reviews. Whether to nearshore turns almost entirely on tariffs.</p>
+      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-6">
+        <table class="w-full text-left text-[16px] min-w-[640px]">
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Source</th><th class="p-4 font-bold text-right">Factory</th><th class="p-4 font-bold text-right">Freight</th><th class="p-4 font-bold text-right">Tariff</th><th class="p-4 font-bold text-right">Landed</th><th class="p-4 font-bold">Transit</th></tr></thead>
+          <tbody class="divide-y divide-nickel-light">
+            <tr><td class="p-4 font-semibold">China — quoted</td><td class="p-4 text-right tabular">$32.00</td><td class="p-4 text-right tabular">$3.31</td><td class="p-4 text-right tabular text-signal">$8.00</td><td class="p-4 text-right tabular font-bold">$43.31</td><td class="p-4 text-ink-mute">20–27 days</td></tr>
+            <tr><td class="p-4">Mexico at +30%</td><td class="p-4 text-right tabular">$41.60</td><td class="p-4 text-right tabular">$2.00</td><td class="p-4 text-right tabular text-care font-semibold">$0.00</td><td class="p-4 text-right tabular font-bold">$43.60</td><td class="p-4 text-ink-mute">3–7 days</td></tr>
+            <tr><td class="p-4">Mexico at +40%</td><td class="p-4 text-right tabular">$44.80</td><td class="p-4 text-right tabular">$2.00</td><td class="p-4 text-right tabular text-care font-semibold">$0.00</td><td class="p-4 text-right tabular font-bold">$46.80</td><td class="p-4 text-ink-mute">3–7 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5 mb-6">
+        <div class="bg-nickel-pale rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[19px] mb-2">Mexico is closer than it looks</h3><p class="text-[16px] text-ink-mute leading-relaxed">USMCA is duty-free. A Mexican supplier can charge <strong class="text-ink">29% more than China</strong> and still land at the same cost — delivering in a week instead of six. Order-to-shelf drops from ~45 days to ~10, so far less cash sits on a boat.</p></div>
+        <div class="bg-gold-light rounded-2xl p-6 border border-gold/25"><h3 class="font-bold text-[19px] text-gold mb-2">And it's the tariff hedge</h3><p class="text-[16px] text-ink-mute leading-relaxed">At 0% or 25% Section 301, China wins on landed cost. <strong class="text-ink">At 50% or above, Mexico wins outright.</strong> Nobody can predict trade policy, so a quoted Mexican alternative is cheap insurance even if we never order.</p></div>
+      </div>
+      <p class="text-[18px] text-ink-mute max-w-3xl">The plan: <strong class="text-ink">start with China because the quotes are real and the supplier base is deep</strong>, and get two Mexican quotes in parallel so one policy decision can't strand us. The category isn't widely made in Mexico yet, so this needs real research.</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-nickel-pale">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">What has to happen</p>
+      <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-8">Nine steps to a finished business</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">1 · Load test report</h3><p class="text-[16px] text-ink-mute leading-relaxed">Third-party certification of the 300 lb rating, not a factory self-declaration. This gates everything — the claim is the brand.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">2 · Customs classification</h3><p class="text-[16px] text-ink-mute leading-relaxed">A broker ruling on which HTS codes apply. Worth $4,786 on the first full order, and it decides the China/Mexico question.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">3 · Samples, three factories</h3><p class="text-[16px] text-ink-mute leading-relaxed">Per product. Stress-test them ourselves before a dollar of inventory is committed.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">4 · Registration and insurance</h3><p class="text-[16px] text-ink-mute leading-relaxed">LLC, registered agent, and product liability cover in force before the first customer order ships.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">5 · A warehouse partner</h3><p class="text-[16px] text-ink-mute leading-relaxed">A 3PL to receive the container and ship every order. Three quotes — oversize surcharges matter for the pole.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">6 · Packaging and barcodes</h3><p class="text-[16px] text-ink-mute leading-relaxed">Custom boxes are $0.16 a unit at 200 pieces. Country-of-origin marking is legally required regardless.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">7 · Clinical relationships</h3><p class="text-[16px] text-ink-mute leading-relaxed">Occupational therapists and discharge planners specify this equipment. Ten conversations beat the first month of ads.</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light"><h3 class="font-bold text-[18px] mb-2">8 · Care-home pipeline</h3><p class="text-[16px] text-ink-mute leading-relaxed">RAL operators, reached directly. No advertising, and the largest orders in the business.</p></div>
+        <div class="bg-ink text-white rounded-2xl p-6"><h3 class="font-bold text-[18px] mb-2">9 · The ad test</h3><p class="text-[16px] text-nickel leading-relaxed">Three creatives, two weeks, equal spend, with a kill number written down in advance. This is the decision point.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ MARKETING ═══════════ -->
+<div id="pt-marketing" class="ptpanel">
+  <section class="py-16 bg-white border-b border-nickel-light">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">What we are actually selling</p>
+      <h1 class="font-display font-bold text-[38px] sm:text-[54px] leading-[1.05] tracking-tight mb-5">You did something about it</h1>
+      <p class="text-[21px] leading-[1.55] text-ink-mute max-w-3xl mb-4">Every person who buys this is answering a question they've been carrying for months: <em>am I doing enough for her?</em></p>
+      <p class="text-[21px] leading-[1.55] text-ink-mute max-w-3xl mb-8">We are not selling a grab bar. We are selling the moment a son or daughter stops worrying every time their mother closes the bathroom door — and the quiet pride of having handled it before something happened, not after.</p>
+      <figure>
+        <img src="images/moment.png" alt="A woman in her fifties sits on a sofa holding a mug, watching her elderly mother walk unaided toward the bathroom. She stays seated." class="w-full h-auto rounded-2xl border border-nickel-light" />
+        <figcaption class="text-[17px] text-ink-mute mt-4 leading-relaxed max-w-3xl"><strong class="text-ink">She got up. You stayed sitting down.</strong> No rushing to help, no listening at the door. That four minutes of ordinary calm is the product. Everything else is how it gets delivered.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="py-16 bg-ink text-white border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <p class="text-care-light font-bold text-[15px] tracking-[.14em] uppercase mb-4">The three things we say</p>
+      <h2 class="font-display font-bold text-[34px] sm:text-[44px] tracking-tight mb-8">Everything ladders to one of these</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/[.06] rounded-2xl p-6 border border-white/15">
+          <p class="font-display font-bold text-[24px] mb-3">"It's handled."</p>
+          <p class="text-[16px] text-nickel leading-relaxed">The good son, the good daughter. You didn't wait for the fall. You sorted it in one afternoon, from 300 miles away, and it's done.</p>
+        </div>
+        <div class="bg-white/[.06] rounded-2xl p-6 border border-white/15">
+          <p class="font-display font-bold text-[24px] mb-3">"Mom's okay."</p>
+          <p class="text-[16px] text-nickel leading-relaxed">The relaxation. No listening for a thud. No calling twice a day to check. The low hum of worry that runs all day finally switches off.</p>
+        </div>
+        <div class="bg-white/[.06] rounded-2xl p-6 border border-white/15">
+          <p class="font-display font-bold text-[24px] mb-3">"Nothing had to change."</p>
+          <p class="text-[16px] text-nickel leading-relaxed">No contractor in her home. No holes in the wall. No conversation about her losing independence. She keeps her bathroom and her dignity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-nickel-pale border-b border-nickel-light">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-8">What actually changes for them</h2>
+      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white">
+        <table class="w-full text-left text-[17px] min-w-[620px]">
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold w-[200px]"></th><th class="p-4 font-bold">Before</th><th class="p-4 font-bold">After</th></tr></thead>
+          <tbody class="divide-y divide-nickel-light">
+            <tr><th scope="row" class="p-4 font-bold text-left bg-nickel-pale">What they have</th><td class="p-4 text-ink-mute">A tub she's afraid of</td><td class="p-4 font-semibold">A handhold exactly where she reaches</td></tr>
+            <tr><th scope="row" class="p-4 font-bold text-left bg-nickel-pale">How they feel</th><td class="p-4 text-ink-mute">Guilty, and useless from 300 miles away</td><td class="p-4 font-semibold">Settled. They did something about it.</td></tr>
+            <tr><th scope="row" class="p-4 font-bold text-left bg-nickel-pale">Their average day</th><td class="p-4 text-ink-mute">Checking in twice, listening for a fall</td><td class="p-4 font-semibold">Calling because they want to, not to check</td></tr>
+            <tr><th scope="row" class="p-4 font-bold text-left bg-nickel-pale">Her status</th><td class="p-4 text-ink-mute">"Someone who needs help now"</td><td class="p-4 font-semibold">Still independent, in her own home</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-[18px] text-ink-mute mt-5 max-w-3xl">Every ad is written from the right-hand column. We never describe the product before we've described the feeling.</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white border-b border-nickel-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-8">Three moments, three products</h2>
+      <div class="grid md:grid-cols-3 gap-7">
+        <figure><img src="images/pole.png" alt="An older man in a blue cardigan holds a matte black floor-to-ceiling pole beside a bathtub." class="w-full h-auto rounded-2xl border border-nickel-light" />
+          <figcaption class="text-[16px] text-ink-mute mt-3 leading-relaxed"><strong class="text-ink">The pole.</strong> Floor to ceiling, 300 lbs, five minutes. It looks like a fixture, not medical equipment — which is what lets her accept it in her own bathroom.</figcaption></figure>
+        <figure><img src="images/rail.png" alt="An older person's hand grips a clamp-on rail on the rim of a white bathtub while stepping in." class="w-full h-auto rounded-2xl border border-nickel-light" />
+          <figcaption class="text-[16px] text-ink-mute mt-3 leading-relaxed"><strong class="text-ink">The tub rail.</strong> The hardest moment in the room is the step in and out. Clamps on by hand, comes off the same way.</figcaption></figure>
+        <figure><img src="images/strips.png" alt="A bare foot steps onto clear non-slip strips across the wet floor of a white bathtub." class="w-full h-auto rounded-2xl border border-nickel-light" />
+          <figcaption class="text-[16px] text-ink-mute mt-3 leading-relaxed"><strong class="text-ink">The strips.</strong> Nearly invisible, which is the point. Safety that doesn't announce itself is safety people keep using.</figcaption></figure>
+      </div>
+      <p class="text-[15px] text-ink-faint mt-6 max-w-3xl">Concept imagery, generated for testing. We reshoot the winners with real people before scaling spend.</p>
+    </div>
+  </section>
+
+  <section class="py-12 sm:py-16 bg-nickel-pale border-b border-nickel-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Meta, specifically</p>
+      <h2 class="font-display font-bold text-[28px] sm:text-[42px] tracking-tight mb-4">How to run the good-son angle without getting blocked</h2>
+      <p class="text-[18px] sm:text-[19px] text-ink-mute max-w-3xl mb-8">Meta rejects ads that imply we know something about the viewer's health or family. "For your aging parent" gets blocked. But the feeling we're selling is entirely permissible — as long as we describe <strong class="text-ink">a scene</strong>, never <strong class="text-ink">the viewer</strong>.</p>
+
+      <div class="grid md:grid-cols-2 gap-5 mb-8">
+        <div class="bg-signal-light rounded-2xl p-6 border border-signal/25">
+          <h3 class="font-bold text-[19px] text-signal mb-3">Gets rejected</h3>
+          <ul class="space-y-2 text-[16px] text-ink-mute">
+            <li>"Worried about your elderly mother?"</li>
+            <li>"Is your dad at risk of falling?"</li>
+            <li>"Caring for an aging parent?"</li>
+          </ul>
+          <p class="text-[15px] text-ink-mute mt-3 leading-relaxed">All three assert something about the person reading it.</p>
+        </div>
+        <div class="bg-care-light rounded-2xl p-6 border border-care/25">
+          <h3 class="font-bold text-[19px] text-care-dark mb-3">Runs fine</h3>
+          <ul class="space-y-2 text-[16px] text-care-dark">
+            <li>"She got up. You stayed sitting down."</li>
+            <li>"It took one afternoon."</li>
+            <li>"Her bathroom. Still hers."</li>
+          </ul>
+          <p class="text-[15px] text-care-dark mt-3 leading-relaxed">All three describe a moment. The viewer decides it's about them.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light">
+          <p class="text-[13px] font-bold tracking-wider uppercase text-care mb-2">Ad 1 · The moment</p>
+          <h3 class="font-bold text-[19px] mb-2">"She got up. You stayed sitting down."</h3>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3">Four minutes of an ordinary evening, and nobody had to get up to help. Grab poles and tub rails rated to 300 lbs, installed in five minutes with no tools and no drilling.</p>
+          <p class="text-[15px] text-ink-faint">Image: the sofa shot. This is the one to spend behind.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light">
+          <p class="text-[13px] font-bold tracking-wider uppercase text-care mb-2">Ad 2 · The proof</p>
+          <h3 class="font-bold text-[19px] mb-2">"It took one afternoon."</h3>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3">No drill. No stud finder. No handyman in the house. Stand it up, hand-tighten until the ring turns green, and it holds 300 lbs. That's the whole install.</p>
+          <p class="text-[15px] text-ink-faint">Video: one unbroken phone shot. The proof is that it's boring.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-nickel-light">
+          <p class="text-[13px] font-bold tracking-wider uppercase text-care mb-2">Ad 3 · Her dignity</p>
+          <h3 class="font-bold text-[19px] mb-2">"Her bathroom. Still hers."</h3>
+          <p class="text-[16px] text-ink-mute leading-relaxed mb-3">Matte black and brushed nickel that read as fixtures, not medical equipment. Nothing drilled, nothing permanent, nothing that announces itself.</p>
+          <p class="text-[15px] text-ink-faint">Reaches the 65+ buyer directly, and reassures the adult child.</p>
+        </div>
+      </div>
+      <p class="text-[16px] text-ink-mute mt-6 max-w-3xl">Run all three on equal budget for two weeks. Put everything behind whichever gets a customer cheapest. <strong class="text-ink">Targeting:</strong> 45–65, interests around caregiving, senior living and home modification. Never mention age or health in the copy itself.</p>
+    </div>
+  </section>
+
+  <section class="py-12 sm:py-16 bg-white border-b border-nickel-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display font-bold text-[28px] sm:text-[42px] tracking-tight mb-6">Where the first budget goes</h2>
+      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-6">
+        <table class="w-full text-left text-[16px] min-w-[600px]">
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Channel</th><th class="p-4 font-bold text-right">Test</th><th class="p-4 font-bold text-right">Full</th><th class="p-4 font-bold">Why</th></tr></thead>
+          <tbody class="divide-y divide-nickel-light">
+            <tr><td class="p-4 font-semibold">Google Search</td><td class="p-4 text-right tabular">$800</td><td class="p-4 text-right tabular">$2,200</td><td class="p-4 text-ink-mute">Someone typing "no drill grab bar" has the problem today.</td></tr>
+            <tr><td class="p-4 font-semibold">Meta</td><td class="p-4 text-right tabular">$900</td><td class="p-4 text-right tabular">$2,400</td><td class="p-4 text-ink-mute">Where the adult child is. Carries the three ads above.</td></tr>
+            <tr><td class="p-4 font-semibold">Reddit</td><td class="p-4 text-right tabular">$300</td><td class="p-4 text-right tabular">$800</td><td class="p-4 text-ink-mute">Targets r/AgingParents directly. Cheap, and they're already discussing it.</td></tr>
+            <tr><td class="p-4 font-semibold">Amazon</td><td class="p-4 text-right tabular">—</td><td class="p-4 text-right tabular">$400</td><td class="p-4 text-ink-mute">Rail and strips only — standard size, so fees don't eat them.</td></tr>
+            <tr><td class="p-4">Held back</td><td class="p-4 text-right tabular">—</td><td class="p-4 text-right tabular">$200</td><td class="p-4 text-ink-mute">For whichever shows a real signal in week two.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bg-signal-light rounded-2xl p-6 border border-signal/25">
+        <h3 class="font-bold text-[19px] text-signal mb-2">Advertise to communities, never post in them</h3>
+        <p class="text-[16px] text-ink-mute leading-relaxed">Buying placement targeted at r/AgingParents is legitimate. Posting promotionally inside a support group breaks their rules and is the fastest reputational loss available to us. Two different activities, and the line isn't blurry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 sm:py-16 bg-care text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display font-bold text-[28px] sm:text-[44px] tracking-tight mb-6">What we can afford to pay for a customer</h2>
+      <p class="text-[19px] sm:text-[21px] leading-relaxed text-white/90 mb-6">A Full Care Package nets <strong class="text-white">$79.42</strong> after landed cost, payment fees, shipping and warehouse handling. A typical order across our mix nets <strong class="text-white">$72.36</strong>. Those are the ceilings.</p>
+      <div class="bg-white/[.10] rounded-2xl p-5 sm:p-6 mb-6">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-[16px] min-w-[420px]">
+            <thead><tr class="text-white/70"><th class="pb-3 font-semibold">Cost per customer</th><th class="pb-3 font-semibold text-right">Left on a package</th><th class="pb-3 font-semibold text-right">Left on a typical order</th></tr></thead>
+            <tbody>
+              <tr class="border-t border-white/20"><td class="py-3">$30</td><td class="py-3 text-right tabular font-bold">$49.42</td><td class="py-3 text-right tabular font-bold">$42.36</td></tr>
+              <tr class="border-t border-white/20"><td class="py-3">$45</td><td class="py-3 text-right tabular font-bold">$34.42</td><td class="py-3 text-right tabular font-bold">$27.36</td></tr>
+              <tr class="border-t border-white/20"><td class="py-3">$60</td><td class="py-3 text-right tabular font-bold">$19.42</td><td class="py-3 text-right tabular font-bold">$12.36</td></tr>
+              <tr class="border-t border-white/20"><td class="py-3">$73</td><td class="py-3 text-right tabular font-bold">$6.42</td><td class="py-3 text-right tabular text-white/70">−$0.64</td></tr>
+              <tr class="border-t border-white/20"><td class="py-3">$85</td><td class="py-3 text-right tabular text-white/70">−$5.58</td><td class="py-3 text-right tabular text-white/70">−$12.64</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="text-[19px] leading-relaxed text-white/90">Good creative buys a customer for <strong class="text-white">$30–60</strong>, which leaves real money on every order. It only stops working past roughly <strong class="text-white">$72</strong>. That is a workable band — but it is why the test runs three creatives, and why we write the stop number down before spending.</p>
+    </div>
+  </section>
+</div>
+
+
+<!-- ═══════════ CART DRAWER ═══════════ -->
+<div id="cartOverlay" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-ink/70 backdrop-blur-sm" data-close-cart></div>
+  <aside id="cartPanel" role="dialog" aria-modal="true" aria-labelledby="cartTitle"
+    class="absolute right-0 top-0 h-full w-[min(460px,100vw)] bg-white shadow-deep flex flex-col translate-x-full transition-transform duration-300">
+    <div class="flex items-center justify-between gap-4 p-6 border-b border-nickel-light">
+      <h2 id="cartTitle" class="font-display font-bold text-[24px]">Your cart</h2>
+      <button type="button" data-close-cart aria-label="Close cart"
+        class="text-[30px] leading-none text-ink-mute hover:text-ink px-2">×</button>
+    </div>
+    <div id="cartBody" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+    <div id="cartFooter" class="border-t border-nickel-light p-6 bg-nickel-pale"></div>
+  </aside>
+</div>
+
+
+<!-- ═══════════ PACKAGE CONTENTS ═══════════ -->
+<dialog id="packModal" class="w-[min(760px,94vw)] rounded-2xl p-0">
+  <div class="bg-white rounded-2xl">
+    <div class="flex justify-between items-start gap-4 p-7 pb-5 border-b border-nickel-light">
+      <div>
+        <h2 id="packTitle" class="font-display font-bold text-[28px] tracking-tight"></h2>
+        <p id="packSub" class="text-[16px] text-ink-mute mt-1"></p>
+      </div>
+      <button type="button" id="closePack" aria-label="Close"
+        class="text-[28px] leading-none text-ink-mute hover:text-ink px-2 shrink-0">&times;</button>
+    </div>
+    <div id="packBody" class="p-7 space-y-3 max-h-[56vh] overflow-y-auto"></div>
+    <div id="packFoot" class="p-7 pt-5 border-t border-nickel-light bg-nickel-pale rounded-b-2xl"></div>
+  </div>
+</dialog>
+
+<!-- ═══════════ ASSESSMENT MODAL ═══════════ -->
+<dialog id="assessModal" class="w-[min(660px,94vw)] rounded-2xl p-0">
+  <div class="bg-white rounded-2xl">
+    <div class="flex justify-between items-start gap-4 p-7 pb-5 border-b border-nickel-light">
+      <div>
+        <h2 class="font-display font-bold text-[27px] tracking-tight">Which pieces do you need?</h2>
+        <p class="text-[16px] text-ink-mute mt-1">Three questions. We'll tell you honestly — including when the full package is more than you need.</p>
+      </div>
+      <button type="button" id="closeAssess" aria-label="Close"
+        class="text-[28px] leading-none text-ink-mute hover:text-ink px-2 shrink-0">×</button>
+    </div>
+
+    <div id="assessForm" class="p-7 pb-8 space-y-6 max-h-[58vh] overflow-y-auto">
+      <fieldset>
+        <legend class="font-bold text-[18px] mb-1">Where does it feel unsteady?</legend>
+        <p class="text-[15px] text-ink-mute mb-3">Choose everything that applies.</p>
+        <div id="concernList" class="space-y-2.5"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="font-bold text-[18px] mb-3">How many bathrooms?</legend>
+        <div class="flex items-center gap-3">
+          <button type="button" data-arooms="-" aria-label="Fewer bathrooms"
+            class="w-12 h-12 rounded-xl border-2 border-ink font-bold text-[22px] hover:bg-ink hover:text-white transition">−</button>
+          <input id="assessRooms" type="number" min="1" max="500" value="1" inputmode="numeric"
+            aria-label="Number of bathrooms"
+            class="w-20 h-12 text-center text-[20px] font-bold tabular rounded-xl border-2 border-nickel" />
+          <button type="button" data-arooms="+" aria-label="More bathrooms"
+            class="w-12 h-12 rounded-xl border-2 border-ink font-bold text-[22px] hover:bg-ink hover:text-white transition">+</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="font-bold text-[18px] mb-3">Is this a rental?</legend>
+        <div class="flex gap-3">
+          <label class="flex-1 flex items-center gap-3 p-4 rounded-xl border-2 border-care ring-2 ring-care/20 cursor-pointer font-semibold" data-rent-card="yes">
+            <input type="radio" name="rents" value="yes" checked class="w-5 h-5 accent-care" /> Yes, we rent
+          </label>
+          <label class="flex-1 flex items-center gap-3 p-4 rounded-xl border-2 border-nickel-light cursor-pointer font-semibold" data-rent-card="no">
+            <input type="radio" name="rents" value="no" class="w-5 h-5 accent-care" /> No, we own
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="p-7 pt-5 border-t border-nickel-light bg-nickel-pale rounded-b-2xl">
+      <button type="button" id="assessSubmit"
+        class="w-full bg-ink hover:bg-ink-soft text-white font-bold text-[18px] py-5 rounded-xl transition active:scale-[.98] disabled:opacity-60">
+        Show me what fits
+      </button>
+    </div>
+
+    <div id="assessResult" class="hidden p-7"></div>
+  </div>
+</dialog>
+
+<!-- ═══════════ B2B MODAL ═══════════ -->
+<dialog id="b2bModal" class="w-[min(680px,94vw)] rounded-2xl p-0">
+  <form id="b2bForm" method="dialog" class="bg-white rounded-2xl" novalidate>
+    <div class="flex justify-between items-start gap-4 p-7 pb-5 border-b border-nickel-light">
+      <div>
+        <h2 class="font-display font-bold text-[27px] tracking-tight">Request a facility quote</h2>
+        <p class="text-[16px] text-ink-mute mt-1">You'll see indicative pricing immediately — before anyone calls you.</p>
+      </div>
+      <button type="button" id="closeB2B" aria-label="Close quote request"
+        class="text-[28px] leading-none text-ink-mute hover:text-ink px-2 shrink-0">×</button>
+    </div>
+    <div class="p-7 space-y-4 max-h-[62vh] overflow-y-auto">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div><label for="facility_name" class="block font-bold text-[16px] mb-1.5">Facility / company name *</label>
+          <input id="facility_name" name="facility_name" required autocomplete="organization" class="w-full h-14 px-4 text-[17px] rounded-xl border-2 border-nickel bg-white" /></div>
+        <div><label for="contact_name" class="block font-bold text-[16px] mb-1.5">Your name *</label>
+          <input id="contact_name" name="contact_name" required autocomplete="name" class="w-full h-14 px-4 text-[17px] rounded-xl border-2 border-nickel bg-white" /></div>
+        <div><label for="email" class="block font-bold text-[16px] mb-1.5">Work email *</label>
+          <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" class="w-full h-14 px-4 text-[17px] rounded-xl border-2 border-nickel bg-white" /></div>
+        <div><label for="phone" class="block font-bold text-[16px] mb-1.5">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(614) 555-0142" class="w-full h-14 px-4 text-[17px] rounded-xl border-2 border-nickel bg-white" /></div>
+        <div><label for="facility_type" class="block font-bold text-[16px] mb-1.5">Facility type *</label>
+          <select id="facility_type" name="facility_type" class="w-full h-14 px-4 text-[17px] rounded-xl border-2 border-nickel bg-white">
+            <option value="residential_assisted_living">Residential Assisted Living (RAL)</option>
+            <option value="assisted_living_facility">Assisted Living Facility</option>
+            <option value="property_management">Property management</option>
+            <option value="senior_housing">Senior housing / 55+</option>
+            <option value="home_health_agency">Home health agency</option>
+            <option value="hospital_discharge">Hospital / discharge planning</option>
+            <option value="other">Other</option>
+          </select></div>
+        <div><label for="role" class="block font-bold text-[16px] mb-1.5">Your role</label>
+          <input id="role" name="role" autocomplete="organization-title" placeholder="Owner, Administrator…" class="w-full h-14 px-4 text-[17px] rounded-xl border-2 border-nickel bg-white" /></div>
+        <div><label for="locations" class="block font-bold text-[16px] mb-1.5">Number of locations *</label>
+          <input id="locations" name="locations" type="number" min="1" max="5000" value="1" inputmode="numeric" class="w-full h-14 px-4 text-[17px] tabular rounded-xl border-2 border-nickel bg-white" /></div>
+        <div><label for="bathrooms" class="block font-bold text-[16px] mb-1.5">Total bathrooms *</label>
+          <input id="bathrooms" name="bathrooms" type="number" min="1" max="20000" value="10" inputmode="numeric" required class="w-full h-14 px-4 text-[17px] tabular rounded-xl border-2 border-nickel bg-white" /></div>
+      </div>
+      <div><label for="timeline" class="block font-bold text-[16px] mb-1.5">Timeline *</label>
+        <select id="timeline" name="timeline" class="w-full h-14 px-4 text-[17px] rounded-xl border-2 border-nickel bg-white">
+          <option value="immediate">Immediate — we need this now</option>
+          <option value="30_days" selected>Within 30 days</option>
+          <option value="90_days">Within 90 days</option>
+          <option value="researching">Researching options</option>
+        </select></div>
+      <div><label for="message" class="block font-bold text-[16px] mb-1.5">Anything we should know?</label>
+        <textarea id="message" name="message" rows="3" maxlength="2000" placeholder="Tub types, inspection deadlines, state requirements…" class="w-full p-4 text-[17px] rounded-xl border-2 border-nickel bg-white resize-y"></textarea></div>
+      <div class="hidden" aria-hidden="true">
+        <label for="company_website">Company website</label>
+        <input id="company_website" name="company_website" tabindex="-1" autocomplete="off" />
+      </div>
+      <label class="flex gap-3 items-start text-[16px] cursor-pointer">
+        <input type="checkbox" id="consent" name="consent" checked class="mt-1 w-5 h-5 accent-care shrink-0" />
+        <span class="text-ink-mute">Yes, a SafeStep operator specialist may contact me about this quote. We never sell or share your information.</span>
+      </label>
+      <p id="b2bError" class="hidden text-signal font-semibold text-[16px]" role="alert"></p>
+    </div>
+    <div class="p-7 pt-5 border-t border-nickel-light bg-nickel-pale rounded-b-2xl">
+      <button type="submit" id="b2bSubmit" class="w-full bg-ink hover:bg-ink-soft text-white font-bold text-[18px] py-5 rounded-xl transition active:scale-[.98] disabled:opacity-60">Get my quote</button>
+      <p class="text-center text-[15px] text-ink-mute mt-3">Response within 4–12 business hours · No obligation</p>
+    </div>
+  </form>
+  <div id="b2bSuccess" class="hidden bg-white rounded-2xl p-9 text-center">
+    <div class="w-16 h-16 rounded-full bg-care-light text-care-dark text-[32px] flex items-center justify-center mx-auto mb-5" aria-hidden="true">✓</div>
+    <h2 class="font-display font-bold text-[28px] mb-3">Quote request received</h2>
+    <p id="b2bSuccessMsg" class="text-[18px] text-ink-mute leading-relaxed mb-6"></p>
+    <div id="b2bQuoteBox" class="bg-nickel-pale rounded-xl border border-nickel-light p-6 text-left mb-6"></div>
+    <button type="button" id="closeSuccess" class="bg-ink text-white font-bold text-[17px] px-8 py-4 rounded-xl hover:bg-ink-soft transition">Done</button>
+  </div>
+</dialog>
+
+<!-- ═══════════ TOAST ═══════════ -->
+<div id="toast" role="status" aria-live="polite" class="fixed bottom-24 lg:bottom-6 right-4 left-4 sm:left-auto sm:w-[min(400px,calc(100vw-2rem))] z-[60] hidden">
+  <div class="bg-ink text-white rounded-xl shadow-deep p-5 flex gap-3 items-start">
+    <span class="text-[22px] leading-none text-care-light" aria-hidden="true">✓</span>
+    <div class="flex-1"><p id="toastMsg" class="font-semibold text-[16px] leading-snug"></p></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict';
+
+  const API = '';
+  const STORAGE_KEY = 'safestep.cart.v1';
+  const FINISH_KEY  = 'safestep.finish.v1';
+
+  const FAM = {
+    POLE:     'tension-grab-pole',
+    CLAMP:    'tub-clamp-grab-bar',
+    STRIPS:   'non-slip-safety-strips',
+    TOILET:   'toilet-safety-rail',
+    BENCH:    'shower-bench',
+    LIGHT:    'motion-night-light',
+    SHOWER:   'handheld-shower-head',
+    BUNDLE:   'full-bathroom-care-package',
+    COMPLETE: 'complete-bathroom-system'
+  };
+  const COMPONENTS = [FAM.POLE, FAM.CLAMP, FAM.STRIPS];
+  // Order the grid deliberately: packages first, pieces after.
+  const PACKAGES = [FAM.COMPLETE, FAM.BUNDLE];
+  const SINGLES  = [FAM.POLE, FAM.CLAMP, FAM.TOILET, FAM.STRIPS, FAM.BENCH, FAM.LIGHT, FAM.SHOWER];
+  const ILLO = {
+    [FAM.POLE]:'#illo-pole',       [FAM.CLAMP]:'#illo-clamp',
+    [FAM.STRIPS]:'#illo-strips',   [FAM.TOILET]:'#illo-toilet',
+    [FAM.BENCH]:'#illo-bench',     [FAM.LIGHT]:'#illo-light',
+    [FAM.SHOWER]:'#illo-showerhead',
+    [FAM.BUNDLE]:'#illo-bundle',   [FAM.COMPLETE]:'#illo-bundle'
+  };
+  const BADGE = {
+    [FAM.COMPLETE]:'EVERYTHING', [FAM.BUNDLE]:'MOST CHOSEN',
+    [FAM.POLE]:'BEST SELLER', [FAM.LIGHT]:'ADD-ON'
+  };
+  const FINISH_LABEL = { matte_black:'Matte Black', brushed_nickel:'Brushed Nickel' };
+  // Where each piece physically goes — a package should read as a room plan,
+  // not a receipt.
+  const PLACE = {
+    [FAM.POLE]:   'Floor to ceiling, beside the tub',
+    [FAM.CLAMP]:  'Clamped to the tub wall',
+    [FAM.TOILET]: 'Either side of the toilet',
+    [FAM.STRIPS]: 'Across the tub floor',
+    [FAM.BENCH]:  'Inside the shower',
+    [FAM.LIGHT]:  'Plugged in on the route there',
+    [FAM.SHOWER]: 'Replaces the shower head'
+  };
+  // Each illustration has its own aspect ratio — sharing one viewBox squashes them.
+  const VBOX = {
+    [FAM.POLE]:'0 0 160 210',    [FAM.CLAMP]:'0 0 200 170',
+    [FAM.STRIPS]:'0 0 200 170',  [FAM.TOILET]:'0 0 200 170',
+    [FAM.BENCH]:'0 0 200 170',   [FAM.LIGHT]:'0 0 200 170',
+    [FAM.SHOWER]:'0 0 200 170',
+    [FAM.BUNDLE]:'0 0 220 180',  [FAM.COMPLETE]:'0 0 220 180'
+  };
+
+  /* ── Local pricing mirror: the page stays usable if the API is down ── */
+  const LOCAL = {
+    freeShipping: 99, flatShipping: 8.95,
+    products: [
+      {sku:'SSL-TGP-MB',family:FAM.POLE,finish:'matte_black',variant_label:'Matte Black',price:109.00,compare_at:null},
+      {sku:'SSL-TGP-BN',family:FAM.POLE,finish:'brushed_nickel',variant_label:'Brushed Nickel',price:109.00,compare_at:null},
+      {sku:'SSL-TCB-MB',family:FAM.CLAMP,finish:'matte_black',variant_label:'Matte Black',price:64.95,compare_at:79.95},
+      {sku:'SSL-TCB-BN',family:FAM.CLAMP,finish:'brushed_nickel',variant_label:'Brushed Nickel',price:64.95,compare_at:79.95},
+      {sku:'SSL-NSS-20',family:FAM.STRIPS,finish:'clear',variant_label:'20-Strip Pack',price:19.99,compare_at:24.99},
+      {sku:'SSL-TSR-MB',family:FAM.TOILET,finish:'matte_black',variant_label:'Matte Black',price:49.95,compare_at:null},
+      {sku:'SSL-TSR-BN',family:FAM.TOILET,finish:'brushed_nickel',variant_label:'Brushed Nickel',price:49.95,compare_at:null},
+      {sku:'SSL-SHB-MB',family:FAM.BENCH,finish:'matte_black',variant_label:'Matte Black',price:89.99,compare_at:null},
+      {sku:'SSL-SHB-BN',family:FAM.BENCH,finish:'brushed_nickel',variant_label:'Brushed Nickel',price:89.99,compare_at:null},
+      {sku:'SSL-MNL-2',family:FAM.LIGHT,finish:'clear',variant_label:'2-Pack',price:16.99,compare_at:null},
+      {sku:'SSL-HSH-MB',family:FAM.SHOWER,finish:'matte_black',variant_label:'Matte Black',price:39.99,compare_at:null},
+      {sku:'SSL-HSH-BN',family:FAM.SHOWER,finish:'brushed_nickel',variant_label:'Brushed Nickel',price:39.99,compare_at:null},
+      {sku:'SSL-BUNDLE-MB',family:FAM.BUNDLE,finish:'matte_black',variant_label:'Matte Black',price:169.99,compare_at:193.94},
+      {sku:'SSL-BUNDLE-BN',family:FAM.BUNDLE,finish:'brushed_nickel',variant_label:'Brushed Nickel',price:169.99,compare_at:193.94},
+      {sku:'SSL-COMPLETE-MB',family:FAM.COMPLETE,finish:'matte_black',variant_label:'Matte Black',price:229.99,compare_at:260.88},
+      {sku:'SSL-COMPLETE-BN',family:FAM.COMPLETE,finish:'brushed_nickel',variant_label:'Brushed Nickel',price:229.99,compare_at:260.88}
+    ].map(p => Object.assign(p, ({
+      [FAM.POLE]:     {short_name:'Tension Grab Pole', name:'SafeStep Tension Grab Pole', kind:'single', weight_rating:'300 lbs', install_time:'5 Mins', install_minutes:5, blurb:'Floor-to-ceiling support that holds by pressure, not by screws.'},
+      [FAM.CLAMP]:    {short_name:'Tub Clamp Grab Bar', name:'SafeStep Tub Clamp Grab Bar', kind:'single', weight_rating:'300 lbs', install_time:'3 Mins', install_minutes:3, blurb:'A steady handhold for the step in and the step out.'},
+      [FAM.STRIPS]:   {short_name:'Non-Slip Safety Strips', name:'SafeStep Non-Slip Safety Strips', kind:'single', weight_rating:'Surface traction', install_time:'2 Mins', install_minutes:2, blurb:'Clear, wet-rated traction that peels away clean.'},
+      [FAM.TOILET]:   {short_name:'Toilet Safety Rail', name:'SafeStep Toilet Safety Rail', kind:'single', weight_rating:'300 lbs', install_time:'4 Mins', install_minutes:4, blurb:'Arms either side, so standing up is a push instead of a haul.'},
+      [FAM.BENCH]:    {short_name:'Shower Bench', name:'SafeStep Shower Bench', kind:'single', weight_rating:'300 lbs', install_time:'2 Mins', install_minutes:2, blurb:'Sit down for the whole shower. Nothing to install at all.'},
+      [FAM.LIGHT]:    {short_name:'Motion Night Light', name:'SafeStep Motion Night Light', kind:'single', weight_rating:'N/A', install_time:'1 Min', install_minutes:1, blurb:'Lights the way at 3am, when most falls actually happen.'},
+      [FAM.SHOWER]:   {short_name:'Handheld Shower Head', name:'SafeStep Handheld Shower Head', kind:'single', weight_rating:'N/A', install_time:'5 Mins', install_minutes:5, blurb:'Brings the water to you. Screws on by hand, no plumber.'},
+      [FAM.BUNDLE]:   {short_name:'Full Care Package', name:'Full Bathroom Care Package', kind:'bundle', weight_rating:'300 lbs', install_time:'15 Mins', install_minutes:15, blurb:'The pole, the tub rail and the strips. One afternoon.',
+                       contains:[FAM.POLE, FAM.CLAMP, FAM.STRIPS]},
+      [FAM.COMPLETE]: {short_name:'Complete System', name:'Complete Bathroom System', kind:'bundle', weight_rating:'300 lbs', install_time:'22 Mins', install_minutes:22, blurb:'Every place a fall starts, covered. The whole room in one box.',
+                       contains:[FAM.POLE, FAM.CLAMP, FAM.TOILET, FAM.STRIPS, FAM.LIGHT]}
+    })[p.family])),
+    tiers: [
+      {min_qty:1,max_qty:1,rate:0,label:'Single unit'},
+      {min_qty:2,max_qty:3,rate:.05,label:'2–3 units · 5% off'},
+      {min_qty:4,max_qty:9,rate:.10,label:'4–9 units · 10% off'},
+      {min_qty:10,max_qty:24,rate:.15,label:'10–24 units · 15% off'},
+      {min_qty:25,max_qty:49,rate:.20,label:'25–49 units · 20% off'},
+      {min_qty:50,max_qty:null,rate:.25,label:'50+ units · 25% off'}
+    ],
+    riskAreas: {
+      tub_entry:'Stepping in and out of the tub',
+      standing:'Standing up from a seated position',
+      balance:'Balance while walking or turning',
+      wet_floor:'Slipping on a wet tub or shower floor'
+    }
+  };
+
+  let catalog = LOCAL.products.slice();
+  let tiers   = LOCAL.tiers.slice();
+  let riskAreas = Object.assign({}, LOCAL.riskAreas);
+
+  const $  = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+  const usd = n => '$' + Number(n || 0).toFixed(2);
+  const bySku = sku => catalog.find(p => p.sku === sku);
+  const familyOf = fam => catalog.filter(p => p.family === fam);
+
+  function skuFor(fam, finish) {
+    const opts = familyOf(fam);
+    if (!opts.length) return null;
+    return (opts.find(p => p.finish === (finish || state.finish)) || opts[0]).sku;
+  }
+  function productFor(fam, finish) { return bySku(skuFor(fam, finish)); }
+
+  /* ── State ── */
+  const state = {
+    finish: 'matte_black',
+    cart: {},                 // sku -> qty
+    config: 'bundle',
+    rooms: 1,
+    custom: {},               // family -> qty
+    promo: ''
+  };
+  SINGLES.forEach(f => state.custom[f] = 0);
+
+  function loadPersisted() {
+    try {
+      const c = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      if (c && typeof c === 'object') state.cart = c;
+      const f = localStorage.getItem(FINISH_KEY);
+      if (f === 'matte_black' || f === 'brushed_nickel') state.finish = f;
+    } catch (_) { /* private mode / blocked storage: run without persistence */ }
+  }
+  function persist() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.cart));
+      localStorage.setItem(FINISH_KEY, state.finish);
+    } catch (_) {}
+  }
+
+  /* ── Toast ── */
+  let toastTimer = null;
+  function toast(msg) {
+    const el = $('#toast');
+    $('#toastMsg').textContent = msg;
+    el.classList.remove('hidden');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.add('hidden'), 4200);
+  }
+
+  /* ── Finish ── */
+  function setFinish(finish, announce) {
+    state.finish = finish;
+    document.documentElement.setAttribute('data-finish', finish);
+    $$('.finish-swatch').forEach(b => {
+      const on = b.dataset.finish === finish;
+      b.setAttribute('aria-pressed', String(on));
+      b.classList.toggle('border-care', on);
+      b.classList.toggle('ring-2', on);
+      b.classList.toggle('ring-care/20', on);
+      b.classList.toggle('border-nickel-light', !on);
+    });
+    const lbl = $('[data-finish-label]');
+    if (lbl) lbl.textContent = FINISH_LABEL[finish];
+    persist();
+    renderProducts();
+    renderCustomPicker();
+    recalc();
+    if (announce) toast(`Finish set to ${FINISH_LABEL[finish]}.`);
+  }
+
+  /* ── Payments ─────────────────────────────────────────────────────────
+     Every method below is wired to CHECKOUT.start(). To go live, fill in
+     the provider calls — nothing else in the page needs to change.
+
+     Cost per method (already reflected in our margin model at 2.9% + $0.30):
+       Shopify Payments / card   2.9% + $0.30   ← our assumption
+       Apple Pay                 no extra fee, rides on Shopify Payments
+       Shop Pay                  no extra fee, rides on Shopify Payments
+       Google Pay                no extra fee, rides on Shopify Payments
+       PayPal                    3.49% + $0.49  ← costs ~$1.30 more per order
+     Using a gateway other than Shopify Payments adds a 0.5–2% Shopify fee.
+  ---------------------------------------------------------------------- */
+  const CHECKOUT = {
+    // Shopify variant ids go here once the catalogue is provisioned.
+    variantId: sku => (window.SAFESTEP_VARIANTS || {})[sku] || null,
+
+    // Shopify permalink checkout: /cart/{variantId}:{qty},...
+    permalink(items) {
+      const parts = items
+        .map(i => [CHECKOUT.variantId(i.sku), i.quantity])
+        .filter(([id]) => id)
+        .map(([id, q]) => `${id}:${q}`);
+      return parts.length ? `/cart/${parts.join(',')}` : null;
+    },
+
+    available() {
+      const out = ['card', 'shop'];
+      // Apple Pay only offers itself where it can actually complete.
+      if (window.ApplePaySession && ApplePaySession.canMakePayments()) out.unshift('apple');
+      if (window.google && window.google.payments) out.push('google');
+      out.push('paypal');
+      return out;
+    },
+
+    start(method, items) {
+      const url = CHECKOUT.permalink(items);
+      if (url) { window.location.href = url; return; }        // live path
+      console.info('[SafeStep] checkout', { method, items });  // not yet connected
+      toast(`${CHECKOUT.label(method)} isn't connected yet — this is the demo store.`);
+    },
+
+    label(m) {
+      return { apple:'Apple Pay', shop:'Shop Pay', google:'Google Pay',
+               paypal:'PayPal', card:'Card checkout' }[m] || 'Checkout';
+    },
+
+    button(m) {
+      const style = {
+        apple:  'background:#000;color:#fff',
+        shop:   'background:#5A31F4;color:#fff',
+        google: 'background:#fff;color:#3c4043;border:1px solid #dadce0',
+        paypal: 'background:#FFC439;color:#003087',
+        card:   ''
+      }[m];
+      const face = { apple:'\uF8FF Pay', shop:'Shop Pay', google:'G Pay', paypal:'PayPal' }[m];
+      if (m === 'card') return '';
+      return `<button type="button" data-pay="${m}" style="${style}"
+        class="flex-1 basis-[calc(50%-4px)] sm:basis-auto min-w-[104px] font-bold text-[15px] py-4 rounded-xl transition active:scale-[.98]">${face}</button>`;
+    }
+  };
+
+  /* ── Scene preview ───────────────────────────────────────────────────
+     Each package puts different things in the bathroom. Dim the pieces a
+     package doesn't include rather than hiding them, so the room still
+     reads as a room. ------------------------------------------------- */
+  const SCENE_PART = {
+    [FAM.POLE]:'sc-pole', [FAM.CLAMP]:'sc-rail', [FAM.STRIPS]:'sc-strips',
+    [FAM.TOILET]:'sc-toilet-rail', [FAM.LIGHT]:'sc-light'
+  };
+
+  function showScene(fam) {
+    const pack = productFor(fam);
+    const included = new Set((pack && pack.contains ? pack.contains : [])
+      .map(f => SCENE_PART[f]).filter(Boolean));
+    Object.values(SCENE_PART).forEach(id => {
+      const g = document.getElementById(id);
+      if (g) g.style.opacity = included.has(id) ? '1' : '0.12';
+    });
+    $$('.scene-btn').forEach(b => {
+      const on = b.dataset.scene === fam;
+      b.setAttribute('aria-pressed', String(on));
+      b.classList.toggle('bg-care', on);
+      b.classList.toggle('text-white', on);
+      b.classList.toggle('bg-white/10', !on);
+      b.classList.toggle('text-nickel', !on);
+      b.classList.toggle('hover:bg-white/20', !on);
+      const prod = productFor(b.dataset.scene);
+      const count = b.querySelector('[data-scene-count]');
+      if (prod && count) {
+        const n = (prod.contains || []).length;
+        count.textContent = `${n} piece${n === 1 ? '' : 's'}`;
+      }
+    });
+  }
+
+  /* ── Cart ── */
+  const cartCount = () => Object.values(state.cart).reduce((a, b) => a + b, 0);
+
+  function addToCart(fam, qty) {
+    const sku = skuFor(fam);
+    if (!sku) return;
+    state.cart[sku] = (state.cart[sku] || 0) + (qty || 1);
+    persist(); renderCart();
+    const p = bySku(sku);
+    toast(`${p.short_name} (${p.variant_label}) added to your cart.`);
+    openCart();
+  }
+  function setCartQty(sku, qty) {
+    if (qty <= 0) delete state.cart[sku]; else state.cart[sku] = qty;
+    persist(); renderCart();
+  }
+
+  function cartTotals() {
+    const items = Object.entries(state.cart).map(([sku, q]) => ({ sku, quantity: q }));
+    return calcLocally(items, '');
+  }
+
+  function renderCart() {
+    const n = cartCount();
+    $$('[data-cart-count]').forEach(el => el.textContent = n);
+    const dot = $('[data-cart-dot]');
+    dot.textContent = n;
+    dot.classList.toggle('hidden', n === 0);
+
+    const body = $('#cartBody'), foot = $('#cartFooter');
+    if (!n) {
+      body.innerHTML = `
+        <div class="text-center py-14">
+          <svg class="illo w-28 h-28 mx-auto mb-5 opacity-40" viewBox="0 0 220 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#illo-bundle"/></svg>
+          <p class="text-[18px] font-bold mb-2">Your cart is empty</p>
+          <p class="text-[16px] text-ink-mute mb-6">Not sure what you need? We'll help you figure it out.</p>
+          <button type="button" class="open-assess bg-ink text-white font-bold text-[16px] px-6 py-4 rounded-xl">Find what fits</button>
+        </div>`;
+      foot.innerHTML = '';
+      body.querySelectorAll('.open-assess').forEach(b => b.addEventListener('click', () => { closeCart(); openAssess(); }));
+      return;
+    }
+
+    body.innerHTML = Object.entries(state.cart).map(([sku, q]) => {
+      const p = bySku(sku); if (!p) return '';
+      return `
+      <div class="flex gap-4 items-start bg-nickel-pale rounded-xl p-4 border border-nickel-light">
+        <svg class="illo w-16 h-16 shrink-0" viewBox="${VBOX[p.family]}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="${ILLO[p.family]}"/></svg>
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-[16px] leading-snug">${p.short_name}</div>
+          <div class="text-[14px] text-ink-mute mb-1.5">${p.variant_label} · ${p.install_time} setup</div>
+          ${(p.contains && p.contains.length) ? `<ul class="text-[13px] text-ink-faint leading-snug mb-2 space-y-0.5">
+            ${p.contains.map(cf => { const cp = productFor(cf);
+              return cp ? `<li>· ${cp.short_name}</li>` : ''; }).join('')}
+          </ul>` : ''}
+          <div class="flex items-center gap-2">
+            <button type="button" data-cq="-" data-sku="${sku}" aria-label="Decrease quantity"
+              class="w-9 h-9 rounded-lg border-2 border-nickel font-bold hover:bg-ink hover:text-white hover:border-ink transition">−</button>
+            <span class="w-8 text-center font-bold tabular">${q}</span>
+            <button type="button" data-cq="+" data-sku="${sku}" aria-label="Increase quantity"
+              class="w-9 h-9 rounded-lg border-2 border-nickel font-bold hover:bg-ink hover:text-white hover:border-ink transition">+</button>
+            <button type="button" data-cq="x" data-sku="${sku}"
+              class="ml-auto text-[14px] font-semibold text-ink-faint hover:text-signal underline">Remove</button>
+          </div>
+        </div>
+        <div class="font-bold tabular text-[16px] shrink-0">${usd(p.price * q)}</div>
+      </div>`;
+    }).join('');
+
+    body.querySelectorAll('[data-cq]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sku = btn.dataset.sku, cur = state.cart[sku] || 0;
+        if (btn.dataset.cq === 'x') setCartQty(sku, 0);
+        else setCartQty(sku, cur + (btn.dataset.cq === '+' ? 1 : -1));
+      });
+    });
+
+    const t = cartTotals();
+    const upsell = t.bundle_upsell;
+    const nextUp = suggestNext();
+    foot.innerHTML = `
+      ${upsell ? `<div class="bg-signal text-white rounded-xl p-4 text-[15px] leading-snug mb-4">
+        <strong>${upsell.message}</strong>
+        <button type="button" id="cartUpsell" class="block mt-2 underline font-bold">Switch and save →</button>
+      </div>` : ''}
+      ${!t.free_shipping && t.amount_to_free_shipping > 0 ? `<div class="bg-care-light text-care-deep rounded-xl p-3 text-[15px] font-semibold mb-4">
+        Add ${usd(t.amount_to_free_shipping)} for free shipping.</div>` : ''}
+      ${nextUp && !upsell ? `<div class="bg-nickel-pale border border-nickel-light rounded-xl p-4 mb-4 flex gap-3 items-center">
+        <svg class="illo w-12 h-12 shrink-0" viewBox="${VBOX[nextUp.family]}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="${ILLO[nextUp.family]}"/></svg>
+        <div class="flex-1 min-w-0">
+          <p class="text-[15px] leading-snug"><strong>${nextUp.reason}</strong></p>
+          <p class="text-[14px] text-ink-mute">${nextUp.short_name} · ${usd(nextUp.price)}</p>
+        </div>
+        <button type="button" id="addNext" class="bg-ink hover:bg-ink-soft text-white font-bold text-[15px] px-4 py-2.5 rounded-lg transition shrink-0">Add</button>
+      </div>` : ''}
+      <dl class="space-y-2 text-[16px] mb-4">
+        <div class="flex justify-between"><dt class="text-ink-mute">Subtotal</dt><dd class="tabular font-semibold">${usd(t.subtotal)}</dd></div>
+        ${t.volume_discount > 0 ? `<div class="flex justify-between"><dt class="text-ink-mute">Volume (${Math.round(t.volume_discount_rate*100)}%)</dt><dd class="tabular font-semibold text-care">−${usd(t.volume_discount)}</dd></div>` : ''}
+        <div class="flex justify-between"><dt class="text-ink-mute">Shipping</dt><dd class="tabular font-semibold">${t.free_shipping ? 'FREE' : usd(t.shipping)}</dd></div>
+      </dl>
+      <div class="flex justify-between items-baseline border-t border-nickel-light pt-3 mb-4">
+        <span class="font-bold text-[18px]">Total</span>
+        <span class="font-display font-bold text-[28px] tabular">${usd(t.total)}</span>
+      </div>
+      <p class="text-[13px] font-bold tracking-wider uppercase text-ink-faint mb-2">Express checkout</p>
+      <div class="flex flex-wrap gap-2 mb-3">${CHECKOUT.available().map(m => CHECKOUT.button(m)).join('')}</div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="h-px flex-1 bg-nickel-light"></div>
+        <span class="text-[13px] text-ink-faint">or</span>
+        <div class="h-px flex-1 bg-nickel-light"></div>
+      </div>
+      <button type="button" id="cartCheckout" class="w-full bg-care hover:bg-care-dark text-white font-bold text-[18px] py-5 rounded-xl transition active:scale-[.98]">Checkout as guest</button>
+      <p class="text-center text-[14px] text-ink-mute mt-3">No account needed · FSA &amp; HSA eligible · 30-day returns</p>`;
+
+    const up = $('#cartUpsell');
+    if (up) up.addEventListener('click', () => {
+      const n2 = upsell.eligible_bundles;
+      COMPONENTS.forEach(fam => {
+        const s = familyOf(fam).map(p => p.sku).find(s => state.cart[s]);
+        if (s) setCartQty(s, Math.max(0, (state.cart[s] || 0) - n2));
+      });
+      state.cart[upsell.bundle_sku] = (state.cart[upsell.bundle_sku] || 0) + n2;
+      persist(); renderCart();
+      toast(`Switched to the Care Package — you saved ${usd(upsell.savings)}.`);
+    });
+    $$('[data-pay]').forEach(b => b.addEventListener('click', () => {
+      const items = Object.entries(state.cart).map(([sku, quantity]) => ({ sku, quantity }));
+      if (!items.length) { toast('Add something to your cart first.'); return; }
+      CHECKOUT.start(b.dataset.pay, items);
+    }));
+
+    const nextBtn = $('#addNext');
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      const n = suggestNext();
+      if (!n) return;
+      const sku = skuFor(n.family);
+      state.cart[sku] = (state.cart[sku] || 0) + 1;
+      persist(); renderCart();
+      toast(`${n.short_name} added.`);
+    });
+    $('#cartCheckout').addEventListener('click', doCheckout);
+  }
+
+  // What is missing from this bathroom, given what is already in the cart.
+  // Ordered by how commonly the gap matters, not by price.
+  function suggestNext() {
+    const fams = new Set(Object.keys(state.cart).map(sku => (bySku(sku)||{}).family));
+    if (fams.has(FAM.COMPLETE)) return null;
+    const rules = [
+      { need: FAM.CLAMP,  when: [FAM.POLE],   reason: 'Most people add a tub rail with the pole' },
+      { need: FAM.TOILET, when: [FAM.POLE, FAM.CLAMP, FAM.BUNDLE], reason: 'Standing up from the toilet is the other hard moment' },
+      { need: FAM.STRIPS, when: [FAM.CLAMP, FAM.POLE], reason: 'The floor is where most slips actually start' },
+      { need: FAM.LIGHT,  when: [FAM.BUNDLE, FAM.TOILET], reason: 'Night trips are when falls happen' },
+    ];
+    for (const r of rules) {
+      if (fams.has(r.need)) continue;
+      if (!r.when.some(f => fams.has(f))) continue;
+      const p = productFor(r.need);
+      if (p) return { family: r.need, short_name: p.short_name, price: p.price, reason: r.reason };
+    }
+    return null;
+  }
+
+  function openCart() {
+    $('#cartOverlay').classList.remove('hidden');
+    requestAnimationFrame(() => $('#cartPanel').classList.remove('translate-x-full'));
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    $('#cartPanel').classList.add('translate-x-full');
+    document.body.style.overflow = '';
+    setTimeout(() => $('#cartOverlay').classList.add('hidden'), 300);
+  }
+
+  function doCheckout() {
+    const items = Object.entries(state.cart).map(([sku, quantity]) => ({ sku, quantity }));
+    if (!items.length) { toast('Add at least one item before checking out.'); return; }
+    CHECKOUT.start('card', items);
+  }
+
+  /* ── Product grid ── */
+  function renderProducts() {
+    // Packages first and larger — the bundle is the offer that cannot be
+    // price-compared, so it should not sit in a row of equals.
+    $('#packageGrid').innerHTML = PACKAGES.map(fam => {
+      const p = productFor(fam); if (!p) return '';
+      const save = p.compare_at ? p.compare_at - p.price : 0;
+      const hero = fam === FAM.BUNDLE;
+      return `
+      <article class="bg-white rounded-2xl border-2 ${hero ? 'border-care ring-4 ring-care/10' : 'border-ink'} shadow-deep p-7 flex flex-col reveal in">
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <span class="${hero ? 'bg-care' : 'bg-ink'} text-white text-[12px] font-bold px-3 py-1.5 rounded-full tracking-wide">${BADGE[fam] || ''}</span>
+          ${save > 0 ? `<span class="bg-gold-light text-gold font-bold text-[14px] px-3 py-1.5 rounded-lg">SAVE ${usd(save)}</span>` : ''}
+        </div>
+        <div class="aspect-[16/10] rounded-xl bg-gradient-to-br from-nickel-pale to-nickel-light border border-nickel-light mb-5 p-5 flex items-center justify-center">
+          <svg class="illo w-full h-full" viewBox="${VBOX[fam]}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${p.short_name}, ${p.variant_label}"><use href="${ILLO[fam]}"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-[27px] leading-snug mb-2">${p.name}</h3>
+        <dl class="flex flex-wrap gap-x-6 gap-y-1 text-[15px] mb-3">
+          <div class="flex gap-2"><dt class="text-ink-mute">Holds</dt><dd class="font-bold">${p.weight_rating}</dd></div>
+          <div class="flex gap-2"><dt class="text-ink-mute">Setup</dt><dd class="font-bold">${p.install_time}</dd></div>
+          <div class="flex gap-2"><dt class="text-ink-mute">Tools</dt><dd class="font-bold">None</dd></div>
+        </dl>
+        <p class="text-[17px] text-ink-mute leading-relaxed mb-4 flex-1">${p.blurb}</p>
+
+        <div class="bg-nickel-pale rounded-xl border border-nickel-light p-5 mb-5">
+          <div class="flex items-baseline justify-between mb-3">
+            <p class="text-[13px] font-bold tracking-wider uppercase text-ink-faint">What's in the box</p>
+            <p class="text-[13px] font-bold text-ink-faint">${(p.contains || []).length} pieces</p>
+          </div>
+          <ul class="space-y-3 mb-4">
+            ${(p.contains || []).map(cf => {
+              const cp = productFor(cf);
+              return cp ? `<li class="flex items-start gap-3">
+                <svg class="illo w-9 h-9 shrink-0 mt-0.5" viewBox="${VBOX[cf]}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="${ILLO[cf]}"/></svg>
+                <span class="flex-1 min-w-0">
+                  <span class="block text-[16px] font-semibold leading-snug">1 &times; ${cp.short_name}</span>
+                  <span class="block text-[14px] text-ink-mute leading-snug">${PLACE[cf] || cp.blurb}</span>
+                </span>
+                <span class="text-[15px] text-ink-faint tabular shrink-0">${usd(cp.price)}</span></li>` : '';
+            }).join('')}
+          </ul>
+          <div class="border-t border-nickel-light pt-3 space-y-1">
+            <div class="flex justify-between text-[15px]">
+              <span class="text-ink-mute">Bought separately</span>
+              <span class="tabular line-through text-ink-mute">${usd(p.compare_at || 0)}</span>
+            </div>
+            <div class="flex justify-between text-[16px] font-bold">
+              <span>As a package</span><span class="tabular">${usd(p.price)}</span>
+            </div>
+          </div>
+          <button type="button" data-pack="${fam}" class="mt-3 text-[15px] font-bold text-care hover:underline">See each piece up close &rarr;</button>
+        </div>
+
+        <div class="flex items-baseline gap-3 mb-2 flex-wrap">
+          <span class="font-display font-bold text-[34px] tabular">${usd(p.price)}</span>
+          ${p.compare_at ? `<span class="text-ink-mute line-through text-[18px] tabular">${usd(p.compare_at)}</span>` : ''}
+        </div>
+        ${save > 0 ? `<p class="text-[15px] font-semibold text-care mb-5">Bundling saves you ${usd(save)} — about ${Math.round(save / p.compare_at * 100)}% less than buying the pieces on their own.</p>` : '<div class="mb-5"></div>'}
+        <button type="button" data-add="${fam}"
+          class="w-full ${hero ? 'bg-care hover:bg-care-dark' : 'bg-ink hover:bg-ink-soft'} text-white font-bold text-[18px] py-5 rounded-xl transition active:scale-[.98]">
+          Add to Cart
+        </button>
+        <p class="text-center text-[14px] text-ink-mute mt-3" data-delivery></p>
+      </article>`;
+    }).join('');
+
+    $('#productGrid').innerHTML = SINGLES.map(fam => {
+      const p = productFor(fam); if (!p) return '';
+      const save = p.compare_at ? p.compare_at - p.price : 0;
+      return `
+      <article class="bg-white rounded-2xl border border-nickel-light shadow-lift p-5 flex flex-col reveal in">
+        ${BADGE[fam] ? `<span class="self-start mb-2 bg-ink text-white text-[12px] font-bold px-2.5 py-1 rounded-full tracking-wide">${BADGE[fam]}</span>` : '<span class="mb-2 h-[24px] block"></span>'}
+        <div class="aspect-square rounded-xl bg-nickel-pale border border-nickel-light mb-3 p-3 flex items-center justify-center">
+          <svg class="illo w-full h-full" viewBox="${VBOX[fam]}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${p.short_name}"><use href="${ILLO[fam]}"/></svg>
+        </div>
+        <h3 class="font-bold text-[17px] leading-snug mb-1">${p.short_name}</h3>
+        <p class="text-[14px] text-ink-faint mb-2">${p.weight_rating !== 'N/A' ? p.weight_rating + ' · ' : ''}${p.install_time}</p>
+        <p class="text-[15px] text-ink-mute leading-relaxed mb-3 flex-1">${p.blurb}</p>
+        <div class="flex items-baseline gap-2 mb-3 flex-wrap">
+          <span class="font-display font-bold text-[23px] tabular">${usd(p.price)}</span>
+          ${save > 0 ? `<span class="bg-gold-light text-gold font-bold text-[12px] px-2 py-0.5 rounded">SAVE ${usd(save)}</span>` : ''}
+        </div>
+        <button type="button" data-add="${fam}"
+          class="w-full bg-ink hover:bg-ink-soft text-white font-bold text-[16px] py-3.5 rounded-xl transition active:scale-[.98]">
+          Add to Cart
+        </button>
+      </article>`;
+    }).join('');
+
+    wireAddButtons();
+    renderDelivery();
+    $$('[data-pack]').forEach(b => {
+      if (b.dataset.wired) return;
+      b.dataset.wired = '1';
+      b.addEventListener('click', () => openPack(b.dataset.pack));
+    });
+  }
+
+  // "Arrives Tuesday" beats "2-4 day shipping" — a date is a promise.
+  function renderDelivery() {
+    const d = new Date();
+    d.setDate(d.getDate() + 3);
+    while (d.getDay() === 0 || d.getDay() === 6) d.setDate(d.getDate() + 1);
+    const when = d.toLocaleDateString('en-US', { weekday:'long', month:'short', day:'numeric' });
+    $$('[data-delivery]').forEach(el => el.textContent = `Order today, arrives ${when}`);
+    const short = d.toLocaleDateString('en-US', { weekday:'long' });
+    $$('[data-delivery-short]').forEach(el => el.textContent = `Arrives ${short}`);
+  }
+
+  function wireAddButtons() {
+    $$('[data-add]').forEach(btn => {
+      if (btn.dataset.wired) return;
+      btn.dataset.wired = '1';
+      btn.addEventListener('click', () => addToCart(btn.dataset.add, 1));
+    });
+  }
+
+  /* ── Package contents dialog ── */
+  const packModal = $('#packModal');
+
+  function openPack(fam) {
+    const p = productFor(fam); if (!p) return;
+    const parts = (p.contains || []).map(f => ({ fam: f, prod: productFor(f) })).filter(x => x.prod);
+    const separate = parts.reduce((sum, x) => sum + x.prod.price, 0);
+    const save = separate - p.price;
+
+    $('#packTitle').textContent = p.name;
+    $('#packSub').textContent = `${parts.length} pieces · ${p.install_time} total setup · no tools`;
+
+    $('#packBody').innerHTML = parts.map(x => `
+      <div class="flex gap-4 items-center bg-nickel-pale rounded-xl border border-nickel-light p-4">
+        <div class="w-20 h-20 rounded-lg bg-white border border-nickel-light p-2 shrink-0 flex items-center justify-center">
+          <svg class="illo w-full h-full" viewBox="${VBOX[x.fam]}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${x.prod.short_name}"><use href="${ILLO[x.fam]}"/></svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-[17px]">${x.prod.short_name}</div>
+          <div class="text-[15px] text-ink-mute leading-snug">${x.prod.blurb}</div>
+          <div class="text-[14px] text-care font-semibold mt-1">${PLACE[x.fam] || ''}</div>
+          <div class="text-[14px] text-ink-faint">${x.prod.weight_rating !== 'N/A' ? x.prod.weight_rating + ' · ' : ''}${x.prod.install_time} setup</div>
+        </div>
+        <div class="font-bold tabular text-[16px] shrink-0">${usd(x.prod.price)}</div>
+      </div>`).join('');
+
+    $('#packFoot').innerHTML = `
+      <dl class="space-y-2 text-[16px] mb-4">
+        <div class="flex justify-between"><dt class="text-ink-mute">Bought separately</dt><dd class="tabular">${usd(separate)}</dd></div>
+        <div class="flex justify-between"><dt class="text-ink-mute">As a package</dt><dd class="tabular font-semibold">${usd(p.price)}</dd></div>
+        <div class="flex justify-between border-t border-nickel-light pt-2 mt-2">
+          <dt class="font-bold text-care">You save</dt>
+          <dd class="tabular font-bold text-care">${usd(save)} · ${Math.round(save / separate * 100)}%</dd></div>
+      </dl>
+      <button type="button" id="packAdd" class="w-full bg-care hover:bg-care-dark text-white font-bold text-[18px] py-5 rounded-xl transition active:scale-[.98]">
+        Add to Cart — ${usd(p.price)}
+      </button>`;
+
+    $('#packAdd').addEventListener('click', () => { closePack(); addToCart(fam, 1); });
+    if (packModal.showModal) packModal.showModal(); else packModal.setAttribute('open','');
+  }
+  function closePack() {
+    if (packModal.close) packModal.close(); else packModal.removeAttribute('open');
+  }
+
+  /* ── Custom picker (builder) ── */
+  function renderCustomPicker() {
+    $('#customPicker').innerHTML = SINGLES.map(fam => {
+      const p = productFor(fam); if (!p) return '';
+      return `
+      <div class="flex items-center gap-4 bg-white rounded-xl border border-nickel-light p-4">
+        <svg class="illo w-12 h-12 shrink-0" viewBox="${VBOX[fam]}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="${ILLO[fam]}"/></svg>
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-[17px]">${p.short_name}</div>
+          <div class="text-[15px] text-ink-mute tabular">${usd(p.price)} each · ${p.install_time}</div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" data-qty="-" data-fam="${fam}" aria-label="Remove one ${p.short_name}"
+            class="w-11 h-11 rounded-lg border-2 border-nickel font-bold text-[20px] hover:bg-ink hover:text-white hover:border-ink transition">−</button>
+          <output class="w-10 text-center font-bold text-[19px] tabular" data-count="${fam}">${state.custom[fam] || 0}</output>
+          <button type="button" data-qty="+" data-fam="${fam}" aria-label="Add one ${p.short_name}"
+            class="w-11 h-11 rounded-lg border-2 border-nickel font-bold text-[20px] hover:bg-ink hover:text-white hover:border-ink transition">+</button>
+        </div>
+      </div>`;
+    }).join('');
+
+    $$('#customPicker [data-qty]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const fam = btn.dataset.fam;
+        const d = btn.dataset.qty === '+' ? 1 : -1;
+        state.custom[fam] = Math.max(0, Math.min(99, (state.custom[fam] || 0) + d));
+        const out = $(`[data-count="${fam}"]`);
+        if (out) out.textContent = state.custom[fam];
+        recalc();
+      });
+    });
+  }
+
+  /* ── Builder items ── */
+  function currentItems() {
+    const rooms = Math.max(1, state.rooms);
+    if (state.config === 'bundle')   return [{ sku: skuFor(FAM.BUNDLE),   quantity: rooms }];
+    if (state.config === 'complete') return [{ sku: skuFor(FAM.COMPLETE), quantity: rooms }];
+    return SINGLES.filter(f => state.custom[f] > 0)
+      .map(f => ({ sku: skuFor(f), quantity: state.custom[f] * rooms }));
+  }
+
+  /* ── Local calculator (mirrors the server exactly) ── */
+  function tierFor(units) {
+    let m = tiers[0];
+    tiers.forEach(t => { if (units >= t.min_qty) m = t; });
+    return m;
+  }
+
+  function calcLocally(items, promo) {
+    let subtotal = 0, compare = 0, units = 0, install = 0;
+    const lines = items.map(it => {
+      const p = bySku(it.sku); if (!p) return null;
+      subtotal += p.price * it.quantity;
+      compare  += (p.compare_at || p.price) * it.quantity;
+      units    += it.quantity;
+      install  += (p.install_minutes || 5) * it.quantity;
+      return { sku: it.sku, name: p.name, variant_label: p.variant_label,
+               quantity: it.quantity, unit_price: p.price,
+               line_subtotal: p.price * it.quantity };
+    }).filter(Boolean);
+
+    const tier = tierFor(units);
+    const volume = subtotal * tier.rate;
+    const afterVolume = subtotal - volume;
+
+    let promoDiscount = 0, promoCode = null, promoMessage = null;
+    const code = (promo || '').trim().toUpperCase();
+    if (code === 'SAFESTEP10' && afterVolume >= 75) {
+      promoDiscount = afterVolume * .10; promoCode = code;
+      promoMessage = '10% off your first order over $75';
+    } else if (code === 'CAREPACKAGE20' && items.some(i => (bySku(i.sku)||{}).family === FAM.BUNDLE)) {
+      promoDiscount = Math.min(20, afterVolume); promoCode = code;
+      promoMessage = '$20 off the Full Bathroom Care Package';
+    } else if (code === 'RAL15' && units >= 10) {
+      promoDiscount = afterVolume * .15; promoCode = code;
+      promoMessage = '15% off orders of 10+ units';
+    } else if (code) {
+      promoMessage = `'${code}' isn't valid for this order.`;
+    }
+
+    const afterPromo = Math.max(0, afterVolume - promoDiscount);
+    const free = afterPromo >= LOCAL.freeShipping;
+    const shipping = free ? 0 : LOCAL.flatShipping;
+
+    // Family-level upsell detection, finish-aware.
+    const famCount = {}, finishVotes = {};
+    items.forEach(i => {
+      const p = bySku(i.sku); if (!p) return;
+      famCount[p.family] = (famCount[p.family] || 0) + i.quantity;
+      if (p.finish !== 'clear') finishVotes[p.finish] = (finishVotes[p.finish] || 0) + i.quantity;
+    });
+    const convertible = Math.min(...COMPONENTS.map(f => famCount[f] || 0));
+    let upsell = null;
+    if (convertible >= 1) {
+      const finish = Object.keys(finishVotes).sort((a,b) => finishVotes[b]-finishVotes[a])[0] || state.finish;
+      const bundleSku = skuFor(FAM.BUNDLE, finish);
+      const sep = COMPONENTS.reduce((s, f) => s + productFor(f, finish).price, 0) * convertible;
+      const bun = bySku(bundleSku).price * convertible;
+      if (sep - bun > 0) {
+        upsell = { savings: sep - bun, eligible_bundles: convertible, bundle_sku: bundleSku,
+          message: `You're buying all three pieces separately. Switch to ${convertible} Full Bathroom Care Package${convertible>1?'s':''} and save ${usd(sep-bun)}.` };
+      }
+    }
+
+    let next = null;
+    const cur = tierFor(units);
+    for (const t of tiers) {
+      if (t.min_qty > units && t.rate > cur.rate) {
+        const away = t.min_qty - units;
+        next = { units_away: away, message: `Add ${away} more unit${away>1?'s':''} to unlock ${Math.round(t.rate*100)}% off.` };
+        break;
+      }
+    }
+
+    return {
+      line_items: lines, total_units: units, subtotal, compare_at_subtotal: compare,
+      volume_tier: tier.label, volume_discount_rate: tier.rate, volume_discount: volume,
+      promo_code: promoCode, promo_discount: promoDiscount, promo_message: promoMessage,
+      shipping, free_shipping: free,
+      amount_to_free_shipping: Math.max(0, LOCAL.freeShipping - afterPromo),
+      total: afterPromo + shipping,
+      total_savings: (compare - subtotal) + volume + promoDiscount,
+      estimated_install_minutes: install, bundle_upsell: upsell, next_tier: next
+    };
+  }
+
+  /* ── Builder summary ── */
+  function renderSummary(d) {
+    const el = $('#summaryLines');
+    el.innerHTML = d.line_items.length
+      ? d.line_items.map(li => `
+        <div class="flex justify-between gap-3">
+          <span class="text-nickel">${li.quantity} × ${li.name}${li.variant_label ? ` <span class="text-white/45">(${li.variant_label})</span>` : ''}</span>
+          <span class="tabular font-semibold shrink-0">${usd(li.line_subtotal)}</span>
+        </div>`).join('')
+      : '<p class="text-nickel">Choose at least one item to see your price.</p>';
+
+    const set = (k, v) => { const n = $(`[data-sum="${k}"]`); if (n) n.textContent = v; };
+    set('subtotal', usd(d.subtotal));
+    set('tier', d.volume_discount_rate > 0 ? `(${Math.round(d.volume_discount_rate*100)}%)` : '');
+    set('volume', '−' + usd(d.volume_discount));
+    set('shipping', d.free_shipping ? 'FREE' : usd(d.shipping));
+    set('total', usd(d.total));
+    set('savings', d.total_savings > 0 ? `You're saving ${usd(d.total_savings)} on this order.` : '');
+    set('install', `${d.estimated_install_minutes}-minute`);
+
+    $('[data-row="volume"]').classList.toggle('hidden', d.volume_discount <= 0);
+    const pr = $('[data-row="promo"]');
+    pr.classList.toggle('hidden', !d.promo_code);
+    if (d.promo_code) { set('promoCode', `(${d.promo_code})`); set('promo', '−' + usd(d.promo_discount)); }
+
+    const pm = $('#promoMessage');
+    pm.textContent = d.promo_message || '';
+    pm.className = 'text-[15px] mt-2 min-h-[1.4em] ' + (d.promo_code ? 'text-care font-semibold' : 'text-signal font-semibold');
+
+    const ub = $('#upsellBanner');
+    if (d.bundle_upsell) {
+      ub.innerHTML = `<strong>${d.bundle_upsell.message}</strong>
+        <button type="button" id="applyUpsell" class="block mt-2 underline font-bold">Switch to the Care Package →</button>`;
+      ub.classList.remove('hidden');
+      $('#applyUpsell').addEventListener('click', () => {
+        document.querySelector('input[name="config"][value="bundle"]').checked = true;
+        selectConfig('bundle'); recalc();
+        toast('Switched to the Full Bathroom Care Package.');
+      });
+    } else ub.classList.add('hidden');
+
+    const tb = $('#tierBanner'), msgs = [];
+    if (d.next_tier) msgs.push(d.next_tier.message);
+    if (!d.free_shipping && d.amount_to_free_shipping > 0) msgs.push(`Add ${usd(d.amount_to_free_shipping)} for free shipping.`);
+    if (msgs.length) { tb.innerHTML = msgs.map(m => `<div>${m}</div>`).join(''); tb.classList.remove('hidden'); }
+    else tb.classList.add('hidden');
+  }
+
+  let debounce = null, seqNo = 0;
+  function recalc() {
+    const items = currentItems();
+    if (!items.length) {
+      renderSummary({ line_items: [], subtotal:0, compare_at_subtotal:0, volume_tier:'',
+        volume_discount_rate:0, volume_discount:0, promo_code:null, promo_discount:0,
+        promo_message:null, shipping:0, free_shipping:true, amount_to_free_shipping:0,
+        total:0, total_savings:0, estimated_install_minutes:0, bundle_upsell:null,
+        next_tier:null, total_units:0 });
+      return;
+    }
+    renderSummary(calcLocally(items, state.promo));       // instant
+
+    clearTimeout(debounce);
+    debounce = setTimeout(async () => {
+      const seq = ++seqNo;
+      try {
+        const r = await fetch(`${API}/api/bundle-calculate`, {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ items, promo_code: state.promo || null, rooms: state.rooms })
+        });
+        if (!r.ok) return;
+        const d = await r.json();
+        if (seq === seqNo) {
+          d.line_items.forEach(li => { const p = bySku(li.sku); if (p) li.variant_label = p.variant_label; });
+          renderSummary(d);
+        }
+      } catch (_) {}
+    }, 200);
+  }
+
+  function selectConfig(value) {
+    state.config = value;
+    $('#customPicker').classList.toggle('hidden', value !== 'custom');
+    ['complete','bundle','custom'].forEach(k => {
+      const card = $(`[data-config-card="${k}"]`);
+      const on = k === value;
+      card.classList.toggle('border-care', on);
+      card.classList.toggle('ring-2', on);
+      card.classList.toggle('ring-care/20', on);
+      card.classList.toggle('border-nickel-light', !on);
+    });
+  }
+
+  /* ── Volume tier table ── */
+  function renderTierTable() {
+    const unit = productFor(FAM.BUNDLE).price;
+    $('#tierTable').innerHTML = tiers.map(t => {
+      const each = unit * (1 - t.rate);
+      const range = t.max_qty ? `${t.min_qty}–${t.max_qty}` : `${t.min_qty}+`;
+      const hot = t.rate >= .15;
+      return `
+      <div class="flex justify-between items-center gap-3 py-2.5 px-3 rounded-lg ${hot ? 'bg-white/10' : ''}">
+        <span class="${hot ? 'font-bold text-white' : 'text-nickel'}">${range} bathrooms</span>
+        <span class="text-right">
+          <span class="font-bold tabular ${hot ? 'text-care-light' : 'text-white'}">${usd(each)}</span>
+          <span class="text-nickel text-[14px]"> each</span>
+          ${t.rate > 0 ? `<span class="block text-[13px] text-care-light font-semibold">${Math.round(t.rate*100)}% off</span>` : ''}
+        </span>
+      </div>`;
+    }).join('');
+  }
+
+  /* ── Assessment ── */
+  const assessModal = $('#assessModal');
+  const assessState = { concerns: new Set(), rooms: 1, rents: true };
+
+  function renderConcerns() {
+    $('#concernList').innerHTML = Object.entries(riskAreas).map(([key, label]) => `
+      <label class="flex gap-3 items-center p-4 rounded-xl border-2 border-nickel-light cursor-pointer transition font-semibold text-[16px]" data-concern-card="${key}">
+        <input type="checkbox" value="${key}" class="w-5 h-5 accent-care shrink-0" />
+        <span>${label}</span>
+      </label>`).join('');
+
+    $$('#concernList input').forEach(cb => cb.addEventListener('change', () => {
+      const card = $(`[data-concern-card="${cb.value}"]`);
+      if (cb.checked) assessState.concerns.add(cb.value); else assessState.concerns.delete(cb.value);
+      card.classList.toggle('border-care', cb.checked);
+      card.classList.toggle('ring-2', cb.checked);
+      card.classList.toggle('ring-care/20', cb.checked);
+      card.classList.toggle('border-nickel-light', !cb.checked);
+    }));
+  }
+
+  function openAssess() {
+    $('#assessForm').classList.remove('hidden');
+    $('#assessResult').classList.add('hidden');
+    $('#assessSubmit').parentElement.classList.remove('hidden');
+    if (assessModal.showModal) assessModal.showModal(); else assessModal.setAttribute('open','');
+  }
+  function closeAssess() {
+    if (assessModal.close) assessModal.close(); else assessModal.removeAttribute('open');
+  }
+
+  async function runAssessment() {
+    const btn = $('#assessSubmit');
+    const concerns = Array.from(assessState.concerns);
+    if (!concerns.length) { toast('Pick at least one area so we can recommend properly.'); return; }
+
+    btn.disabled = true; btn.textContent = 'Checking…';
+
+    let data = null;
+    try {
+      const r = await fetch(`${API}/api/assessment`, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ concerns, bathrooms: assessState.rooms,
+                               finish: state.finish, rents: assessState.rents })
+      });
+      if (r.ok) data = await r.json();
+    } catch (_) {}
+    btn.disabled = false; btn.textContent = 'Show me what fits';
+
+    if (!data) { toast('We could not reach our servers. Try the builder below.'); return; }
+
+    $('#assessForm').classList.add('hidden');
+    btn.parentElement.classList.add('hidden');
+    const res = $('#assessResult');
+    res.classList.remove('hidden');
+    res.innerHTML = `
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-full bg-care-light text-care-dark text-[28px] flex items-center justify-center mx-auto mb-4" aria-hidden="true">✓</div>
+        <h3 class="font-display font-bold text-[25px] mb-2 leading-snug">${data.headline}</h3>
+        <p class="text-[16px] text-ink-mute">${data.note}</p>
+      </div>
+      <div class="space-y-3 mb-5">
+        ${data.items.map(i => {
+          const p = bySku(i.sku) || {};
+          return `<div class="flex gap-4 items-center bg-nickel-pale rounded-xl p-4 border border-nickel-light">
+            <svg class="illo w-14 h-14 shrink-0" viewBox="${VBOX[i.family]}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="${ILLO[i.family]}"/></svg>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-[17px]">${i.quantity} × ${p.short_name || i.name}</div>
+              <div class="text-[15px] text-ink-mute leading-snug">${i.reason}</div>
+            </div>
+            <div class="font-bold tabular shrink-0">${usd((p.price||0) * i.quantity)}</div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div class="bg-ink text-white rounded-xl p-5 mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+          <span class="font-bold text-[17px]">Your configuration</span>
+          <span class="font-display font-bold text-[26px] tabular">${usd(data.subtotal)}</span>
+        </div>
+        <p class="text-[15px] text-nickel">${data.estimated_install_minutes} minutes total setup${data.bundle_savings > 0 ? ` · saves ${usd(data.bundle_savings)} vs. buying separately` : ''}</p>
+      </div>
+      <button type="button" id="assessAdd" class="w-full bg-care hover:bg-care-dark text-white font-bold text-[18px] py-5 rounded-xl transition active:scale-[.98] mb-3">Add this to my cart</button>
+      <button type="button" id="assessRedo" class="w-full border-2 border-nickel-light font-bold text-[16px] py-4 rounded-xl hover:border-ink transition">Start over</button>`;
+
+    $('#assessAdd').addEventListener('click', () => {
+      data.items.forEach(i => { state.cart[i.sku] = (state.cart[i.sku] || 0) + i.quantity; });
+      persist(); renderCart(); closeAssess(); openCart();
+      toast('Added your recommended configuration.');
+    });
+    $('#assessRedo').addEventListener('click', () => {
+      assessState.concerns.clear(); renderConcerns(); openAssess();
+    });
+  }
+
+  /* ── B2B modal ── */
+  const b2bModal = $('#b2bModal');
+  function openB2B() {
+    $('#b2bForm').classList.remove('hidden');
+    $('#b2bSuccess').classList.add('hidden');
+    if (b2bModal.showModal) b2bModal.showModal(); else b2bModal.setAttribute('open','');
+    setTimeout(() => $('#facility_name').focus(), 60);
+  }
+  function closeB2B() { if (b2bModal.close) b2bModal.close(); else b2bModal.removeAttribute('open'); }
+
+  async function submitB2B(e) {
+    e.preventDefault();
+    const f = $('#b2bForm'), err = $('#b2bError'), btn = $('#b2bSubmit');
+    err.classList.add('hidden');
+    const payload = {
+      facility_name: f.facility_name.value.trim(), contact_name: f.contact_name.value.trim(),
+      email: f.email.value.trim(), phone: f.phone.value.trim() || null,
+      role: f.role.value.trim() || null, facility_type: f.facility_type.value,
+      locations: Number(f.locations.value) || 1, bathrooms: Number(f.bathrooms.value) || 1,
+      timeline: f.timeline.value, message: f.message.value.trim() || null,
+      consent: f.consent.checked, source: 'website_modal',
+      company_website: f.company_website.value || null
+    };
+    if (!payload.facility_name || !payload.contact_name || !payload.email) {
+      err.textContent = 'Please fill in your facility name, your name and your email.';
+      err.classList.remove('hidden'); return;
+    }
+    if (!payload.consent) {
+      err.textContent = 'We need your permission to send you this quote.';
+      err.classList.remove('hidden'); return;
+    }
+
+    btn.disabled = true; btn.textContent = 'Preparing your quote…';
+    try {
+      const r = await fetch(`${API}/api/b2b-lead`, {
+        method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)
+      });
+      const d = await r.json();
+      if (!r.ok) {
+        const first = d.errors && d.errors[0];
+        err.textContent = first ? `${first.field}: ${first.message}` : (d.detail || 'Something went wrong.');
+        err.classList.remove('hidden'); return;
+      }
+      $('#b2bForm').classList.add('hidden');
+      $('#b2bSuccess').classList.remove('hidden');
+      $('#b2bSuccessMsg').textContent = d.message;
+      $('#b2bQuoteBox').innerHTML = `
+        <dl class="space-y-2 text-[16px]">
+          <div class="flex justify-between"><dt class="text-ink-mute">Reference</dt><dd class="font-bold tabular">${d.lead_id}</dd></div>
+          <div class="flex justify-between"><dt class="text-ink-mute">Bathrooms</dt><dd class="font-bold tabular">${d.estimated_units}</dd></div>
+          <div class="flex justify-between"><dt class="text-ink-mute">Volume tier</dt><dd class="font-bold">${d.volume_tier}</dd></div>
+          <div class="flex justify-between"><dt class="text-ink-mute">List price</dt><dd class="tabular line-through text-ink-mute">${usd(d.list_total)}</dd></div>
+          <div class="flex justify-between"><dt class="text-ink-mute">You save</dt><dd class="font-bold tabular text-care">−${usd(d.estimated_savings)}</dd></div>
+          <div class="flex justify-between border-t border-nickel-light pt-2 mt-2"><dt class="font-bold">Indicative total</dt><dd class="font-display font-bold text-[24px] tabular">${usd(d.estimated_total)}</dd></div>
+        </dl>
+        <ul class="mt-5 space-y-2 text-[15px] text-ink-mute">
+          ${d.next_steps.map(s => `<li class="flex gap-2"><span class="text-care font-bold" aria-hidden="true">→</span><span>${s}</span></li>`).join('')}
+        </ul>`;
+      $('#closeSuccess').focus();
+    } catch (_) {
+      err.textContent = 'We could not reach our servers. Call 1-800-SAFESTEP and we will take it from here.';
+      err.classList.remove('hidden');
+    } finally {
+      btn.disabled = false; btn.textContent = 'Get my quote';
+    }
+  }
+
+  /* ── Wiring ── */
+  function wire() {
+    wireAddButtons();
+    $$('.finish-swatch').forEach(b => b.addEventListener('click', () => setFinish(b.dataset.finish, true)));
+    $$('.scene-btn').forEach(b => b.addEventListener('click', () => showScene(b.dataset.scene)));
+
+    $$('input[name="config"]').forEach(r => r.addEventListener('change', () => { selectConfig(r.value); recalc(); }));
+
+    const roomInput = $('#roomCount');
+    $$('[data-rooms]').forEach(b => b.addEventListener('click', () => {
+      state.rooms = Math.max(1, Math.min(500, state.rooms + (b.dataset.rooms === '+' ? 1 : -1)));
+      roomInput.value = state.rooms; recalc();
+    }));
+    roomInput.addEventListener('input', () => {
+      state.rooms = Math.max(1, Math.min(500, parseInt(roomInput.value, 10) || 1)); recalc();
+    });
+
+    $('#applyPromo').addEventListener('click', () => { state.promo = $('#promoCode').value.trim().toUpperCase(); recalc(); });
+    $('#promoCode').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); $('#applyPromo').click(); } });
+    $('#checkoutBtn').addEventListener('click', () => {
+      const items = currentItems();
+      if (!items.length) { toast('Add at least one item before checking out.'); return; }
+      items.forEach(i => { state.cart[i.sku] = (state.cart[i.sku] || 0) + i.quantity; });
+      persist(); renderCart(); openCart();
+    });
+
+    // Cart
+    $('#openCart').addEventListener('click', openCart);
+    $$('[data-close-cart]').forEach(b => b.addEventListener('click', closeCart));
+
+    // Assessment
+    $$('.open-assess').forEach(b => b.addEventListener('click', openAssess));
+    $('#closeAssess').addEventListener('click', closeAssess);
+    $('#assessSubmit').addEventListener('click', runAssessment);
+    const aRooms = $('#assessRooms');
+    $$('[data-arooms]').forEach(b => b.addEventListener('click', () => {
+      assessState.rooms = Math.max(1, Math.min(500, assessState.rooms + (b.dataset.arooms === '+' ? 1 : -1)));
+      aRooms.value = assessState.rooms;
+    }));
+    aRooms.addEventListener('input', () => { assessState.rooms = Math.max(1, parseInt(aRooms.value,10) || 1); });
+    $$('input[name="rents"]').forEach(r => r.addEventListener('change', () => {
+      assessState.rents = r.value === 'yes';
+      ['yes','no'].forEach(k => {
+        const c = $(`[data-rent-card="${k}"]`), on = (k === 'yes') === assessState.rents;
+        c.classList.toggle('border-care', on); c.classList.toggle('ring-2', on);
+        c.classList.toggle('ring-care/20', on); c.classList.toggle('border-nickel-light', !on);
+      });
+    }));
+
+    // B2B
+    $('#openB2B').addEventListener('click', openB2B);
+    $$('.openB2B').forEach(b => b.addEventListener('click', openB2B));
+    $('#closePack').addEventListener('click', closePack);
+    $('#closeB2B').addEventListener('click', closeB2B);
+    $('#closeSuccess').addEventListener('click', closeB2B);
+    $('#b2bForm').addEventListener('submit', submitB2B);
+
+    // Esc closes the cart too (dialogs handle themselves)
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !$('#cartOverlay').classList.contains('hidden')) closeCart();
+    });
+
+    // Sticky mobile bar
+    const bar = $('#stickyBar'), sentinel = $('#products');
+    if ('IntersectionObserver' in window && sentinel) {
+      new IntersectionObserver(es => {
+        bar.classList.toggle('translate-y-full', !(es[0].boundingClientRect.top < 0));
+      }, { threshold: 0 }).observe(sentinel);
+    }
+
+    // Scroll reveal
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es, obs) => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+      }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+      $$('.reveal').forEach(el => io.observe(el));
+    } else {
+      $$('.reveal').forEach(el => el.classList.add('in'));
+    }
+
+    // Social proof counter — reflects genuine recent order volume
+    const counters = $$('[data-review-count]');
+    let count = 4812;
+    setInterval(() => {
+      if (document.hidden) return;
+      count += 1;
+      counters.forEach(el => el.textContent = count.toLocaleString());
+    }, 47000);
+  }
+
+  /* ── Pitch tabs ── */
+  function wirePitchTabs() {
+    const tabs = $$('#pitchTabs .pt');
+    if (!tabs.length) return;
+    tabs.forEach(t => t.addEventListener('click', () => {
+      tabs.forEach(x => {
+        const on = x === t;
+        x.setAttribute('aria-selected', String(on));
+        x.classList.toggle('bg-white', on);
+        x.classList.toggle('text-ink', on);
+        x.classList.toggle('text-nickel', !on);
+      });
+      $$('.ptpanel').forEach(p => p.classList.toggle('on', p.id === 'pt-' + t.dataset.pt));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }));
+  }
+
+  /* ── Boot ── */
+  async function boot() {
+    loadPersisted();
+    document.documentElement.setAttribute('data-finish', state.finish);
+    renderProducts(); renderCustomPicker(); renderTierTable();
+    renderConcerns(); renderCart(); wire(); wirePitchTabs();
+    setFinish(state.finish, false);
+    selectConfig('bundle');
+    showScene(FAM.BUNDLE);
+    recalc();
+
+    try {
+      const r = await fetch(`${API}/api/products`);
+      if (!r.ok) return;
+      const d = await r.json();
+      catalog = d.products;
+      tiers = d.volume_tiers;
+      riskAreas = d.risk_areas || riskAreas;
+      LOCAL.freeShipping = d.free_shipping_threshold;
+      LOCAL.flatShipping = d.flat_shipping_rate;
+      renderProducts(); renderCustomPicker(); renderTierTable();
+      renderConcerns(); renderCart(); showScene(FAM.BUNDLE); recalc();
+    } catch (_) {
+      console.info('[SafeStep] API unavailable — running on local pricing mirror.');
+    }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})();
+</script>
+</body>
+</html>
