@@ -70,7 +70,7 @@ tailwind.config = {
   @keyframes rise { from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:none;} }
   @keyframes fade { from{opacity:0;} to{opacity:1;} }
   @keyframes slideIn { from{transform:translateX(100%);} to{transform:none;} }
-  @keyframes pulseRing { 0%,100%{opacity:.35; r:13;} 50%{opacity:.9; r:16;} }
+  @keyframes pulseRing { 0%,100%{opacity:.35;} 50%{opacity:.85;} }
   .rise{ animation:rise .4s cubic-bezier(.2,.7,.3,1) both; }
   .reveal{ opacity:0; transform:translateY(20px);
     transition:opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1); }
@@ -115,6 +115,20 @@ tailwind.config = {
     /* No scroll-reveal on phones. It buys nothing on a small screen and
        leaves a section blank if the observer misses it. */
     .reveal{ opacity:1 !important; transform:none !important; }
+  }
+
+  @media (max-width:1023px){
+    /* backdrop-filter re-blurs everything behind the element on every
+       scrolled frame. The header isn't sticky below lg, so it buys nothing
+       here and costs a frame budget. */
+    [class*="backdrop-blur"]{ backdrop-filter:none !important; -webkit-backdrop-filter:none !important; }
+    .lock-pulse{ animation:none !important; }
+    /* 18 illustration subtrees, each transition-capable. The finish swap can
+       be instant on a phone. */
+    .illo, .illo *, #heroScene g[id^="sc-"]{ transition:none !important; }
+    /* Wide, soft shadows on ~35 cards are a real repaint cost on iOS. */
+    .shadow-deep{ box-shadow:0 2px 10px rgba(14,18,21,.10) !important; }
+    .shadow-lift{ box-shadow:0 1px 5px rgba(14,18,21,.07) !important; }
   }
   .tile-grid{ background-image:
     linear-gradient(rgba(255,255,255,.55) 1px, transparent 1px),
