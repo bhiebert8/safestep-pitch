@@ -98,6 +98,23 @@ tailwind.config = {
     table{ min-width:0 !important; }
     .tablewrap, .overflow-x-auto{ overflow-x:visible; }
     th, td{ padding-left:12px !important; padding-right:12px !important; }
+
+    /* Phone sizing. Measured at 390x844: a package card ran 1,511px — nearly
+       two full screens — with 639px of that in the contents panel alone, and
+       the 7 single-product cards added 4,567px. Trimmed below; desktop keeps
+       the full treatment. */
+    .pkg-illo{ aspect-ratio:auto !important; height:150px !important; padding:10px !important; }
+    .pkg-contents{ padding:14px !important; }
+    .pkg-contents .pkg-item-illo, .pkg-contents .pkg-item-desc{ display:none !important; }
+    .pkg-contents ul{ margin-bottom:12px !important; }
+    .pkg-contents ul > li + li{ margin-top:7px !important; }
+    .prod-illo{ aspect-ratio:auto !important; height:108px !important; padding:8px !important; }
+    .prod-card{ padding:12px !important; }
+    .prod-card h3{ font-size:15px !important; line-height:1.25 !important; }
+    .prod-card p{ font-size:13px !important; }
+    /* No scroll-reveal on phones. It buys nothing on a small screen and
+       leaves a section blank if the observer misses it. */
+    .reveal{ opacity:1 !important; transform:none !important; }
   }
   .tile-grid{ background-image:
     linear-gradient(rgba(255,255,255,.55) 1px, transparent 1px),
@@ -714,7 +731,7 @@ tailwind.config = {
       <div class="h-px flex-1 bg-nickel-light"></div>
     </div>
 
-    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+    <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5"></div>
   </div>
 </section>
 
@@ -2170,7 +2187,7 @@ tailwind.config = {
           <span class="${hero ? 'bg-care' : 'bg-ink'} text-white text-[12px] font-bold px-3 py-1.5 rounded-full tracking-wide">${BADGE[fam] || ''}</span>
           ${save > 0 ? `<span class="bg-gold-light text-gold font-bold text-[14px] px-3 py-1.5 rounded-lg">SAVE ${usd(save)}</span>` : ''}
         </div>
-        <div class="aspect-[16/10] rounded-xl bg-gradient-to-br from-nickel-pale to-nickel-light border border-nickel-light mb-5 p-5 flex items-center justify-center">
+        <div class="pkg-illo aspect-[16/10] rounded-xl bg-gradient-to-br from-nickel-pale to-nickel-light border border-nickel-light mb-5 p-5 flex items-center justify-center">
           <svg class="illo w-full h-full" viewBox="${VBOX[fam]}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${p.short_name}, ${p.variant_label}"><use href="${ILLO[fam]}"/></svg>
         </div>
         <h3 class="font-display font-bold text-[27px] leading-snug mb-2">${p.name}</h3>
@@ -2181,7 +2198,7 @@ tailwind.config = {
         </dl>
         <p class="text-[17px] text-ink-mute leading-relaxed mb-4 flex-1">${p.blurb}</p>
 
-        <div class="bg-nickel-pale rounded-xl border border-nickel-light p-5 mb-5">
+        <div class="pkg-contents bg-nickel-pale rounded-xl border border-nickel-light p-5 mb-5">
           <div class="flex items-baseline justify-between mb-3">
             <p class="text-[13px] font-bold tracking-wider uppercase text-ink-faint">What's in the box</p>
             <p class="text-[13px] font-bold text-ink-faint">${(p.contains || []).length} pieces</p>
@@ -2190,10 +2207,10 @@ tailwind.config = {
             ${(p.contains || []).map(cf => {
               const cp = productFor(cf);
               return cp ? `<li class="flex items-start gap-3">
-                <svg class="illo w-9 h-9 shrink-0 mt-0.5" viewBox="${VBOX[cf]}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="${ILLO[cf]}"/></svg>
+                <svg class="pkg-item-illo illo w-9 h-9 shrink-0 mt-0.5" viewBox="${VBOX[cf]}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="${ILLO[cf]}"/></svg>
                 <span class="flex-1 min-w-0">
                   <span class="block text-[16px] font-semibold leading-snug">1 &times; ${cp.short_name}</span>
-                  <span class="block text-[14px] text-ink-mute leading-snug">${PLACE[cf] || cp.blurb}</span>
+                  <span class="pkg-item-desc block text-[14px] text-ink-mute leading-snug">${PLACE[cf] || cp.blurb}</span>
                 </span>
                 <span class="text-[15px] text-ink-faint tabular shrink-0">${usd(cp.price)}</span></li>` : '';
             }).join('')}
@@ -2227,9 +2244,9 @@ tailwind.config = {
       const p = productFor(fam); if (!p) return '';
       const save = p.compare_at ? p.compare_at - p.price : 0;
       return `
-      <article class="bg-white rounded-2xl border border-nickel-light shadow-lift p-5 flex flex-col reveal in">
+      <article class="prod-card bg-white rounded-2xl border border-nickel-light shadow-lift p-5 flex flex-col reveal in">
         ${BADGE[fam] ? `<span class="self-start mb-2 bg-ink text-white text-[12px] font-bold px-2.5 py-1 rounded-full tracking-wide">${BADGE[fam]}</span>` : '<span class="mb-2 h-[24px] block"></span>'}
-        <div class="aspect-square rounded-xl bg-nickel-pale border border-nickel-light mb-3 p-3 flex items-center justify-center">
+        <div class="prod-illo aspect-square rounded-xl bg-nickel-pale border border-nickel-light mb-3 p-3 flex items-center justify-center">
           <svg class="illo w-full h-full" viewBox="${VBOX[fam]}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${p.short_name}"><use href="${ILLO[fam]}"/></svg>
         </div>
         <h3 class="font-bold text-[17px] leading-snug mb-1">${p.short_name}</h3>
