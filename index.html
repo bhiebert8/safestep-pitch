@@ -89,15 +89,22 @@ tailwind.config = {
   details > summary::-webkit-details-marker{ display:none; }
   details[open] .faq-chev{ transform:rotate(180deg); }
   .tabular{ font-variant-numeric:tabular-nums; }
+  .scrollhint{ display:none; }
   dialog::backdrop{ background:rgba(14,18,21,.74); backdrop-filter:blur(4px); }
   .no-scrollbar::-webkit-scrollbar{ display:none; }
   .no-scrollbar{ -ms-overflow-style:none; scrollbar-width:none; }
   /* Phones: drop secondary table columns so nothing scrolls sideways. */
   @media (max-width:639px){
-    .mob-hide{ display:none !important; }
-    table{ min-width:0 !important; }
-    .tablewrap, .overflow-x-auto{ overflow-x:visible; }
-    th, td{ padding-left:12px !important; padding-right:12px !important; }
+    /* Tables keep every column on a phone and scroll sideways inside their
+       own box. Hiding columns by index misaligned any table whose rows did
+       not all get tagged — numbers ended up under the wrong headers. */
+    .tablewrap, .overflow-x-auto{ overflow-x:auto !important; -webkit-overflow-scrolling:touch; }
+    table{ font-size:13px !important; }
+    th, td{ padding-left:10px !important; padding-right:10px !important; }
+    th + th, td + td{ white-space:nowrap; }
+    /* currentColor so the cue reads on the dark sections too. */
+    .scrollhint{ display:block; font-size:12px; line-height:1.3; margin:0 0 6px;
+      color:currentColor; opacity:.55; }
 
     /* Phone sizing. Measured at 390x844: a package card ran 1,511px — nearly
        two full screens — with 639px of that in the contents panel alone, and
@@ -1137,27 +1144,28 @@ tailwind.config = {
       <h2 class="font-display font-bold text-[28px] sm:text-[42px] tracking-tight mb-3">What early success looks like</h2>
       <p class="text-[18px] sm:text-[19px] text-ink-mute mb-8 max-w-3xl">Year one to two, before either engine runs. Two partners, both keeping their jobs.</p>
 
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-4">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-4">
         <table class="w-full text-left text-[15px] min-w-[860px]">
           <thead class="bg-ink text-white"><tr>
             <th class="p-4 font-bold">Level</th>
-            <th class="mob-hide p-4 font-bold text-right">Orders/mo</th>
-            <th class="mob-hide p-4 font-bold text-right">Revenue/yr</th>
+            <th class="p-4 font-bold text-right">Orders/mo</th>
+            <th class="p-4 font-bold text-right">Revenue/yr</th>
             <th class="p-4 font-bold text-right">Cash at risk</th>
-            <th class="mob-hide p-4 font-bold text-right">Profit/yr</th>
+            <th class="p-4 font-bold text-right">Profit/yr</th>
             <th class="p-4 font-bold text-right">Each partner</th>
-            <th class="mob-hide p-4 font-bold text-right">Hrs/wk each</th></tr></thead>
+            <th class="p-4 font-bold text-right">Hrs/wk each</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4 font-semibold">Conservative</td><td class="mob-hide p-4 text-right tabular">15</td>
-              <td class="mob-hide p-4 text-right tabular">$27,695</td><td class="p-4 text-right tabular">$11,656</td>
-              <td class="mob-hide p-4 text-right tabular font-bold text-ink-mute">&minus;$175</td>
+            <tr><td class="p-4 font-semibold">Conservative</td><td class="p-4 text-right tabular">15</td>
+              <td class="p-4 text-right tabular">$27,695</td><td class="p-4 text-right tabular">$11,656</td>
+              <td class="p-4 text-right tabular font-bold text-ink-mute">&minus;$175</td>
               <td class="p-4 text-right tabular font-bold text-ink-mute">&minus;$88</td>
-              <td class="mob-hide p-4 text-right tabular">1.5&ndash;2.5</td></tr>
-            <tr><td class="p-4 font-semibold">Average</td><td class="mob-hide p-4 text-right tabular">50</td>
-              <td class="mob-hide p-4 text-right tabular">$92,316</td><td class="p-4 text-right tabular">$17,806</td>
-              <td class="mob-hide p-4 text-right tabular font-bold text-care">$12,216</td>
+              <td class="p-4 text-right tabular">1.5&ndash;2.5</td></tr>
+            <tr><td class="p-4 font-semibold">Average</td><td class="p-4 text-right tabular">50</td>
+              <td class="p-4 text-right tabular">$92,316</td><td class="p-4 text-right tabular">$17,806</td>
+              <td class="p-4 text-right tabular font-bold text-care">$12,216</td>
               <td class="p-4 text-right tabular font-bold text-care">$6,108</td>
-              <td class="mob-hide p-4 text-right tabular">3&ndash;5</td></tr>
+              <td class="p-4 text-right tabular">3&ndash;5</td></tr>
             <tr class="bg-care-light"><td class="p-4 font-bold">Optimistic + 1 care home/mo</td><td class="p-4 text-right tabular">150</td>
               <td class="p-4 text-right tabular">$334,544</td><td class="p-4 text-right tabular">$33,556</td>
               <td class="p-4 text-right tabular font-bold text-care-dark">$65,568</td>
@@ -1199,16 +1207,17 @@ tailwind.config = {
       <h2 class="font-display font-bold text-[28px] sm:text-[38px] tracking-tight mb-3">Growth doesn't cost hours &mdash; it costs cash</h2>
       <p class="text-[18px] text-ink-mute mb-6 max-w-3xl">That assumes our time grows with orders. It doesn't &mdash; a warehouse ships everything, so <strong class="text-ink">order 1 and order 5,000 cost us the same.</strong></p>
 
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white mb-6">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white mb-6">
         <table class="w-full text-left text-[15px] min-w-[640px]">
-          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">The work</th><th class="p-4 font-bold">Scales with volume?</th><th class="mob-hide p-4 font-bold">Why</th></tr></thead>
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">The work</th><th class="p-4 font-bold">Scales with volume?</th><th class="p-4 font-bold">Why</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4 font-semibold">Fulfilment</td><td class="p-4 text-care font-bold">Not at all</td><td class="mob-hide p-4 text-ink-mute">The 3PL picks, packs and ships everything</td></tr>
-            <tr><td class="p-4 font-semibold">Ad management</td><td class="p-4 text-care font-bold">Fixed</td><td class="mob-hide p-4 text-ink-mute">Same dashboards at $2k/month or $30k/month</td></tr>
-            <tr><td class="p-4 font-semibold">Creative refresh</td><td class="p-4 text-care font-bold">Fixed</td><td class="mob-hide p-4 text-ink-mute">Ads fatigue on a calendar, not on volume</td></tr>
-            <tr><td class="p-4 font-semibold">Supplier and reorders</td><td class="p-4 text-ink-mute font-semibold">Stepped</td><td class="mob-hide p-4 text-ink-mute">Same conversation for 500 units or 5,000</td></tr>
-            <tr><td class="p-4 font-semibold">Customer service</td><td class="p-4 text-signal font-bold">Linear</td><td class="mob-hide p-4 text-ink-mute">The one that grows &mdash; and a VA absorbs it for ~$450/month</td></tr>
-            <tr><td class="p-4 font-semibold">B2B outreach</td><td class="p-4 text-signal font-bold">Linear</td><td class="mob-hide p-4 text-ink-mute">Relationship selling. The only real claim on our hours</td></tr>
+            <tr><td class="p-4 font-semibold">Fulfilment</td><td class="p-4 text-care font-bold">Not at all</td><td class="p-4 text-ink-mute">The 3PL picks, packs and ships everything</td></tr>
+            <tr><td class="p-4 font-semibold">Ad management</td><td class="p-4 text-care font-bold">Fixed</td><td class="p-4 text-ink-mute">Same dashboards at $2k/month or $30k/month</td></tr>
+            <tr><td class="p-4 font-semibold">Creative refresh</td><td class="p-4 text-care font-bold">Fixed</td><td class="p-4 text-ink-mute">Ads fatigue on a calendar, not on volume</td></tr>
+            <tr><td class="p-4 font-semibold">Supplier and reorders</td><td class="p-4 text-ink-mute font-semibold">Stepped</td><td class="p-4 text-ink-mute">Same conversation for 500 units or 5,000</td></tr>
+            <tr><td class="p-4 font-semibold">Customer service</td><td class="p-4 text-signal font-bold">Linear</td><td class="p-4 text-ink-mute">The one that grows &mdash; and a VA absorbs it for ~$450/month</td></tr>
+            <tr><td class="p-4 font-semibold">B2B outreach</td><td class="p-4 text-signal font-bold">Linear</td><td class="p-4 text-ink-mute">Relationship selling. The only real claim on our hours</td></tr>
           </tbody>
         </table>
       </div>
@@ -1232,15 +1241,16 @@ tailwind.config = {
 
       <h2 class="font-display font-bold text-[28px] sm:text-[38px] tracking-tight mb-3">So what happens if we feed it more?</h2>
       <p class="text-[18px] text-ink-mute mb-6 max-w-3xl">Ad spend buys growth only to a point. Cheap customers run out and acquisition climbs into our $72.36 ceiling.</p>
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-4">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-4">
         <table class="w-full text-left text-[15px] min-w-[620px]">
-          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Ad spend/mo</th><th class="mob-hide p-4 font-bold text-right">Cost per customer</th><th class="mob-hide p-4 font-bold text-right">Orders/mo</th><th class="p-4 font-bold text-right">Consumer profit/yr</th><th class="mob-hide p-4 font-bold text-right">Our hours</th></tr></thead>
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Ad spend/mo</th><th class="p-4 font-bold text-right">Cost per customer</th><th class="p-4 font-bold text-right">Orders/mo</th><th class="p-4 font-bold text-right">Consumer profit/yr</th><th class="p-4 font-bold text-right">Our hours</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4">$2,000</td><td class="mob-hide p-4 text-right tabular">$40</td><td class="mob-hide p-4 text-right tabular">50</td><td class="p-4 text-right tabular">$15,216</td><td class="mob-hide p-4 text-right tabular">3&ndash;5</td></tr>
-            <tr><td class="p-4">$10,000</td><td class="mob-hide p-4 text-right tabular">$48</td><td class="mob-hide p-4 text-right tabular">208</td><td class="p-4 text-right tabular">$51,300</td><td class="mob-hide p-4 text-right tabular">8&ndash;11</td></tr>
+            <tr><td class="p-4">$2,000</td><td class="p-4 text-right tabular">$40</td><td class="p-4 text-right tabular">50</td><td class="p-4 text-right tabular">$15,216</td><td class="p-4 text-right tabular">3&ndash;5</td></tr>
+            <tr><td class="p-4">$10,000</td><td class="p-4 text-right tabular">$48</td><td class="p-4 text-right tabular">208</td><td class="p-4 text-right tabular">$51,300</td><td class="p-4 text-right tabular">8&ndash;11</td></tr>
             <tr class="bg-care-light"><td class="p-4 font-bold">$22,000</td><td class="p-4 text-right tabular">$56</td><td class="p-4 text-right tabular">393</td><td class="p-4 text-right tabular font-bold text-care-dark">$62,126 &larr; peak</td><td class="p-4 text-right tabular">10&ndash;13</td></tr>
-            <tr><td class="p-4">$30,000</td><td class="mob-hide p-4 text-right tabular">$60</td><td class="mob-hide p-4 text-right tabular">500</td><td class="p-4 text-right tabular">$55,560</td><td class="mob-hide p-4 text-right tabular">10&ndash;13</td></tr>
-            <tr><td class="p-4">$50,000</td><td class="mob-hide p-4 text-right tabular">$70</td><td class="mob-hide p-4 text-right tabular">714</td><td class="p-4 text-right tabular text-signal font-semibold">&minus;$7,971</td><td class="mob-hide p-4 text-right tabular">12&ndash;16</td></tr>
+            <tr><td class="p-4">$30,000</td><td class="p-4 text-right tabular">$60</td><td class="p-4 text-right tabular">500</td><td class="p-4 text-right tabular">$55,560</td><td class="p-4 text-right tabular">10&ndash;13</td></tr>
+            <tr><td class="p-4">$50,000</td><td class="p-4 text-right tabular">$70</td><td class="p-4 text-right tabular">714</td><td class="p-4 text-right tabular text-signal font-semibold">&minus;$7,971</td><td class="p-4 text-right tabular">12&ndash;16</td></tr>
           </tbody>
         </table>
       </div>
@@ -1254,18 +1264,19 @@ tailwind.config = {
 
       <h2 class="font-display font-bold text-[28px] sm:text-[38px] tracking-tight mb-3">Running both engines</h2>
       <p class="text-[18px] text-ink-mute mb-6 max-w-3xl">Two partners, still employed. Hours per week, each.</p>
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-4">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-4">
         <table class="w-full text-left text-[15px] min-w-[780px]">
           <thead class="bg-ink text-white"><tr>
-            <th class="p-4 font-bold">Scenario</th><th class="mob-hide p-4 font-bold text-right">Ads/mo</th><th class="mob-hide p-4 font-bold text-right">Care homes/mo</th>
-            <th class="mob-hide p-4 font-bold text-right">Revenue/yr</th><th class="p-4 font-bold text-right">Profit/yr</th>
-            <th class="mob-hide p-4 font-bold text-right">Each</th><th class="p-4 font-bold text-right">h/wk each</th><th class="mob-hide p-4 font-bold text-right">Inventory</th></tr></thead>
+            <th class="p-4 font-bold">Scenario</th><th class="p-4 font-bold text-right">Ads/mo</th><th class="p-4 font-bold text-right">Care homes/mo</th>
+            <th class="p-4 font-bold text-right">Revenue/yr</th><th class="p-4 font-bold text-right">Profit/yr</th>
+            <th class="p-4 font-bold text-right">Each</th><th class="p-4 font-bold text-right">h/wk each</th><th class="p-4 font-bold text-right">Inventory</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4 font-semibold">Start small</td><td class="mob-hide p-4 text-right tabular">$2,000</td><td class="mob-hide p-4 text-right tabular">1</td><td class="mob-hide p-4 text-right tabular">$149,912</td><td class="p-4 text-right tabular font-bold">$26,736</td><td class="mob-hide p-4 text-right tabular">$13,368</td><td class="p-4 text-right tabular">4.5</td><td class="mob-hide p-4 text-right tabular">$6,000</td></tr>
-            <tr><td class="p-4 font-semibold">Consumer working</td><td class="mob-hide p-4 text-right tabular">$10,000</td><td class="mob-hide p-4 text-right tabular">2</td><td class="mob-hide p-4 text-right tabular">$499,842</td><td class="p-4 text-right tabular font-bold">$74,340</td><td class="mob-hide p-4 text-right tabular">$37,170</td><td class="p-4 text-right tabular">9.0</td><td class="mob-hide p-4 text-right tabular">$25,000</td></tr>
+            <tr><td class="p-4 font-semibold">Start small</td><td class="p-4 text-right tabular">$2,000</td><td class="p-4 text-right tabular">1</td><td class="p-4 text-right tabular">$149,912</td><td class="p-4 text-right tabular font-bold">$26,736</td><td class="p-4 text-right tabular">$13,368</td><td class="p-4 text-right tabular">4.5</td><td class="p-4 text-right tabular">$6,000</td></tr>
+            <tr><td class="p-4 font-semibold">Consumer working</td><td class="p-4 text-right tabular">$10,000</td><td class="p-4 text-right tabular">2</td><td class="p-4 text-right tabular">$499,842</td><td class="p-4 text-right tabular font-bold">$74,340</td><td class="p-4 text-right tabular">$37,170</td><td class="p-4 text-right tabular">9.0</td><td class="p-4 text-right tabular">$25,000</td></tr>
             <tr class="bg-care-light"><td class="p-4 font-bold">Both engines</td><td class="p-4 text-right tabular">$22,000</td><td class="p-4 text-right tabular">4</td><td class="p-4 text-right tabular">$955,725</td><td class="p-4 text-right tabular font-bold text-care-dark">$108,206</td><td class="p-4 text-right tabular font-bold text-care-dark">$54,103</td><td class="p-4 text-right tabular">14.0</td><td class="p-4 text-right tabular">$47,143</td></tr>
-            <tr><td class="p-4 font-semibold">B2B-led</td><td class="mob-hide p-4 text-right tabular">$10,000</td><td class="mob-hide p-4 text-right tabular">8</td><td class="mob-hide p-4 text-right tabular">$845,419</td><td class="p-4 text-right tabular font-bold">$143,460</td><td class="mob-hide p-4 text-right tabular">$71,730</td><td class="p-4 text-right tabular">16.5</td><td class="mob-hide p-4 text-right tabular">$25,000</td></tr>
-            <tr><td class="p-4 font-semibold">Everything</td><td class="mob-hide p-4 text-right tabular">$22,000</td><td class="mob-hide p-4 text-right tabular">10</td><td class="mob-hide p-4 text-right tabular">$1,301,302</td><td class="p-4 text-right tabular font-bold">$177,326</td><td class="mob-hide p-4 text-right tabular">$88,663</td><td class="p-4 text-right tabular">19.5</td><td class="mob-hide p-4 text-right tabular">$47,143</td></tr>
+            <tr><td class="p-4 font-semibold">B2B-led</td><td class="p-4 text-right tabular">$10,000</td><td class="p-4 text-right tabular">8</td><td class="p-4 text-right tabular">$845,419</td><td class="p-4 text-right tabular font-bold">$143,460</td><td class="p-4 text-right tabular">$71,730</td><td class="p-4 text-right tabular">16.5</td><td class="p-4 text-right tabular">$25,000</td></tr>
+            <tr><td class="p-4 font-semibold">Everything</td><td class="p-4 text-right tabular">$22,000</td><td class="p-4 text-right tabular">10</td><td class="p-4 text-right tabular">$1,301,302</td><td class="p-4 text-right tabular font-bold">$177,326</td><td class="p-4 text-right tabular">$88,663</td><td class="p-4 text-right tabular">19.5</td><td class="p-4 text-right tabular">$47,143</td></tr>
           </tbody>
         </table>
       </div>
@@ -1292,19 +1303,20 @@ tailwind.config = {
       <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Unit economics</p>
       <h1 class="font-display font-bold text-[38px] sm:text-[52px] leading-[1.05] tracking-tight mb-5">What every item costs and earns</h1>
       <p class="text-[19px] text-ink-mute max-w-3xl mb-8">Landed = factory price + freight + 25% tariff. Net is after payment fees, shipping and pick-and-pack.</p>
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift">
         <table class="w-full text-left text-[16px] min-w-[720px]">
           <thead class="bg-ink text-white"><tr>
-            <th class="p-4 font-bold">Product</th><th class="mob-hide p-4 font-bold text-right">Factory</th><th class="mob-hide p-4 font-bold text-right">Landed</th>
-            <th class="p-4 font-bold text-right">We sell at</th><th class="p-4 font-bold text-right">We keep</th><th class="mob-hide p-4 font-bold text-right">Margin</th></tr></thead>
+            <th class="p-4 font-bold">Product</th><th class="p-4 font-bold text-right">Factory</th><th class="p-4 font-bold text-right">Landed</th>
+            <th class="p-4 font-bold text-right">We sell at</th><th class="p-4 font-bold text-right">We keep</th><th class="p-4 font-bold text-right">Margin</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4 font-semibold">Tension Grab Pole</td><td class="mob-hide p-4 text-right tabular">$32.00</td><td class="mob-hide p-4 text-right tabular">$43.31</td><td class="p-4 text-right tabular">$109.00</td><td class="p-4 text-right tabular font-bold">$44.74</td><td class="mob-hide p-4 text-right tabular">41.0%</td></tr>
-            <tr><td class="p-4 font-semibold">Tub Rail</td><td class="mob-hide p-4 text-right tabular">$10.36</td><td class="mob-hide p-4 text-right tabular">$15.11</td><td class="p-4 text-right tabular">$64.95</td><td class="p-4 text-right tabular font-bold">$33.04</td><td class="mob-hide p-4 text-right tabular">50.9%</td></tr>
-            <tr><td class="p-4">Toilet Safety Rail <span class="text-[13px] text-signal font-semibold">est</span></td><td class="mob-hide p-4 text-right tabular">$9.00</td><td class="mob-hide p-4 text-right tabular">$14.10</td><td class="p-4 text-right tabular">$49.95</td><td class="p-4 text-right tabular font-bold">$19.33</td><td class="mob-hide p-4 text-right tabular">38.7%</td></tr>
-            <tr><td class="p-4">Shower Bench <span class="text-[13px] text-signal font-semibold">est</span></td><td class="mob-hide p-4 text-right tabular">$16.00</td><td class="mob-hide p-4 text-right tabular">$24.98</td><td class="p-4 text-right tabular">$89.99</td><td class="p-4 text-right tabular font-bold">$45.76</td><td class="mob-hide p-4 text-right tabular">50.9%</td></tr>
-            <tr><td class="p-4">Non-Slip Strips</td><td class="mob-hide p-4 text-right tabular">$1.35</td><td class="mob-hide p-4 text-right tabular">$1.96</td><td class="p-4 text-right tabular">$19.99</td><td class="p-4 text-right tabular font-bold">$7.00</td><td class="mob-hide p-4 text-right tabular">35.0%</td></tr>
-            <tr><td class="p-4">Motion Night Light <span class="text-[13px] text-signal font-semibold">est</span></td><td class="mob-hide p-4 text-right tabular">$1.80</td><td class="mob-hide p-4 text-right tabular">$2.52</td><td class="p-4 text-right tabular">$16.99</td><td class="p-4 text-right tabular font-bold">$3.56</td><td class="mob-hide p-4 text-right tabular">20.9%</td></tr>
-            <tr><td class="p-4">Handheld Shower Head <span class="text-[13px] text-signal font-semibold">est</span></td><td class="mob-hide p-4 text-right tabular">$5.50</td><td class="mob-hide p-4 text-right tabular">$7.74</td><td class="p-4 text-right tabular">$39.99</td><td class="p-4 text-right tabular font-bold">$19.97</td><td class="mob-hide p-4 text-right tabular">49.9%</td></tr>
+            <tr><td class="p-4 font-semibold">Tension Grab Pole</td><td class="p-4 text-right tabular">$32.00</td><td class="p-4 text-right tabular">$43.31</td><td class="p-4 text-right tabular">$109.00</td><td class="p-4 text-right tabular font-bold">$44.74</td><td class="p-4 text-right tabular">41.0%</td></tr>
+            <tr><td class="p-4 font-semibold">Tub Rail</td><td class="p-4 text-right tabular">$10.36</td><td class="p-4 text-right tabular">$15.11</td><td class="p-4 text-right tabular">$64.95</td><td class="p-4 text-right tabular font-bold">$33.04</td><td class="p-4 text-right tabular">50.9%</td></tr>
+            <tr><td class="p-4">Toilet Safety Rail <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$9.00</td><td class="p-4 text-right tabular">$14.10</td><td class="p-4 text-right tabular">$49.95</td><td class="p-4 text-right tabular font-bold">$19.33</td><td class="p-4 text-right tabular">38.7%</td></tr>
+            <tr><td class="p-4">Shower Bench <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$16.00</td><td class="p-4 text-right tabular">$24.98</td><td class="p-4 text-right tabular">$89.99</td><td class="p-4 text-right tabular font-bold">$45.76</td><td class="p-4 text-right tabular">50.9%</td></tr>
+            <tr><td class="p-4">Non-Slip Strips</td><td class="p-4 text-right tabular">$1.35</td><td class="p-4 text-right tabular">$1.96</td><td class="p-4 text-right tabular">$19.99</td><td class="p-4 text-right tabular font-bold">$7.00</td><td class="p-4 text-right tabular">35.0%</td></tr>
+            <tr><td class="p-4">Motion Night Light <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$1.80</td><td class="p-4 text-right tabular">$2.52</td><td class="p-4 text-right tabular">$16.99</td><td class="p-4 text-right tabular font-bold">$3.56</td><td class="p-4 text-right tabular">20.9%</td></tr>
+            <tr><td class="p-4">Handheld Shower Head <span class="text-[13px] text-signal font-semibold">est</span></td><td class="p-4 text-right tabular">$5.50</td><td class="p-4 text-right tabular">$7.74</td><td class="p-4 text-right tabular">$39.99</td><td class="p-4 text-right tabular font-bold">$19.97</td><td class="p-4 text-right tabular">49.9%</td></tr>
             <tr class="bg-care-light"><td class="p-4 font-bold">Full Care Package</td><td class="p-4 text-right tabular">$43.71</td><td class="p-4 text-right tabular">$64.13</td><td class="p-4 text-right tabular">$169.99</td><td class="p-4 text-right tabular font-bold text-care-dark">$79.42</td><td class="p-4 text-right tabular font-bold text-care-dark">46.7%</td></tr>
             <tr class="bg-care-light"><td class="p-4 font-bold">Complete System</td><td class="p-4 text-right tabular">$62.61</td><td class="p-4 text-right tabular">$91.64</td><td class="p-4 text-right tabular">$229.99</td><td class="p-4 text-right tabular font-bold text-care-dark">$103.72</td><td class="p-4 text-right tabular font-bold text-care-dark">45.1%</td></tr>
           </tbody>
@@ -1319,15 +1331,16 @@ tailwind.config = {
       <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Capital required</p>
       <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-4">$9,556 to find out, paid in five stages</h2>
       <p class="text-[19px] text-ink-mute max-w-3xl mb-8">No single large cheque. Each stage happens only if the last one worked, and we can stop holding sellable stock.</p>
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white mb-6">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white mb-6">
         <table class="w-full text-left text-[16px] min-w-[680px]">
-          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">When</th><th class="p-4 font-bold text-right">Amount</th><th class="p-4 font-bold">What it buys</th><th class="mob-hide p-4 font-bold">Can we stop?</th></tr></thead>
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">When</th><th class="p-4 font-bold text-right">Amount</th><th class="p-4 font-bold">What it buys</th><th class="p-4 font-bold">Can we stop?</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4 font-semibold">Week 1</td><td class="p-4 text-right tabular">$1,100</td><td class="p-4 text-ink-mute">Samples from three factories, registration, storefront, domain</td><td class="mob-hide p-4 text-care font-semibold">Yes — lose $1,100</td></tr>
-            <tr><td class="p-4 font-semibold">Week 3</td><td class="p-4 text-right tabular">$1,034</td><td class="p-4 text-ink-mute">30% deposit: 50 poles, 100 rails, 200 strip packs</td><td class="mob-hide p-4 text-care font-semibold">Yes — lose the deposit</td></tr>
-            <tr><td class="p-4 font-semibold">Week 7</td><td class="p-4 text-right tabular">$4,222</td><td class="p-4 text-ink-mute">Balance, freight, tariff, customs entry. Ships to warehouse</td><td class="mob-hide p-4 text-ink-mute">Committed from here</td></tr>
-            <tr><td class="p-4 font-semibold">Week 10</td><td class="p-4 text-right tabular">$1,200</td><td class="p-4 text-ink-mute">Liability insurance and packaging, before anything ships</td><td class="mob-hide p-4 text-signal font-semibold">Non-negotiable</td></tr>
-            <tr><td class="p-4 font-semibold">Week 12</td><td class="p-4 text-right tabular">$2,000</td><td class="p-4 text-ink-mute">Three ad creatives, two weeks, equal budget</td><td class="mob-hide p-4 text-ink-mute">This is the test</td></tr>
+            <tr><td class="p-4 font-semibold">Week 1</td><td class="p-4 text-right tabular">$1,100</td><td class="p-4 text-ink-mute">Samples from three factories, registration, storefront, domain</td><td class="p-4 text-care font-semibold">Yes — lose $1,100</td></tr>
+            <tr><td class="p-4 font-semibold">Week 3</td><td class="p-4 text-right tabular">$1,034</td><td class="p-4 text-ink-mute">30% deposit: 50 poles, 100 rails, 200 strip packs</td><td class="p-4 text-care font-semibold">Yes — lose the deposit</td></tr>
+            <tr><td class="p-4 font-semibold">Week 7</td><td class="p-4 text-right tabular">$4,222</td><td class="p-4 text-ink-mute">Balance, freight, tariff, customs entry. Ships to warehouse</td><td class="p-4 text-ink-mute">Committed from here</td></tr>
+            <tr><td class="p-4 font-semibold">Week 10</td><td class="p-4 text-right tabular">$1,200</td><td class="p-4 text-ink-mute">Liability insurance and packaging, before anything ships</td><td class="p-4 text-signal font-semibold">Non-negotiable</td></tr>
+            <tr><td class="p-4 font-semibold">Week 12</td><td class="p-4 text-right tabular">$2,000</td><td class="p-4 text-ink-mute">Three ad creatives, two weeks, equal budget</td><td class="p-4 text-ink-mute">This is the test</td></tr>
             <tr class="bg-nickel-pale"><td class="p-4 font-bold">Total</td><td class="p-4 text-right tabular font-bold">$9,556</td><td class="p-4 text-ink-mute" colspan="2">A real market test, with sellable inventory at the end</td></tr>
           </tbody>
         </table>
@@ -1344,13 +1357,14 @@ tailwind.config = {
       <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Supply relationships</p>
       <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-4">China now, Mexico as the hedge</h2>
       <p class="text-[19px] text-ink-mute max-w-3xl mb-8">Live quotes from a Guangdong manufacturer: 12 years trading, 4.7/5 across 677 reviews.</p>
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-6">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-6">
         <table class="w-full text-left text-[16px] min-w-[640px]">
-          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Source</th><th class="mob-hide p-4 font-bold text-right">Factory</th><th class="mob-hide p-4 font-bold text-right">Freight</th><th class="mob-hide p-4 font-bold text-right">Tariff</th><th class="p-4 font-bold text-right">Landed</th><th class="p-4 font-bold">Transit</th></tr></thead>
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Source</th><th class="p-4 font-bold text-right">Factory</th><th class="p-4 font-bold text-right">Freight</th><th class="p-4 font-bold text-right">Tariff</th><th class="p-4 font-bold text-right">Landed</th><th class="p-4 font-bold">Transit</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4 font-semibold">China — quoted</td><td class="mob-hide p-4 text-right tabular">$32.00</td><td class="mob-hide p-4 text-right tabular">$3.31</td><td class="mob-hide p-4 text-right tabular text-signal">$8.00</td><td class="p-4 text-right tabular font-bold">$43.31</td><td class="p-4 text-ink-mute">20–27 days</td></tr>
-            <tr><td class="p-4">Mexico at +30%</td><td class="mob-hide p-4 text-right tabular">$41.60</td><td class="mob-hide p-4 text-right tabular">$2.00</td><td class="mob-hide p-4 text-right tabular text-care font-semibold">$0.00</td><td class="p-4 text-right tabular font-bold">$43.60</td><td class="p-4 text-ink-mute">3–7 days</td></tr>
-            <tr><td class="p-4">Mexico at +40%</td><td class="mob-hide p-4 text-right tabular">$44.80</td><td class="mob-hide p-4 text-right tabular">$2.00</td><td class="mob-hide p-4 text-right tabular text-care font-semibold">$0.00</td><td class="p-4 text-right tabular font-bold">$46.80</td><td class="p-4 text-ink-mute">3–7 days</td></tr>
+            <tr><td class="p-4 font-semibold">China — quoted</td><td class="p-4 text-right tabular">$32.00</td><td class="p-4 text-right tabular">$3.31</td><td class="p-4 text-right tabular text-signal">$8.00</td><td class="p-4 text-right tabular font-bold">$43.31</td><td class="p-4 text-ink-mute">20–27 days</td></tr>
+            <tr><td class="p-4">Mexico at +30%</td><td class="p-4 text-right tabular">$41.60</td><td class="p-4 text-right tabular">$2.00</td><td class="p-4 text-right tabular text-care font-semibold">$0.00</td><td class="p-4 text-right tabular font-bold">$43.60</td><td class="p-4 text-ink-mute">3–7 days</td></tr>
+            <tr><td class="p-4">Mexico at +40%</td><td class="p-4 text-right tabular">$44.80</td><td class="p-4 text-right tabular">$2.00</td><td class="p-4 text-right tabular text-care font-semibold">$0.00</td><td class="p-4 text-right tabular font-bold">$46.80</td><td class="p-4 text-ink-mute">3–7 days</td></tr>
           </tbody>
         </table>
       </div>
@@ -1420,7 +1434,8 @@ tailwind.config = {
   <section class="py-16 bg-nickel-pale border-b border-nickel-light">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <h2 class="font-display font-bold text-[34px] sm:text-[42px] tracking-tight mb-8">What actually changes for them</h2>
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift bg-white">
         <table class="w-full text-left text-[17px] min-w-[620px]">
           <thead class="bg-ink text-white"><tr><th class="p-4 font-bold w-[200px]"></th><th class="p-4 font-bold">Before</th><th class="p-4 font-bold">After</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
@@ -1454,7 +1469,7 @@ tailwind.config = {
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <p class="text-care font-bold text-[15px] tracking-[.14em] uppercase mb-4">Meta, specifically</p>
       <h2 class="font-display font-bold text-[28px] sm:text-[42px] tracking-tight mb-4">How to run the good-son angle without getting blocked</h2>
-      <p class="text-[18px] sm:text-[19px] text-ink-mute max-w-3xl mb-8">Meta rejects ads that imply we know something about the viewer's health or family. "For your aging parent" gets blocked. But the feeling we're selling is entirely permissible — as long as we describe <strong class="text-ink">a scene</strong>, never <strong class="text-ink">the viewer</strong>.</p>
+      <p class="text-[18px] sm:text-[19px] text-ink-mute max-w-3xl mb-8">Meta rejects ads that imply we know something about the viewer's health or family."For your aging parent" gets blocked. But the feeling we're selling is entirely permissible — as long as we describe <strong class="text-ink">a scene</strong>, never <strong class="text-ink">the viewer</strong>.</p>
 
       <div class="grid md:grid-cols-2 gap-5 mb-8">
         <div class="bg-signal-light rounded-2xl p-6 border border-signal/25">
@@ -1504,15 +1519,16 @@ tailwind.config = {
   <section class="py-12 sm:py-16 bg-white border-b border-nickel-light">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <h2 class="font-display font-bold text-[28px] sm:text-[42px] tracking-tight mb-6">Where the first budget goes</h2>
-      <div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-6">
+      <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto rounded-2xl border border-nickel-light shadow-lift mb-6">
         <table class="w-full text-left text-[16px] min-w-[600px]">
-          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Channel</th><th class="p-4 font-bold text-right">Test</th><th class="p-4 font-bold text-right">Full</th><th class="mob-hide p-4 font-bold">Why</th></tr></thead>
+          <thead class="bg-ink text-white"><tr><th class="p-4 font-bold">Channel</th><th class="p-4 font-bold text-right">Test</th><th class="p-4 font-bold text-right">Full</th><th class="p-4 font-bold">Why</th></tr></thead>
           <tbody class="divide-y divide-nickel-light">
-            <tr><td class="p-4 font-semibold">Google Search</td><td class="p-4 text-right tabular">$800</td><td class="p-4 text-right tabular">$2,200</td><td class="mob-hide p-4 text-ink-mute">Someone typing "no drill grab bar" has the problem today.</td></tr>
-            <tr><td class="p-4 font-semibold">Meta</td><td class="p-4 text-right tabular">$900</td><td class="p-4 text-right tabular">$2,400</td><td class="mob-hide p-4 text-ink-mute">Where the adult child is. Carries the three ads above.</td></tr>
-            <tr><td class="p-4 font-semibold">Reddit</td><td class="p-4 text-right tabular">$300</td><td class="p-4 text-right tabular">$800</td><td class="mob-hide p-4 text-ink-mute">Targets r/AgingParents directly. Cheap, and they're already discussing it.</td></tr>
-            <tr><td class="p-4 font-semibold">Amazon</td><td class="p-4 text-right tabular">—</td><td class="p-4 text-right tabular">$400</td><td class="mob-hide p-4 text-ink-mute">Rail and strips only — standard size, so fees don't eat them.</td></tr>
-            <tr><td class="p-4">Held back</td><td class="p-4 text-right tabular">—</td><td class="p-4 text-right tabular">$200</td><td class="mob-hide p-4 text-ink-mute">For whichever shows a real signal in week two.</td></tr>
+            <tr><td class="p-4 font-semibold">Google Search</td><td class="p-4 text-right tabular">$800</td><td class="p-4 text-right tabular">$2,200</td><td class="p-4 text-ink-mute">Someone typing"no drill grab bar" has the problem today.</td></tr>
+            <tr><td class="p-4 font-semibold">Meta</td><td class="p-4 text-right tabular">$900</td><td class="p-4 text-right tabular">$2,400</td><td class="p-4 text-ink-mute">Where the adult child is. Carries the three ads above.</td></tr>
+            <tr><td class="p-4 font-semibold">Reddit</td><td class="p-4 text-right tabular">$300</td><td class="p-4 text-right tabular">$800</td><td class="p-4 text-ink-mute">Targets r/AgingParents directly. Cheap, and they're already discussing it.</td></tr>
+            <tr><td class="p-4 font-semibold">Amazon</td><td class="p-4 text-right tabular">—</td><td class="p-4 text-right tabular">$400</td><td class="p-4 text-ink-mute">Rail and strips only — standard size, so fees don't eat them.</td></tr>
+            <tr><td class="p-4">Held back</td><td class="p-4 text-right tabular">—</td><td class="p-4 text-right tabular">$200</td><td class="p-4 text-ink-mute">For whichever shows a real signal in week two.</td></tr>
           </tbody>
         </table>
       </div>
@@ -1528,7 +1544,8 @@ tailwind.config = {
       <h2 class="font-display font-bold text-[28px] sm:text-[44px] tracking-tight mb-6">What we can afford to pay for a customer</h2>
       <p class="text-[19px] sm:text-[21px] leading-relaxed text-white/90 mb-6">A Full Care Package nets <strong class="text-white">$79.42</strong> after landed cost, payment fees, shipping and warehouse handling. A typical order across our mix nets <strong class="text-white">$72.36</strong>. Those are the ceilings.</p>
       <div class="bg-white/[.10] rounded-2xl p-5 sm:p-6 mb-6">
-        <div class="overflow-x-auto">
+        <p class="scrollhint">Swipe the table sideways for the rest of the columns &rarr;</p>
+<div class="overflow-x-auto">
           <table class="w-full text-left text-[16px] min-w-[420px]">
             <thead><tr class="text-white/70"><th class="pb-3 font-semibold">Cost per customer</th><th class="pb-3 font-semibold text-right">Left on a package</th><th class="pb-3 font-semibold text-right">Left on a typical order</th></tr></thead>
             <tbody>
